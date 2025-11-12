@@ -1,0 +1,831 @@
+orderID,orderDate,requiredDate,shippedDate,companyName,employeeName,companyName_shipper,productName,quantity,unitPrice,discount,totalPrice
+10248,7/4/2013,8/1/2013,7/16/2013,Vins et alcools Chevalier,Steven Buchanan,Federal Shipping,Queso Cabrales,12,14,0,168
+10249,7/5/2013,8/16/2013,7/10/2013,Toms SpezialitÃ¤ten,Michael Suyama,Speedy Express,Tofu,9,18.6,0,167.4
+10250,7/8/2013,8/5/2013,7/12/2013,Hanari Carnes,Margaret Peacock,United Package,Jack's New England Clam Chowder,10,7.7,0,77
+10251,7/8/2013,8/5/2013,7/15/2013,Victuailles en stock,Janet Leverling,Speedy Express,Gustaf's KnackebrÃ¶d,6,16.8,0.05,95.76
+10252,7/9/2013,8/6/2013,7/11/2013,SuprÃªmes dÃ©lices,Margaret Peacock,United Package,Sir Rodney's Marmalade,40,64.8,0.05,2462.4
+10253,7/10/2013,7/24/2013,7/16/2013,Hanari Carnes,Janet Leverling,United Package,Gorgonzola Telino,20,10,0,200
+10254,7/11/2013,8/8/2013,7/23/2013,Chop-suey Chinese,Steven Buchanan,United Package,Guarana Fantastica,15,3.6,0.15,45.9
+10255,7/12/2013,8/9/2013,7/15/2013,Richter Supermarkt,Anne Dodsworth,Federal Shipping,Chang,20,15.2,0,304
+10256,7/15/2013,8/12/2013,7/17/2013,Wellington Importadora,Janet Leverling,United Package,Perth Pasties,15,26.2,0,393
+10257,7/16/2013,8/13/2013,7/22/2013,HILARION-Abastos,Margaret Peacock,Federal Shipping,Schoggi Schokolade,25,35.1,0,877.5
+10258,7/17/2013,8/14/2013,7/23/2013,Ernst Handel,Nancy Davolio,Speedy Express,Chang,50,15.2,0.2,608
+10259,7/18/2013,8/15/2013,7/25/2013,Centro comercial Moctezuma,Margaret Peacock,Federal Shipping,Sir Rodney's Scones,10,8,0,80
+10260,7/19/2013,8/16/2013,7/29/2013,Ottilies KÃ¤seladen,Margaret Peacock,Speedy Express,Jack's New England Clam Chowder,16,7.7,0.25,92.4
+10261,7/19/2013,8/16/2013,7/30/2013,Que DelÃ­cia,Margaret Peacock,United Package,Sir Rodney's Scones,20,8,0,160
+10262,7/22/2013,8/19/2013,7/25/2013,Rattlesnake Canyon Grocery,Laura Callahan,Federal Shipping,Chef Anton's Gumbo Mix,12,17,0.2,163.2
+10263,7/23/2013,8/20/2013,7/31/2013,Ernst Handel,Anne Dodsworth,Federal Shipping,Pavlova,60,13.9,0.25,625.5
+10264,7/24/2013,8/21/2013,8/23/2013,Folk och fÃ¤ HB,Michael Suyama,Federal Shipping,Chang,35,15.2,0,532
+10265,7/25/2013,8/22/2013,8/12/2013,Blondesddsl pÃ¨re et fils,Andrew Fuller,Speedy Express,Alice Mutton,30,31.2,0,936
+10266,7/26/2013,9/6/2013,7/31/2013,Wartian Herkku,Janet Leverling,Federal Shipping,Queso Manchego La Pastora,12,30.4,0.05,346.56
+10267,7/29/2013,8/26/2013,8/6/2013,Frankenversand,Margaret Peacock,Speedy Express,Boston Crab Meat,50,14.7,0,735
+10268,7/30/2013,8/27/2013,8/2/2013,GROSELLA-Restaurante,Laura Callahan,Federal Shipping,ThÃ¼ringer Rostbratwurst,10,99,0,990
+10269,7/31/2013,8/14/2013,8/9/2013,White Clover Markets,Steven Buchanan,Speedy Express,Geitost,60,2,0.05,114
+10270,8/1/2013,8/29/2013,8/2/2013,Wartian Herkku,Nancy Davolio,Speedy Express,Inlagd Sill,30,15.2,0,456
+10271,8/1/2013,8/29/2013,8/30/2013,Split Rail Beer & Ale,Michael Suyama,United Package,Geitost,24,2,0,48
+10272,8/2/2013,8/30/2013,8/6/2013,Rattlesnake Canyon Grocery,Michael Suyama,United Package,Sir Rodney's Marmalade,6,64.8,0,388.8
+10273,8/5/2013,9/2/2013,8/12/2013,QUICK-Stop,Janet Leverling,Federal Shipping,Ikura,24,24.8,0.05,565.44
+10274,8/6/2013,9/3/2013,8/16/2013,Vins et alcools Chevalier,Michael Suyama,Speedy Express,Flotemysost,20,17.2,0,344
+10275,8/7/2013,9/4/2013,8/9/2013,Magazzini Alimentari Riuniti,Nancy Davolio,Speedy Express,Guarana Fantastica,12,3.6,0.05,41.04
+10276,8/8/2013,8/22/2013,8/14/2013,Tortuga Restaurante,Laura Callahan,Federal Shipping,Ikura,15,24.8,0,372
+10277,8/9/2013,9/6/2013,8/13/2013,Morgenstern Gesundkost,Andrew Fuller,Federal Shipping,RÃ¶ssle Sauerkraut,20,36.4,0,728
+10278,8/12/2013,9/9/2013,8/16/2013,Berglunds snabbkÃ¶p,Laura Callahan,United Package,Gula Malacca,16,15.5,0,248
+10279,8/13/2013,9/10/2013,8/16/2013,Lehmanns Marktstand,Laura Callahan,United Package,Alice Mutton,15,31.2,0.25,351
+10280,8/14/2013,9/11/2013,9/12/2013,Berglunds snabbkÃ¶p,Andrew Fuller,Speedy Express,Guarana Fantastica,12,3.6,0,43.2
+10281,8/14/2013,8/28/2013,8/21/2013,Romero y tomillo,Margaret Peacock,Speedy Express,Teatime Chocolate Biscuits,1,7.3,0,7.3
+10282,8/15/2013,9/12/2013,8/21/2013,Romero y tomillo,Margaret Peacock,Speedy Express,Nord-Ost Matjeshering,6,20.7,0,124.2
+10283,8/16/2013,9/13/2013,8/23/2013,LILA-Supermercado,Janet Leverling,Federal Shipping,Genen Shouyu,20,12.4,0,248
+10284,8/19/2013,9/16/2013,8/27/2013,Lehmanns Marktstand,Margaret Peacock,Speedy Express,Schoggi Schokolade,15,35.1,0.25,394.88
+10285,8/20/2013,9/17/2013,8/26/2013,QUICK-Stop,Nancy Davolio,United Package,Chai,45,14.4,0.2,518.4
+10286,8/21/2013,9/18/2013,8/30/2013,QUICK-Stop,Laura Callahan,Federal Shipping,Steeleye Stout,100,14.4,0,1440
+10287,8/22/2013,9/19/2013,8/28/2013,Ricardo Adocicados,Laura Callahan,Federal Shipping,Pavlova,40,13.9,0.15,472.6
+10288,8/23/2013,9/20/2013,9/3/2013,Reggiani Caseifici,Margaret Peacock,Speedy Express,TourtiÃ¨re,10,5.9,0.1,53.1
+10289,8/26/2013,9/23/2013,8/28/2013,B's Beverages,Robert King,Federal Shipping,Aniseed Syrup,30,8,0,240
+10290,8/27/2013,9/24/2013,9/3/2013,ComÃ©rcio Mineiro,Laura Callahan,Speedy Express,Chef Anton's Gumbo Mix,20,17,0,340
+10291,8/27/2013,9/24/2013,9/4/2013,Que DelÃ­cia,Michael Suyama,United Package,Konbu,20,4.8,0.1,86.4
+10292,8/28/2013,9/25/2013,9/2/2013,TradiÃ§Ã£o Hipermercados,Nancy Davolio,United Package,Sir Rodney's Marmalade,20,64.8,0,1296
+10293,8/29/2013,9/26/2013,9/11/2013,Tortuga Restaurante,Nancy Davolio,Federal Shipping,Carnarvon Tigers,12,50,0,600
+10294,8/30/2013,9/27/2013,9/5/2013,Rattlesnake Canyon Grocery,Margaret Peacock,United Package,Chai,18,14.4,0,259.2
+10295,9/2/2013,9/30/2013,9/10/2013,Vins et alcools Chevalier,Andrew Fuller,United Package,Gnocchi di nonna Alice,4,30.4,0,121.6
+10296,9/3/2013,10/1/2013,9/11/2013,LILA-Supermercado,Michael Suyama,Speedy Express,Queso Cabrales,12,16.8,0,201.6
+10297,9/4/2013,10/16/2013,9/10/2013,Blondesddsl pÃ¨re et fils,Steven Buchanan,United Package,Chartreuse verte,60,14.4,0,864
+10298,9/5/2013,10/3/2013,9/11/2013,Hungry Owl All-Night Grocers,Michael Suyama,United Package,Chang,40,15.2,0,608
+10299,9/6/2013,10/4/2013,9/13/2013,Ricardo Adocicados,Margaret Peacock,United Package,Teatime Chocolate Biscuits,15,7.3,0,109.5
+10300,9/9/2013,10/7/2013,9/18/2013,Magazzini Alimentari Riuniti,Andrew Fuller,United Package,Louisiana Hot Spiced Okra,30,13.6,0,408
+10301,9/9/2013,10/7/2013,9/17/2013,Die Wandernde Kuh,Laura Callahan,United Package,Boston Crab Meat,10,14.7,0,147
+10302,9/10/2013,10/8/2013,10/9/2013,SuprÃªmes dÃ©lices,Margaret Peacock,United Package,Alice Mutton,40,31.2,0,1248
+10303,9/11/2013,10/9/2013,9/18/2013,Godos Cocina TÃ­pica,Robert King,United Package,Boston Crab Meat,40,14.7,0.1,529.2
+10304,9/12/2013,10/10/2013,9/17/2013,Tortuga Restaurante,Nancy Davolio,United Package,Maxilaku,30,16,0,480
+10305,9/13/2013,10/11/2013,10/9/2013,Old World Delicatessen,Laura Callahan,Federal Shipping,Carnarvon Tigers,25,50,0.1,1125
+10306,9/16/2013,10/14/2013,9/23/2013,Romero y tomillo,Nancy Davolio,Federal Shipping,Nord-Ost Matjeshering,10,20.7,0,207
+10307,9/17/2013,10/15/2013,9/25/2013,Lonesome Pine Restaurant,Andrew Fuller,United Package,Tarte au sucre,10,39.4,0,394
+10308,9/18/2013,10/16/2013,9/24/2013,Ana Trujillo Emparedados y helados,Robert King,Federal Shipping,Gudbrandsdalsost,1,28.8,0,28.8
+10309,9/19/2013,10/17/2013,10/23/2013,Hungry Owl All-Night Grocers,Janet Leverling,Speedy Express,Chef Anton's Cajun Seasoning,20,17.6,0,352
+10310,9/20/2013,10/18/2013,9/27/2013,The Big Cheese,Laura Callahan,United Package,Pavlova,10,13.9,0,139
+10311,9/20/2013,10/4/2013,9/26/2013,Du monde entier,Nancy Davolio,Federal Shipping,Singaporean Hokkien Fried Mee,6,11.2,0,67.2
+10312,9/23/2013,10/21/2013,10/3/2013,Die Wandernde Kuh,Andrew Fuller,United Package,RÃ¶ssle Sauerkraut,4,36.4,0,145.6
+10313,9/24/2013,10/22/2013,10/4/2013,QUICK-Stop,Andrew Fuller,United Package,Inlagd Sill,12,15.2,0,182.4
+10314,9/25/2013,10/23/2013,10/4/2013,Rattlesnake Canyon Grocery,Nancy Davolio,United Package,Mascarpone Fabioli,40,25.6,0.1,921.6
+10315,9/26/2013,10/24/2013,10/3/2013,Island Trading,Margaret Peacock,United Package,Sasquatch Ale,14,11.2,0,156.8
+10316,9/27/2013,10/25/2013,10/8/2013,Rattlesnake Canyon Grocery,Nancy Davolio,Federal Shipping,Jack's New England Clam Chowder,10,7.7,0,77
+10317,9/30/2013,10/28/2013,10/10/2013,Lonesome Pine Restaurant,Michael Suyama,Speedy Express,Chai,20,14.4,0,288
+10318,10/1/2013,10/29/2013,10/4/2013,Island Trading,Laura Callahan,United Package,Jack's New England Clam Chowder,20,7.7,0,154
+10319,10/2/2013,10/30/2013,10/11/2013,Tortuga Restaurante,Robert King,Federal Shipping,Alice Mutton,8,31.2,0,249.6
+10320,10/3/2013,10/17/2013,10/18/2013,Wartian Herkku,Steven Buchanan,Federal Shipping,Flotemysost,30,17.2,0,516
+10321,10/3/2013,10/31/2013,10/11/2013,Island Trading,Janet Leverling,United Package,Steeleye Stout,10,14.4,0,144
+10322,10/4/2013,11/1/2013,10/23/2013,Pericles Comidas clÃ¡sicas,Robert King,Federal Shipping,Filo Mix,20,5.6,0,112
+10323,10/7/2013,11/4/2013,10/14/2013,KÃ¶niglich Essen,Margaret Peacock,Speedy Express,Genen Shouyu,5,12.4,0,62
+10324,10/8/2013,11/5/2013,10/10/2013,Save-a-lot Markets,Anne Dodsworth,Speedy Express,Pavlova,21,13.9,0.15,248.12
+10325,10/9/2013,10/23/2013,10/14/2013,KÃ¶niglich Essen,Nancy Davolio,Federal Shipping,Grandma's Boysenberry Spread,6,20,0,120
+10326,10/10/2013,11/7/2013,10/14/2013,BÃ³lido Comidas preparadas,Margaret Peacock,United Package,Chef Anton's Cajun Seasoning,24,17.6,0,422.4
+10327,10/11/2013,11/8/2013,10/14/2013,Folk och fÃ¤ HB,Andrew Fuller,Speedy Express,Chang,25,15.2,0.2,304
+10328,10/14/2013,11/11/2013,10/17/2013,Furia Bacalhau e Frutos do Mar,Margaret Peacock,Federal Shipping,Raclette Courdavault,9,44,0,396
+10329,10/15/2013,11/26/2013,10/23/2013,Split Rail Beer & Ale,Margaret Peacock,United Package,Teatime Chocolate Biscuits,10,7.3,0.05,69.35
+10330,10/16/2013,11/13/2013,10/28/2013,LILA-Supermercado,Janet Leverling,Speedy Express,GumbÃ¤r GummibÃ¤rchen,50,24.9,0.15,1058.25
+10331,10/16/2013,11/27/2013,10/21/2013,Bon app',Anne Dodsworth,Speedy Express,TourtiÃ¨re,15,5.9,0,88.5
+10332,10/17/2013,11/28/2013,10/21/2013,MÃ¨re Paillarde,Janet Leverling,United Package,Carnarvon Tigers,40,50,0.2,1600
+10333,10/18/2013,11/15/2013,10/25/2013,Wartian Herkku,Steven Buchanan,Federal Shipping,Tofu,10,18.6,0,186
+10334,10/21/2013,11/18/2013,10/28/2013,Victuailles en stock,Laura Callahan,United Package,Filo Mix,8,5.6,0,44.8
+10335,10/22/2013,11/19/2013,10/24/2013,Hungry Owl All-Night Grocers,Robert King,United Package,Chang,7,15.2,0.2,85.12
+10336,10/23/2013,11/20/2013,10/25/2013,Princesa Isabel Vinhos,Robert King,United Package,Chef Anton's Cajun Seasoning,18,17.6,0.1,285.12
+10337,10/24/2013,11/21/2013,10/29/2013,Frankenversand,Margaret Peacock,Federal Shipping,TunnbrÃ¶d,40,7.2,0,288
+10338,10/25/2013,11/22/2013,10/29/2013,Old World Delicatessen,Margaret Peacock,Federal Shipping,Alice Mutton,20,31.2,0,624
+10339,10/28/2013,11/25/2013,11/4/2013,MÃ¨re Paillarde,Andrew Fuller,United Package,Chef Anton's Cajun Seasoning,10,17.6,0,176
+10340,10/29/2013,11/26/2013,11/8/2013,Bon app',Nancy Davolio,Federal Shipping,Carnarvon Tigers,20,50,0.05,950
+10341,10/29/2013,11/26/2013,11/5/2013,Simons bistro,Robert King,Federal Shipping,Geitost,8,2,0,16
+10342,10/30/2013,11/13/2013,11/4/2013,Frankenversand,Margaret Peacock,United Package,Chang,24,15.2,0.2,291.84
+10343,10/31/2013,11/28/2013,11/6/2013,Lehmanns Marktstand,Margaret Peacock,Speedy Express,Wimmers gute SemmelknÃ¶del,50,26.6,0,1330
+10344,11/1/2013,11/29/2013,11/5/2013,White Clover Markets,Margaret Peacock,United Package,Chef Anton's Cajun Seasoning,35,17.6,0,616
+10345,11/4/2013,12/2/2013,11/11/2013,QUICK-Stop,Andrew Fuller,United Package,Northwoods Cranberry Sauce,70,32,0,2240
+10346,11/5/2013,12/17/2013,11/8/2013,Rattlesnake Canyon Grocery,Janet Leverling,Federal Shipping,Alice Mutton,36,31.2,0.1,1010.88
+10347,11/6/2013,12/4/2013,11/8/2013,Familia Arquibaldo,Margaret Peacock,Federal Shipping,NuNuCaÂ NuÃ-Nougat-Creme,10,11.2,0,112
+10348,11/7/2013,12/5/2013,11/15/2013,Die Wandernde Kuh,Margaret Peacock,United Package,Chai,15,14.4,0.15,183.6
+10349,11/8/2013,12/6/2013,11/15/2013,Split Rail Beer & Ale,Robert King,Speedy Express,TourtiÃ¨re,24,5.9,0,141.6
+10350,11/11/2013,12/9/2013,12/3/2013,La maison d'Asie,Michael Suyama,United Package,Valkoinen suklaa,15,13,0.1,175.5
+10351,11/11/2013,12/9/2013,11/20/2013,Ernst Handel,Nancy Davolio,Speedy Express,CÃ´te de Blaye,20,210.8,0.05,4005.2
+10352,11/12/2013,11/26/2013,11/18/2013,Furia Bacalhau e Frutos do Mar,Janet Leverling,Federal Shipping,Guarana Fantastica,10,3.6,0,36
+10353,11/13/2013,12/11/2013,11/25/2013,Piccolo und mehr,Robert King,Federal Shipping,Queso Cabrales,12,16.8,0.2,161.28
+10354,11/14/2013,12/12/2013,11/20/2013,Pericles Comidas clÃ¡sicas,Laura Callahan,Federal Shipping,Chai,12,14.4,0,172.8
+10355,11/15/2013,12/13/2013,11/20/2013,Around the Horn,Michael Suyama,Speedy Express,Guarana Fantastica,25,3.6,0,90
+10356,11/18/2013,12/16/2013,11/27/2013,Die Wandernde Kuh,Michael Suyama,United Package,Gorgonzola Telino,30,10,0,300
+10357,11/19/2013,12/17/2013,12/2/2013,LILA-Supermercado,Nancy Davolio,Federal Shipping,Ikura,30,24.8,0.2,595.2
+10358,11/20/2013,12/18/2013,11/27/2013,La maison d'Asie,Steven Buchanan,Speedy Express,Guarana Fantastica,10,3.6,0.05,34.2
+10359,11/21/2013,12/19/2013,11/26/2013,Seven Seas Imports,Steven Buchanan,Federal Shipping,Pavlova,56,13.9,0.05,739.48
+10360,11/22/2013,12/20/2013,12/2/2013,Blondesddsl pÃ¨re et fils,Margaret Peacock,Federal Shipping,RÃ¶ssle Sauerkraut,30,36.4,0,1092
+10361,11/22/2013,12/20/2013,12/3/2013,QUICK-Stop,Nancy Davolio,United Package,Chartreuse verte,54,14.4,0.1,699.84
+10362,11/25/2013,12/23/2013,11/28/2013,Bon app',Janet Leverling,Speedy Express,NuNuCaÂ NuÃ-Nougat-Creme,50,11.2,0,560
+10363,11/26/2013,12/24/2013,12/4/2013,Drachenblut Delikatessen,Margaret Peacock,Federal Shipping,Gorgonzola Telino,20,10,0,200
+10364,11/26/2013,1/7/2014,12/4/2013,Eastern Connection,Nancy Davolio,Speedy Express,Gudbrandsdalsost,30,28.8,0,864
+10365,11/27/2013,12/25/2013,12/2/2013,Antonio Moreno TaquerÃ­a,Janet Leverling,United Package,Queso Cabrales,24,16.8,0,403.2
+10366,11/28/2013,1/9/2014,12/30/2013,GalerÃ­a del gastrÃ³nomo,Laura Callahan,United Package,Louisiana Fiery Hot Pepper Sauce,5,16.8,0,84
+10367,11/28/2013,12/26/2013,12/2/2013,Vaffeljernet,Robert King,Federal Shipping,Sasquatch Ale,36,11.2,0,403.2
+10368,11/29/2013,12/27/2013,12/2/2013,Ernst Handel,Andrew Fuller,United Package,Sir Rodney's Scones,5,8,0.1,36
+10369,12/2/2013,12/30/2013,12/9/2013,Split Rail Beer & Ale,Laura Callahan,United Package,ThÃ¼ringer Rostbratwurst,20,99,0,1980
+10370,12/3/2013,12/31/2013,12/27/2013,Chop-suey Chinese,Michael Suyama,United Package,Chai,15,14.4,0.15,183.6
+10371,12/3/2013,12/31/2013,12/24/2013,La maison d'Asie,Nancy Davolio,Speedy Express,Inlagd Sill,6,15.2,0.2,72.96
+10372,12/4/2013,1/1/2014,12/9/2013,Queen Cozinha,Steven Buchanan,United Package,Sir Rodney's Marmalade,12,64.8,0.25,583.2
+10373,12/5/2013,1/2/2014,12/11/2013,Hungry Owl All-Night Grocers,Margaret Peacock,Federal Shipping,Escargots de Bourgogne,80,10.6,0.2,678.4
+10374,12/5/2013,1/2/2014,12/9/2013,Wolski  Zajazd,Nancy Davolio,Federal Shipping,Gorgonzola Telino,30,10,0,300
+10375,12/6/2013,1/3/2014,12/9/2013,Hungry Coyote Import Store,Janet Leverling,United Package,Tofu,15,18.6,0,279
+10376,12/9/2013,1/6/2014,12/13/2013,MÃ¨re Paillarde,Nancy Davolio,United Package,Gorgonzola Telino,42,10,0.05,399
+10377,12/9/2013,1/6/2014,12/13/2013,Seven Seas Imports,Nancy Davolio,Federal Shipping,RÃ¶ssle Sauerkraut,20,36.4,0.15,618.8
+10378,12/10/2013,1/7/2014,12/19/2013,Folk och fÃ¤ HB,Steven Buchanan,Federal Shipping,Flotemysost,6,17.2,0,103.2
+10379,12/11/2013,1/8/2014,12/13/2013,Que DelÃ­cia,Andrew Fuller,Speedy Express,Jack's New England Clam Chowder,8,7.7,0.1,55.44
+10380,12/12/2013,1/9/2014,1/16/2014,Hungry Owl All-Night Grocers,Laura Callahan,Federal Shipping,Nord-Ost Matjeshering,18,20.7,0.1,335.34
+10381,12/12/2013,1/9/2014,12/13/2013,LILA-Supermercado,Janet Leverling,Federal Shipping,Longlife Tofu,14,8,0,112
+10382,12/13/2013,1/10/2014,12/16/2013,Ernst Handel,Margaret Peacock,Speedy Express,Chef Anton's Gumbo Mix,32,17,0,544
+10383,12/16/2013,1/13/2014,12/18/2013,Around the Horn,Laura Callahan,Federal Shipping,Konbu,20,4.8,0,96
+10384,12/16/2013,1/13/2014,12/20/2013,Berglunds snabbkÃ¶p,Janet Leverling,Federal Shipping,Sir Rodney's Marmalade,28,64.8,0,1814.4
+10385,12/17/2013,1/14/2014,12/23/2013,Split Rail Beer & Ale,Nancy Davolio,United Package,Uncle Bob's Organic Dried Pears,10,24,0.2,192
+10386,12/18/2013,1/1/2014,12/25/2013,Familia Arquibaldo,Anne Dodsworth,Federal Shipping,Guarana Fantastica,15,3.6,0,54
+10387,12/18/2013,1/15/2014,12/20/2013,SantÃ© Gourmet,Nancy Davolio,United Package,Guarana Fantastica,15,3.6,0,54
+10388,12/19/2013,1/16/2014,12/20/2013,Seven Seas Imports,Andrew Fuller,Speedy Express,Rogede sild,15,7.6,0.2,91.2
+10389,12/20/2013,1/17/2014,12/24/2013,Bottom-Dollar Markets,Margaret Peacock,United Package,Ikura,16,24.8,0,396.8
+10390,12/23/2013,1/20/2014,12/26/2013,Ernst Handel,Michael Suyama,Speedy Express,Gorgonzola Telino,60,10,0.1,540
+10391,12/23/2013,1/20/2014,12/31/2013,Drachenblut Delikatessen,Janet Leverling,Federal Shipping,Konbu,18,4.8,0,86.4
+10392,12/24/2013,1/21/2014,1/1/2014,Piccolo und mehr,Andrew Fuller,Federal Shipping,Gudbrandsdalsost,50,28.8,0,1440
+10393,12/25/2013,1/22/2014,1/3/2014,Save-a-lot Markets,Nancy Davolio,Federal Shipping,Chang,25,15.2,0.25,285
+10394,12/25/2013,1/22/2014,1/3/2014,Hungry Coyote Import Store,Nancy Davolio,Federal Shipping,Konbu,10,4.8,0,48
+10395,12/26/2013,1/23/2014,1/3/2014,HILARION-Abastos,Michael Suyama,Speedy Express,Spegesild,28,9.6,0.1,241.92
+10396,12/27/2013,1/10/2014,1/6/2014,Frankenversand,Nancy Davolio,Federal Shipping,TunnbrÃ¶d,40,7.2,0,288
+10397,12/27/2013,1/24/2014,1/2/2014,Princesa Isabel Vinhos,Steven Buchanan,Speedy Express,Sir Rodney's Scones,10,8,0.15,68
+10398,12/30/2013,1/27/2014,1/9/2014,Save-a-lot Markets,Andrew Fuller,Federal Shipping,Steeleye Stout,30,14.4,0,432
+10399,12/31/2013,1/14/2014,1/8/2014,Vaffeljernet,Laura Callahan,Federal Shipping,Scottish Longbreads,60,10,0,600
+10400,1/1/2014,1/29/2014,1/16/2014,Eastern Connection,Nancy Davolio,Federal Shipping,ThÃ¼ringer Rostbratwurst,21,99,0,2079
+10401,1/1/2014,1/29/2014,1/10/2014,Rattlesnake Canyon Grocery,Nancy Davolio,Speedy Express,Nord-Ost Matjeshering,18,20.7,0,372.6
+10402,1/2/2014,2/13/2014,1/10/2014,Ernst Handel,Laura Callahan,United Package,TunnbrÃ¶d,60,7.2,0,432
+10403,1/3/2014,1/31/2014,1/9/2014,Ernst Handel,Margaret Peacock,Federal Shipping,Pavlova,21,13.9,0.15,248.12
+10404,1/3/2014,1/31/2014,1/8/2014,Magazzini Alimentari Riuniti,Andrew Fuller,Speedy Express,GumbÃ¤r GummibÃ¤rchen,30,24.9,0.05,709.65
+10405,1/6/2014,2/3/2014,1/22/2014,LINO-Delicateses,Nancy Davolio,Speedy Express,Aniseed Syrup,50,8,0,400
+10406,1/7/2014,2/18/2014,1/13/2014,Queen Cozinha,Robert King,Speedy Express,Chai,10,14.4,0,144
+10407,1/7/2014,2/4/2014,1/30/2014,Ottilies KÃ¤seladen,Andrew Fuller,United Package,Queso Cabrales,30,16.8,0,504
+10408,1/8/2014,2/5/2014,1/14/2014,Folies gourmandes,Laura Callahan,Speedy Express,Gravad lax,10,20.8,0,208
+10409,1/9/2014,2/6/2014,1/14/2014,OcÃ©ano AtlÃ¡ntico Ltda.,Janet Leverling,Speedy Express,Tofu,12,18.6,0,223.2
+10410,1/10/2014,2/7/2014,1/15/2014,Bottom-Dollar Markets,Janet Leverling,Federal Shipping,Geitost,49,2,0,98
+10411,1/10/2014,2/7/2014,1/21/2014,Bottom-Dollar Markets,Anne Dodsworth,Federal Shipping,Jack's New England Clam Chowder,25,7.7,0.2,154
+10412,1/13/2014,2/10/2014,1/15/2014,Wartian Herkku,Laura Callahan,United Package,Tofu,20,18.6,0.1,334.8
+10413,1/14/2014,2/11/2014,1/16/2014,La maison d'Asie,Janet Leverling,United Package,Chai,24,14.4,0,345.6
+10414,1/14/2014,2/11/2014,1/17/2014,Familia Arquibaldo,Andrew Fuller,Federal Shipping,Teatime Chocolate Biscuits,18,7.3,0.05,124.83
+10415,1/15/2014,2/12/2014,1/24/2014,Hungry Coyote Import Store,Janet Leverling,Speedy Express,Alice Mutton,2,31.2,0,62.4
+10416,1/16/2014,2/13/2014,1/27/2014,Wartian Herkku,Laura Callahan,Federal Shipping,Teatime Chocolate Biscuits,20,7.3,0,146
+10417,1/16/2014,2/13/2014,1/28/2014,Simons bistro,Margaret Peacock,Federal Shipping,CÃ´te de Blaye,50,210.8,0,10540
+10418,1/17/2014,2/14/2014,1/24/2014,QUICK-Stop,Margaret Peacock,Speedy Express,Chang,60,15.2,0,912
+10419,1/20/2014,2/17/2014,1/30/2014,Richter Supermarkt,Margaret Peacock,United Package,Camembert Pierrot,60,27.2,0.05,1550.4
+10420,1/21/2014,2/18/2014,1/27/2014,Wellington Importadora,Janet Leverling,Speedy Express,Mishi Kobe Niku,20,77.6,0.1,1396.8
+10421,1/21/2014,3/4/2014,1/27/2014,Que DelÃ­cia,Laura Callahan,Speedy Express,Teatime Chocolate Biscuits,4,7.3,0.15,24.82
+10422,1/22/2014,2/19/2014,1/31/2014,Franchi S.p.A.,Andrew Fuller,Speedy Express,GumbÃ¤r GummibÃ¤rchen,2,24.9,0,49.8
+10423,1/23/2014,2/6/2014,2/24/2014,Gourmet Lanchonetes,Michael Suyama,Federal Shipping,Gorgonzola Telino,14,10,0,140
+10424,1/23/2014,2/20/2014,1/27/2014,MÃ¨re Paillarde,Robert King,United Package,Steeleye Stout,60,14.4,0.2,691.2
+10425,1/24/2014,2/21/2014,2/14/2014,La maison d'Asie,Michael Suyama,United Package,PÃ¢tÃ© chinois,10,19.2,0.25,144
+10426,1/27/2014,2/24/2014,2/6/2014,GalerÃ­a del gastrÃ³nomo,Margaret Peacock,Speedy Express,Gnocchi di nonna Alice,5,30.4,0,152
+10427,1/27/2014,2/24/2014,3/3/2014,Piccolo und mehr,Margaret Peacock,United Package,Tofu,35,18.6,0,651
+10428,1/28/2014,2/25/2014,2/4/2014,Reggiani Caseifici,Robert King,Speedy Express,Spegesild,20,9.6,0,192
+10429,1/29/2014,3/12/2014,2/7/2014,Hungry Owl All-Night Grocers,Janet Leverling,United Package,Valkoinen suklaa,40,13,0,520
+10430,1/30/2014,2/13/2014,2/3/2014,Ernst Handel,Margaret Peacock,Speedy Express,Alice Mutton,45,31.2,0.2,1123.2
+10431,1/30/2014,2/13/2014,2/7/2014,Bottom-Dollar Markets,Margaret Peacock,United Package,Alice Mutton,50,31.2,0.25,1170
+10432,1/31/2014,2/14/2014,2/7/2014,Split Rail Beer & Ale,Janet Leverling,United Package,GumbÃ¤r GummibÃ¤rchen,10,24.9,0,249
+10433,2/3/2014,3/3/2014,3/4/2014,Princesa Isabel Vinhos,Janet Leverling,Federal Shipping,Gnocchi di nonna Alice,28,30.4,0,851.2
+10434,2/3/2014,3/3/2014,2/13/2014,Folk och fÃ¤ HB,Janet Leverling,United Package,Queso Cabrales,6,16.8,0,100.8
+10435,2/4/2014,3/18/2014,2/7/2014,Consolidated Holdings,Laura Callahan,United Package,Chang,10,15.2,0,152
+10436,2/5/2014,3/5/2014,2/11/2014,Blondesddsl pÃ¨re et fils,Janet Leverling,United Package,Spegesild,5,9.6,0,48
+10437,2/5/2014,3/5/2014,2/12/2014,Wartian Herkku,Laura Callahan,Speedy Express,Perth Pasties,15,26.2,0,393
+10438,2/6/2014,3/6/2014,2/14/2014,Toms SpezialitÃ¤ten,Janet Leverling,United Package,Teatime Chocolate Biscuits,15,7.3,0.2,87.6
+10439,2/7/2014,3/7/2014,2/10/2014,MÃ¨re Paillarde,Michael Suyama,Federal Shipping,Queso Manchego La Pastora,15,30.4,0,456
+10440,2/10/2014,3/10/2014,2/28/2014,Save-a-lot Markets,Margaret Peacock,United Package,Chang,45,15.2,0.15,581.4
+10441,2/10/2014,3/24/2014,3/14/2014,Old World Delicatessen,Janet Leverling,United Package,Schoggi Schokolade,50,35.1,0,1755
+10442,2/11/2014,3/11/2014,2/18/2014,Ernst Handel,Janet Leverling,United Package,Queso Cabrales,30,16.8,0,504
+10443,2/12/2014,3/12/2014,2/14/2014,Reggiani Caseifici,Laura Callahan,Speedy Express,Queso Cabrales,6,16.8,0.2,80.64
+10444,2/12/2014,3/12/2014,2/21/2014,Berglunds snabbkÃ¶p,Janet Leverling,Federal Shipping,Alice Mutton,10,31.2,0,312
+10445,2/13/2014,3/13/2014,2/20/2014,Berglunds snabbkÃ¶p,Janet Leverling,Speedy Express,Chartreuse verte,6,14.4,0,86.4
+10446,2/14/2014,3/14/2014,2/19/2014,Toms SpezialitÃ¤ten,Michael Suyama,Speedy Express,Teatime Chocolate Biscuits,12,7.3,0.1,78.84
+10447,2/14/2014,3/14/2014,3/7/2014,Ricardo Adocicados,Margaret Peacock,United Package,Teatime Chocolate Biscuits,40,7.3,0,292
+10448,2/17/2014,3/17/2014,2/24/2014,Rancho grande,Margaret Peacock,United Package,GumbÃ¤r GummibÃ¤rchen,6,24.9,0,149.4
+10449,2/18/2014,3/18/2014,2/27/2014,Blondesddsl pÃ¨re et fils,Janet Leverling,United Package,Ikura,14,24.8,0,347.2
+10450,2/19/2014,3/19/2014,3/11/2014,Victuailles en stock,Laura Callahan,United Package,Ikura,20,24.8,0.2,396.8
+10451,2/19/2014,3/5/2014,3/12/2014,QUICK-Stop,Margaret Peacock,Federal Shipping,PÃ¢tÃ© chinois,120,19.2,0.1,2073.6
+10452,2/20/2014,3/20/2014,2/26/2014,Save-a-lot Markets,Laura Callahan,Speedy Express,RÃ¶ssle Sauerkraut,15,36.4,0,546
+10453,2/21/2014,3/21/2014,2/26/2014,Around the Horn,Nancy Davolio,United Package,Chocolade,15,10.2,0.1,137.7
+10454,2/21/2014,3/21/2014,2/25/2014,La maison d'Asie,Margaret Peacock,Federal Shipping,Pavlova,20,13.9,0.2,222.4
+10455,2/24/2014,4/7/2014,3/3/2014,Wartian Herkku,Laura Callahan,United Package,Chartreuse verte,20,14.4,0,288
+10456,2/25/2014,4/8/2014,2/28/2014,KÃ¶niglich Essen,Laura Callahan,United Package,Sir Rodney's Scones,40,8,0.15,272
+10457,2/25/2014,3/25/2014,3/3/2014,KÃ¶niglich Essen,Andrew Fuller,Speedy Express,Raclette Courdavault,36,44,0,1584
+10458,2/26/2014,3/26/2014,3/4/2014,SuprÃªmes dÃ©lices,Robert King,Federal Shipping,GumbÃ¤r GummibÃ¤rchen,30,24.9,0,747
+10459,2/27/2014,3/27/2014,2/28/2014,Victuailles en stock,Margaret Peacock,United Package,Uncle Bob's Organic Dried Pears,16,24,0.05,364.8
+10460,2/28/2014,3/28/2014,3/3/2014,Folk och fÃ¤ HB,Laura Callahan,Speedy Express,Scottish Longbreads,21,10,0.25,157.5
+10461,2/28/2014,3/28/2014,3/5/2014,LILA-Supermercado,Nancy Davolio,Federal Shipping,Sir Rodney's Scones,40,8,0.25,240
+10462,3/3/2014,3/31/2014,3/18/2014,Consolidated Holdings,Andrew Fuller,Speedy Express,Konbu,1,4.8,0,4.8
+10463,3/4/2014,4/1/2014,3/6/2014,SuprÃªmes dÃ©lices,Steven Buchanan,Federal Shipping,Teatime Chocolate Biscuits,21,7.3,0,153.3
+10464,3/4/2014,4/1/2014,3/14/2014,Furia Bacalhau e Frutos do Mar,Margaret Peacock,United Package,Chef Anton's Cajun Seasoning,16,17.6,0.2,225.28
+10465,3/5/2014,4/2/2014,3/14/2014,Vaffeljernet,Nancy Davolio,Federal Shipping,Guarana Fantastica,25,3.6,0,90
+10466,3/6/2014,4/3/2014,3/13/2014,ComÃ©rcio Mineiro,Margaret Peacock,Speedy Express,Queso Cabrales,10,16.8,0,168
+10467,3/6/2014,4/3/2014,3/11/2014,Magazzini Alimentari Riuniti,Laura Callahan,United Package,Guarana Fantastica,28,3.6,0,100.8
+10468,3/7/2014,4/4/2014,3/12/2014,KÃ¶niglich Essen,Janet Leverling,Federal Shipping,Nord-Ost Matjeshering,8,20.7,0,165.6
+10469,3/10/2014,4/7/2014,3/14/2014,White Clover Markets,Nancy Davolio,Speedy Express,Chang,40,15.2,0.15,516.8
+10470,3/11/2014,4/8/2014,3/14/2014,Bon app',Margaret Peacock,United Package,Carnarvon Tigers,30,50,0,1500
+10471,3/11/2014,4/8/2014,3/18/2014,B's Beverages,Andrew Fuller,Federal Shipping,Uncle Bob's Organic Dried Pears,30,24,0,720
+10472,3/12/2014,4/9/2014,3/19/2014,Seven Seas Imports,Laura Callahan,Speedy Express,Guarana Fantastica,80,3.6,0.05,273.6
+10473,3/13/2014,3/27/2014,3/21/2014,Island Trading,Nancy Davolio,Federal Shipping,Geitost,12,2,0,24
+10474,3/13/2014,4/10/2014,3/21/2014,Pericles Comidas clÃ¡sicas,Steven Buchanan,United Package,Tofu,12,18.6,0,223.2
+10475,3/14/2014,4/11/2014,4/4/2014,SuprÃªmes dÃ©lices,Anne Dodsworth,Speedy Express,Gorgonzola Telino,35,10,0.15,297.5
+10476,3/17/2014,4/14/2014,3/24/2014,HILARION-Abastos,Laura Callahan,Federal Shipping,PÃ¢tÃ© chinois,2,19.2,0.05,36.48
+10477,3/17/2014,4/14/2014,3/25/2014,Princesa Isabel Vinhos,Steven Buchanan,United Package,Chai,15,14.4,0,216
+10478,3/18/2014,4/1/2014,3/26/2014,Victuailles en stock,Andrew Fuller,Federal Shipping,Ikura,20,24.8,0.05,471.2
+10479,3/19/2014,4/16/2014,3/21/2014,Rattlesnake Canyon Grocery,Janet Leverling,Federal Shipping,CÃ´te de Blaye,30,210.8,0,6324
+10480,3/20/2014,4/17/2014,3/24/2014,Folies gourmandes,Michael Suyama,United Package,Zaanse koeken,30,7.6,0,228
+10481,3/20/2014,4/17/2014,3/25/2014,Ricardo Adocicados,Laura Callahan,United Package,Maxilaku,24,16,0,384
+10482,3/21/2014,4/18/2014,4/10/2014,Lazy K Kountry Store,Nancy Davolio,Federal Shipping,Boston Crab Meat,10,14.7,0,147
+10483,3/24/2014,4/21/2014,4/25/2014,White Clover Markets,Robert King,United Package,Sasquatch Ale,35,11.2,0.05,372.4
+10484,3/24/2014,4/21/2014,4/1/2014,B's Beverages,Janet Leverling,Federal Shipping,Sir Rodney's Scones,14,8,0,112
+10485,3/25/2014,4/8/2014,3/31/2014,LINO-Delicateses,Margaret Peacock,United Package,Chang,20,15.2,0.1,273.6
+10486,3/26/2014,4/23/2014,4/2/2014,HILARION-Abastos,Nancy Davolio,United Package,Queso Cabrales,5,16.8,0,84
+10487,3/26/2014,4/23/2014,3/28/2014,Queen Cozinha,Andrew Fuller,United Package,Teatime Chocolate Biscuits,5,7.3,0,36.5
+10488,3/27/2014,4/24/2014,4/2/2014,Frankenversand,Laura Callahan,United Package,Raclette Courdavault,30,44,0,1320
+10489,3/28/2014,4/25/2014,4/9/2014,Piccolo und mehr,Michael Suyama,United Package,Queso Cabrales,15,16.8,0.25,189
+10490,3/31/2014,4/28/2014,4/3/2014,HILARION-Abastos,Robert King,United Package,Raclette Courdavault,60,44,0,2640
+10491,3/31/2014,4/28/2014,4/8/2014,Furia Bacalhau e Frutos do Mar,Laura Callahan,Federal Shipping,Gula Malacca,15,15.5,0.15,197.62
+10492,4/1/2014,4/29/2014,4/11/2014,Bottom-Dollar Markets,Janet Leverling,Speedy Express,NuNuCaÂ NuÃ-Nougat-Creme,60,11.2,0.05,638.4
+10493,4/2/2014,4/30/2014,4/10/2014,La maison d'Asie,Margaret Peacock,Federal Shipping,Louisiana Fiery Hot Pepper Sauce,15,16.8,0.1,226.8
+10494,4/2/2014,4/30/2014,4/9/2014,ComÃ©rcio Mineiro,Margaret Peacock,United Package,Gnocchi di nonna Alice,30,30.4,0,912
+10495,4/3/2014,5/1/2014,4/11/2014,Laughing Bacchus Wine Cellars,Janet Leverling,Federal Shipping,TunnbrÃ¶d,10,7.2,0,72
+10496,4/4/2014,5/2/2014,4/7/2014,TradiÃ§Ã£o Hipermercados,Robert King,United Package,Gorgonzola Telino,20,10,0.05,190
+10497,4/4/2014,5/2/2014,4/7/2014,Lehmanns Marktstand,Robert King,Speedy Express,Gnocchi di nonna Alice,14,30.4,0,425.6
+10498,4/7/2014,5/5/2014,4/11/2014,HILARION-Abastos,Laura Callahan,United Package,Guarana Fantastica,14,4.5,0,63
+10499,4/8/2014,5/6/2014,4/16/2014,LILA-Supermercado,Margaret Peacock,United Package,RÃ¶ssle Sauerkraut,20,45.6,0,912
+10500,4/9/2014,5/7/2014,4/17/2014,La maison d'Asie,Michael Suyama,Speedy Express,Genen Shouyu,12,15.5,0.05,176.7
+10501,4/9/2014,5/7/2014,4/16/2014,Blauer See Delikatessen,Anne Dodsworth,Federal Shipping,TourtiÃ¨re,20,7.45,0,149
+10502,4/10/2014,5/8/2014,4/29/2014,Pericles Comidas clÃ¡sicas,Andrew Fuller,Speedy Express,Rogede sild,21,9.5,0,199.5
+10503,4/11/2014,5/9/2014,4/16/2014,Hungry Owl All-Night Grocers,Michael Suyama,United Package,Tofu,70,23.25,0,1627.5
+10504,4/11/2014,5/9/2014,4/18/2014,White Clover Markets,Margaret Peacock,Federal Shipping,Chang,12,19,0,228
+10505,4/14/2014,5/12/2014,4/21/2014,MÃ¨re Paillarde,Janet Leverling,Federal Shipping,Tarte au sucre,3,49.3,0,147.9
+10506,4/15/2014,5/13/2014,5/2/2014,KÃ¶niglich Essen,Anne Dodsworth,United Package,NuNuCaÂ NuÃ-Nougat-Creme,18,14,0.1,226.8
+10507,4/15/2014,5/13/2014,4/22/2014,Antonio Moreno TaquerÃ­a,Robert King,Speedy Express,Ipoh Coffee,15,46,0.15,586.5
+10508,4/16/2014,5/14/2014,5/13/2014,Ottilies KÃ¤seladen,Nancy Davolio,United Package,Konbu,10,6,0,60
+10509,4/17/2014,5/15/2014,4/29/2014,Blauer See Delikatessen,Margaret Peacock,Speedy Express,RÃ¶ssle Sauerkraut,3,45.6,0,136.8
+10510,4/18/2014,5/16/2014,4/28/2014,Save-a-lot Markets,Michael Suyama,Federal Shipping,ThÃ¼ringer Rostbratwurst,36,123.79,0,4456.44
+10511,4/18/2014,5/16/2014,4/21/2014,Bon app',Margaret Peacock,Federal Shipping,Chef Anton's Cajun Seasoning,50,22,0.15,935
+10512,4/21/2014,5/19/2014,4/24/2014,Familia Arquibaldo,Robert King,United Package,Guarana Fantastica,10,4.5,0.15,38.25
+10513,4/22/2014,6/3/2014,4/28/2014,Die Wandernde Kuh,Robert King,Speedy Express,Sir Rodney's Scones,40,10,0.2,320
+10514,4/22/2014,5/20/2014,5/16/2014,Ernst Handel,Janet Leverling,United Package,Sir Rodney's Marmalade,39,81,0,3159
+10515,4/23/2014,5/7/2014,5/23/2014,QUICK-Stop,Andrew Fuller,Speedy Express,Mishi Kobe Niku,16,97,0.15,1319.2
+10516,4/24/2014,5/22/2014,5/1/2014,Hungry Owl All-Night Grocers,Andrew Fuller,Federal Shipping,Carnarvon Tigers,25,62.5,0.1,1406.25
+10517,4/24/2014,5/22/2014,4/29/2014,North/South,Janet Leverling,Federal Shipping,Filo Mix,6,7,0,42
+10518,4/25/2014,5/9/2014,5/5/2014,Tortuga Restaurante,Margaret Peacock,United Package,Guarana Fantastica,5,4.5,0,22.5
+10519,4/28/2014,5/26/2014,5/1/2014,Chop-suey Chinese,Michael Suyama,Federal Shipping,Ikura,16,31,0.05,471.2
+10520,4/29/2014,5/27/2014,5/1/2014,SantÃ© Gourmet,Robert King,Speedy Express,Guarana Fantastica,8,4.5,0,36
+10521,4/29/2014,5/27/2014,5/2/2014,Cactus Comidas para llevar,Laura Callahan,United Package,Steeleye Stout,3,18,0,54
+10522,4/30/2014,5/28/2014,5/6/2014,Lehmanns Marktstand,Margaret Peacock,Speedy Express,Chai,40,18,0.2,576
+10523,5/1/2014,5/29/2014,5/30/2014,Seven Seas Imports,Robert King,United Package,Alice Mutton,25,39,0.1,877.5
+10524,5/1/2014,5/29/2014,5/7/2014,Berglunds snabbkÃ¶p,Nancy Davolio,United Package,Ikura,2,31,0,62
+10525,5/2/2014,5/30/2014,5/23/2014,Bon app',Nancy Davolio,United Package,Inlagd Sill,30,19,0,570
+10526,5/5/2014,6/2/2014,5/15/2014,Wartian Herkku,Margaret Peacock,United Package,Chai,8,18,0.15,122.4
+10527,5/5/2014,6/2/2014,5/7/2014,QUICK-Stop,Robert King,Speedy Express,Chef Anton's Cajun Seasoning,50,22,0.1,990
+10528,5/6/2014,5/20/2014,5/9/2014,Great Lakes Food Market,Michael Suyama,United Package,Queso Cabrales,3,21,0,63
+10529,5/7/2014,6/4/2014,5/9/2014,Maison Dewey,Steven Buchanan,United Package,PÃ¢tÃ© chinois,14,24,0,336
+10530,5/8/2014,6/5/2014,5/12/2014,Piccolo und mehr,Janet Leverling,United Package,Alice Mutton,40,39,0,1560
+10531,5/8/2014,6/5/2014,5/19/2014,OcÃ©ano AtlÃ¡ntico Ltda.,Robert King,Speedy Express,Raclette Courdavault,2,55,0,110
+10532,5/9/2014,6/6/2014,5/12/2014,Eastern Connection,Robert King,Federal Shipping,Nord-Ost Matjeshering,15,25.89,0,388.35
+10533,5/12/2014,6/9/2014,5/22/2014,Folk och fÃ¤ HB,Laura Callahan,Speedy Express,Chef Anton's Cajun Seasoning,50,22,0.05,1045
+10534,5/12/2014,6/9/2014,5/14/2014,Lehmanns Marktstand,Laura Callahan,United Package,Nord-Ost Matjeshering,10,25.89,0,258.9
+10535,5/13/2014,6/10/2014,5/21/2014,Antonio Moreno TaquerÃ­a,Margaret Peacock,Speedy Express,Queso Cabrales,50,21,0.1,945
+10536,5/14/2014,6/11/2014,6/6/2014,Lehmanns Marktstand,Janet Leverling,United Package,Queso Manchego La Pastora,15,38,0.25,427.5
+10537,5/14/2014,5/28/2014,5/19/2014,Richter Supermarkt,Nancy Davolio,Speedy Express,Gorgonzola Telino,30,12.5,0,375
+10538,5/15/2014,6/12/2014,5/16/2014,B's Beverages,Anne Dodsworth,Federal Shipping,Outback Lager,7,15,0,105
+10539,5/16/2014,6/13/2014,5/23/2014,B's Beverages,Michael Suyama,Federal Shipping,Konbu,8,6,0,48
+10540,5/19/2014,6/16/2014,6/13/2014,QUICK-Stop,Janet Leverling,Federal Shipping,Aniseed Syrup,60,10,0,600
+10541,5/19/2014,6/16/2014,5/29/2014,Hanari Carnes,Andrew Fuller,Speedy Express,Guarana Fantastica,35,4.5,0.1,141.75
+10542,5/20/2014,6/17/2014,5/26/2014,KÃ¶niglich Essen,Nancy Davolio,Federal Shipping,Queso Cabrales,15,21,0.05,299.25
+10543,5/21/2014,6/18/2014,5/23/2014,LILA-Supermercado,Laura Callahan,United Package,Queso Manchego La Pastora,30,38,0.15,969
+10544,5/21/2014,6/18/2014,5/30/2014,Lonesome Pine Restaurant,Margaret Peacock,Speedy Express,RÃ¶ssle Sauerkraut,7,45.6,0,319.2
+10545,5/22/2014,6/19/2014,6/26/2014,Lazy K Kountry Store,Laura Callahan,United Package,Queso Cabrales,10,21,0,210
+10546,5/23/2014,6/20/2014,5/27/2014,Victuailles en stock,Nancy Davolio,Federal Shipping,Uncle Bob's Organic Dried Pears,10,30,0,300
+10547,5/23/2014,6/20/2014,6/2/2014,Seven Seas Imports,Janet Leverling,United Package,Mascarpone Fabioli,24,32,0.15,652.8
+10548,5/26/2014,6/23/2014,6/2/2014,Toms SpezialitÃ¤ten,Janet Leverling,United Package,Sasquatch Ale,10,14,0.25,105
+10549,5/27/2014,6/10/2014,5/30/2014,QUICK-Stop,Steven Buchanan,Speedy Express,Gorgonzola Telino,55,12.5,0.15,584.38
+10550,5/28/2014,6/25/2014,6/6/2014,Godos Cocina TÃ­pica,Robert King,Federal Shipping,Alice Mutton,8,39,0.1,280.8
+10551,5/28/2014,7/9/2014,6/6/2014,Furia Bacalhau e Frutos do Mar,Margaret Peacock,Federal Shipping,Pavlova,40,17.45,0.15,593.3
+10552,5/29/2014,6/26/2014,6/5/2014,HILARION-Abastos,Andrew Fuller,Speedy Express,Gudbrandsdalsost,18,36,0,648
+10553,5/30/2014,6/27/2014,6/3/2014,Wartian Herkku,Andrew Fuller,United Package,Queso Cabrales,15,21,0,315
+10554,5/30/2014,6/27/2014,6/5/2014,Ottilies KÃ¤seladen,Margaret Peacock,Federal Shipping,Pavlova,30,17.45,0.05,497.32
+10555,6/2/2014,6/30/2014,6/4/2014,Save-a-lot Markets,Michael Suyama,Federal Shipping,Tofu,30,23.25,0.2,558
+10556,6/3/2014,7/15/2014,6/13/2014,Simons bistro,Andrew Fuller,Speedy Express,Mozzarella di Giovanni,24,34.8,0,835.2
+10557,6/3/2014,6/17/2014,6/6/2014,Lehmanns Marktstand,Anne Dodsworth,United Package,Wimmers gute SemmelknÃ¶del,30,33.25,0,997.5
+10558,6/4/2014,7/2/2014,6/10/2014,Around the Horn,Nancy Davolio,United Package,Zaanse koeken,25,9.5,0,237.5
+10559,6/5/2014,7/3/2014,6/13/2014,Blondesddsl pÃ¨re et fils,Michael Suyama,Speedy Express,Jack's New England Clam Chowder,12,9.65,0.05,110.01
+10560,6/6/2014,7/4/2014,6/9/2014,Frankenversand,Laura Callahan,Speedy Express,Nord-Ost Matjeshering,20,25.89,0,517.8
+10561,6/6/2014,7/4/2014,6/9/2014,Folk och fÃ¤ HB,Andrew Fuller,United Package,Gula Malacca,10,19.45,0,194.5
+10562,6/9/2014,7/7/2014,6/12/2014,Reggiani Caseifici,Nancy Davolio,Speedy Express,Geitost,20,2.5,0.1,45
+10563,6/10/2014,7/22/2014,6/24/2014,Ricardo Adocicados,Andrew Fuller,United Package,Inlagd Sill,25,19,0,475
+10564,6/10/2014,7/8/2014,6/16/2014,Rattlesnake Canyon Grocery,Margaret Peacock,Federal Shipping,Alice Mutton,16,39,0.05,592.8
+10565,6/11/2014,7/9/2014,6/18/2014,MÃ¨re Paillarde,Laura Callahan,United Package,Guarana Fantastica,25,4.5,0.1,101.25
+10566,6/12/2014,7/10/2014,6/18/2014,Blondesddsl pÃ¨re et fils,Anne Dodsworth,Speedy Express,Queso Cabrales,35,21,0.15,624.75
+10567,6/12/2014,7/10/2014,6/17/2014,Hungry Owl All-Night Grocers,Nancy Davolio,Speedy Express,Gorgonzola Telino,60,12.5,0.2,600
+10568,6/13/2014,7/11/2014,7/9/2014,GalerÃ­a del gastrÃ³nomo,Janet Leverling,Federal Shipping,Ikura,5,31,0,155
+10569,6/16/2014,7/14/2014,7/11/2014,Rattlesnake Canyon Grocery,Steven Buchanan,Speedy Express,Gorgonzola Telino,35,12.5,0.2,350
+10570,6/17/2014,7/15/2014,6/19/2014,MÃ¨re Paillarde,Janet Leverling,Federal Shipping,Queso Cabrales,15,21,0.05,299.25
+10571,6/17/2014,7/29/2014,7/4/2014,Ernst Handel,Laura Callahan,Federal Shipping,Tofu,11,23.25,0.15,217.39
+10572,6/18/2014,7/16/2014,6/25/2014,Berglunds snabbkÃ¶p,Janet Leverling,United Package,Pavlova,12,17.45,0.1,188.46
+10573,6/19/2014,7/17/2014,6/20/2014,Antonio Moreno TaquerÃ­a,Robert King,Federal Shipping,Alice Mutton,18,39,0,702
+10574,6/19/2014,7/17/2014,6/30/2014,Trail's Head Gourmet Provisioners,Margaret Peacock,United Package,Geitost,14,2.5,0,35
+10575,6/20/2014,7/4/2014,6/30/2014,Morgenstern Gesundkost,Steven Buchanan,Speedy Express,Raclette Courdavault,12,55,0,660
+10576,6/23/2014,7/7/2014,6/30/2014,Tortuga Restaurante,Janet Leverling,Federal Shipping,Chai,10,18,0,180
+10577,6/23/2014,8/4/2014,6/30/2014,Trail's Head Gourmet Provisioners,Anne Dodsworth,United Package,Chartreuse verte,10,18,0,180
+10578,6/24/2014,7/22/2014,7/25/2014,B's Beverages,Margaret Peacock,Federal Shipping,Steeleye Stout,20,18,0,360
+10579,6/25/2014,7/23/2014,7/4/2014,Let's Stop N Shop,Nancy Davolio,United Package,Genen Shouyu,10,15.5,0,155
+10580,6/26/2014,7/24/2014,7/1/2014,Ottilies KÃ¤seladen,Margaret Peacock,Federal Shipping,Tofu,15,23.25,0.05,331.31
+10581,6/26/2014,7/24/2014,7/2/2014,Familia Arquibaldo,Janet Leverling,Speedy Express,RhÃ¶nbrÃ¤u Klosterbier,50,7.75,0.2,310
+10582,6/27/2014,7/25/2014,7/14/2014,Blauer See Delikatessen,Janet Leverling,United Package,Ravioli Angelo,4,19.5,0,78
+10583,6/30/2014,7/28/2014,7/4/2014,Wartian Herkku,Andrew Fuller,United Package,ThÃ¼ringer Rostbratwurst,10,123.79,0,1237.9
+10584,6/30/2014,7/28/2014,7/4/2014,Blondesddsl pÃ¨re et fils,Margaret Peacock,Speedy Express,Gorgonzola Telino,50,12.5,0.05,593.75
+10585,7/1/2014,7/29/2014,7/10/2014,Wellington Importadora,Robert King,Speedy Express,Zaanse koeken,15,9.5,0,142.5
+10586,7/2/2014,7/30/2014,7/9/2014,Reggiani Caseifici,Anne Dodsworth,Speedy Express,Filo Mix,4,7,0.15,23.8
+10587,7/2/2014,7/30/2014,7/9/2014,Que DelÃ­cia,Nancy Davolio,Speedy Express,GumbÃ¤r GummibÃ¤rchen,6,31.23,0,187.38
+10588,7/3/2014,7/31/2014,7/10/2014,QUICK-Stop,Andrew Fuller,Federal Shipping,Carnarvon Tigers,40,62.5,0.2,2000
+10589,7/4/2014,8/1/2014,7/14/2014,Great Lakes Food Market,Laura Callahan,United Package,Steeleye Stout,4,18,0,72
+10590,7/7/2014,8/4/2014,7/14/2014,MÃ¨re Paillarde,Margaret Peacock,Federal Shipping,Chai,20,18,0,360
+10591,7/7/2014,7/21/2014,7/16/2014,Vaffeljernet,Nancy Davolio,Speedy Express,Aniseed Syrup,14,10,0,140
+10592,7/8/2014,8/5/2014,7/16/2014,Lehmanns Marktstand,Janet Leverling,Speedy Express,Genen Shouyu,25,15.5,0.05,368.12
+10593,7/9/2014,8/6/2014,8/13/2014,Lehmanns Marktstand,Robert King,United Package,Sir Rodney's Marmalade,21,81,0.2,1360.8
+10594,7/9/2014,8/6/2014,7/16/2014,Old World Delicatessen,Janet Leverling,United Package,Filo Mix,24,7,0,168
+10595,7/10/2014,8/7/2014,7/14/2014,Ernst Handel,Andrew Fuller,Speedy Express,Steeleye Stout,30,18,0.25,405
+10596,7/11/2014,8/8/2014,8/12/2014,White Clover Markets,Laura Callahan,Speedy Express,Gnocchi di nonna Alice,5,38,0.2,152
+10597,7/11/2014,8/8/2014,7/18/2014,Piccolo und mehr,Robert King,Federal Shipping,Guarana Fantastica,35,4.5,0.2,126
+10598,7/14/2014,8/11/2014,7/18/2014,Rattlesnake Canyon Grocery,Nancy Davolio,Federal Shipping,Schoggi Schokolade,50,43.9,0,2195
+10599,7/15/2014,8/26/2014,7/21/2014,B's Beverages,Michael Suyama,Federal Shipping,Tarte au sucre,10,49.3,0,493
+10600,7/16/2014,8/13/2014,7/21/2014,Hungry Coyote Import Store,Margaret Peacock,Speedy Express,TourtiÃ¨re,4,7.45,0,29.8
+10601,7/16/2014,8/27/2014,7/22/2014,HILARION-Abastos,Robert King,Speedy Express,Konbu,60,6,0,360
+10602,7/17/2014,8/14/2014,7/22/2014,Vaffeljernet,Laura Callahan,United Package,Original Frankfurter GrÃ¼ne SoÃe,5,13,0.25,48.75
+10603,7/18/2014,8/15/2014,8/8/2014,Save-a-lot Markets,Laura Callahan,United Package,Gustaf's KnackebrÃ¶d,48,21,0,1008
+10604,7/18/2014,8/15/2014,7/29/2014,Furia Bacalhau e Frutos do Mar,Nancy Davolio,Speedy Express,Chocolade,6,12.75,0.1,68.85
+10605,7/21/2014,8/18/2014,7/29/2014,MÃ¨re Paillarde,Nancy Davolio,United Package,Pavlova,30,17.45,0.05,497.32
+10606,7/22/2014,8/19/2014,7/31/2014,TradiÃ§Ã£o Hipermercados,Margaret Peacock,Federal Shipping,Chef Anton's Cajun Seasoning,20,22,0.2,352
+10607,7/22/2014,8/19/2014,7/25/2014,Save-a-lot Markets,Steven Buchanan,Speedy Express,Uncle Bob's Organic Dried Pears,45,30,0,1350
+10608,7/23/2014,8/20/2014,8/1/2014,Toms SpezialitÃ¤ten,Margaret Peacock,United Package,Gnocchi di nonna Alice,28,38,0,1064
+10609,7/24/2014,8/21/2014,7/30/2014,Du monde entier,Robert King,United Package,Chai,3,18,0,54
+10610,7/25/2014,8/22/2014,8/6/2014,La maison d'Asie,Laura Callahan,Speedy Express,Inlagd Sill,21,19,0.25,299.25
+10611,7/25/2014,8/22/2014,8/1/2014,Wolski  Zajazd,Michael Suyama,United Package,Chai,6,18,0,108
+10612,7/28/2014,8/25/2014,8/1/2014,Save-a-lot Markets,Nancy Davolio,United Package,Ikura,70,31,0,2170
+10613,7/29/2014,8/26/2014,8/1/2014,HILARION-Abastos,Margaret Peacock,United Package,Konbu,8,6,0.1,43.2
+10614,7/29/2014,8/26/2014,8/1/2014,Blauer See Delikatessen,Laura Callahan,Federal Shipping,Queso Cabrales,14,21,0,294
+10615,7/30/2014,8/27/2014,8/6/2014,Wilman Kala,Andrew Fuller,Federal Shipping,PÃ¢tÃ© chinois,5,24,0,120
+10616,7/31/2014,8/28/2014,8/5/2014,Great Lakes Food Market,Nancy Davolio,United Package,CÃ´te de Blaye,15,263.5,0.05,3754.88
+10617,7/31/2014,8/28/2014,8/4/2014,Great Lakes Food Market,Margaret Peacock,United Package,Raclette Courdavault,30,55,0.15,1402.5
+10618,8/1/2014,9/12/2014,8/8/2014,MÃ¨re Paillarde,Nancy Davolio,Speedy Express,Grandma's Boysenberry Spread,70,25,0,1750
+10619,8/4/2014,9/1/2014,8/7/2014,MÃ¨re Paillarde,Janet Leverling,Federal Shipping,Sir Rodney's Scones,42,10,0,420
+10620,8/5/2014,9/2/2014,8/14/2014,Laughing Bacchus Wine Cellars,Andrew Fuller,Federal Shipping,Guarana Fantastica,5,4.5,0,22.5
+10621,8/5/2014,9/2/2014,8/11/2014,Island Trading,Margaret Peacock,United Package,Teatime Chocolate Biscuits,5,9.2,0,46
+10622,8/6/2014,9/3/2014,8/11/2014,Ricardo Adocicados,Margaret Peacock,Federal Shipping,Chang,20,19,0,380
+10623,8/7/2014,9/4/2014,8/12/2014,Frankenversand,Laura Callahan,United Package,Tofu,21,23.25,0,488.25
+10624,8/7/2014,9/4/2014,8/19/2014,The Cracker Box,Margaret Peacock,United Package,RÃ¶ssle Sauerkraut,10,45.6,0,456
+10625,8/8/2014,9/5/2014,8/14/2014,Ana Trujillo Emparedados y helados,Janet Leverling,Speedy Express,Tofu,3,23.25,0,69.75
+10626,8/11/2014,9/8/2014,8/20/2014,Berglunds snabbkÃ¶p,Nancy Davolio,United Package,Perth Pasties,12,32.8,0,393.6
+10627,8/11/2014,9/22/2014,8/21/2014,Save-a-lot Markets,Laura Callahan,Federal Shipping,Tarte au sucre,15,49.3,0,739.5
+10628,8/12/2014,9/9/2014,8/20/2014,Blondesddsl pÃ¨re et fils,Margaret Peacock,Federal Shipping,Chai,25,18,0,450
+10629,8/12/2014,9/9/2014,8/20/2014,Godos Cocina TÃ­pica,Margaret Peacock,Federal Shipping,ThÃ¼ringer Rostbratwurst,20,123.79,0,2475.8
+10630,8/13/2014,9/10/2014,8/19/2014,KÃ¶niglich Essen,Nancy Davolio,United Package,PÃ¢tÃ© chinois,12,24,0.05,273.6
+10631,8/14/2014,9/11/2014,8/15/2014,La maison d'Asie,Laura Callahan,Speedy Express,RhÃ¶nbrÃ¤u Klosterbier,8,7.75,0.1,55.8
+10632,8/14/2014,9/11/2014,8/19/2014,Die Wandernde Kuh,Laura Callahan,Speedy Express,Chang,30,19,0.05,541.5
+10633,8/15/2014,9/12/2014,8/18/2014,Ernst Handel,Robert King,Federal Shipping,Queso Manchego La Pastora,36,38,0.15,1162.8
+10634,8/15/2014,9/12/2014,8/21/2014,Folies gourmandes,Margaret Peacock,Federal Shipping,Uncle Bob's Organic Dried Pears,35,30,0,1050
+10635,8/18/2014,9/15/2014,8/21/2014,Magazzini Alimentari Riuniti,Laura Callahan,Federal Shipping,Chef Anton's Cajun Seasoning,10,22,0.1,198
+10636,8/19/2014,9/16/2014,8/26/2014,Wartian Herkku,Margaret Peacock,Speedy Express,Chef Anton's Cajun Seasoning,25,22,0,550
+10637,8/19/2014,9/16/2014,8/26/2014,Queen Cozinha,Michael Suyama,Speedy Express,Queso Cabrales,10,21,0,210
+10638,8/20/2014,9/17/2014,9/1/2014,LINO-Delicateses,Janet Leverling,Speedy Express,Rogede sild,20,9.5,0,190
+10639,8/20/2014,9/17/2014,8/27/2014,SantÃ© Gourmet,Robert King,Federal Shipping,Carnarvon Tigers,8,62.5,0,500
+10640,8/21/2014,9/18/2014,8/28/2014,Die Wandernde Kuh,Margaret Peacock,Speedy Express,Gudbrandsdalsost,20,36,0.25,540
+10641,8/22/2014,9/19/2014,8/26/2014,HILARION-Abastos,Margaret Peacock,United Package,Chang,50,19,0,950
+10642,8/22/2014,9/19/2014,9/5/2014,Simons bistro,Robert King,Federal Shipping,Sir Rodney's Scones,30,10,0.2,240
+10643,8/25/2014,9/22/2014,9/2/2014,Alfreds Futterkiste,Michael Suyama,Speedy Express,RÃ¶ssle Sauerkraut,15,45.6,0.25,513
+10644,8/25/2014,9/22/2014,9/1/2014,Wellington Importadora,Janet Leverling,United Package,Carnarvon Tigers,4,62.5,0.1,225
+10645,8/26/2014,9/23/2014,9/2/2014,Hanari Carnes,Margaret Peacock,Speedy Express,Carnarvon Tigers,20,62.5,0,1250
+10646,8/27/2014,10/8/2014,9/3/2014,Hungry Owl All-Night Grocers,Anne Dodsworth,Federal Shipping,Chai,15,18,0.25,202.5
+10647,8/27/2014,9/10/2014,9/3/2014,Que DelÃ­cia,Margaret Peacock,United Package,Teatime Chocolate Biscuits,30,9.2,0,276
+10648,8/28/2014,10/9/2014,9/9/2014,Ricardo Adocicados,Steven Buchanan,United Package,Gustaf's KnackebrÃ¶d,15,21,0,315
+10649,8/28/2014,9/25/2014,8/29/2014,Maison Dewey,Steven Buchanan,Federal Shipping,RÃ¶ssle Sauerkraut,20,45.6,0,912
+10650,8/29/2014,9/26/2014,9/3/2014,Familia Arquibaldo,Steven Buchanan,Federal Shipping,Nord-Ost Matjeshering,30,25.89,0,776.7
+10651,9/1/2014,9/29/2014,9/11/2014,Die Wandernde Kuh,Laura Callahan,United Package,Teatime Chocolate Biscuits,12,9.2,0.25,82.8
+10652,9/1/2014,9/29/2014,9/8/2014,Gourmet Lanchonetes,Margaret Peacock,United Package,Nord-Ost Matjeshering,2,25.89,0.25,38.84
+10653,9/2/2014,9/30/2014,9/19/2014,Frankenversand,Nancy Davolio,Speedy Express,Pavlova,30,17.45,0.1,471.15
+10654,9/2/2014,9/30/2014,9/11/2014,Berglunds snabbkÃ¶p,Steven Buchanan,Speedy Express,Chef Anton's Cajun Seasoning,12,22,0.1,237.6
+10655,9/3/2014,10/1/2014,9/11/2014,Reggiani Caseifici,Nancy Davolio,United Package,Jack's New England Clam Chowder,20,9.65,0.2,154.4
+10656,9/4/2014,10/2/2014,9/10/2014,Great Lakes Food Market,Michael Suyama,Speedy Express,Tofu,3,23.25,0.1,62.78
+10657,9/4/2014,10/2/2014,9/15/2014,Save-a-lot Markets,Andrew Fuller,United Package,Genen Shouyu,50,15.5,0,775
+10658,9/5/2014,10/3/2014,9/8/2014,QUICK-Stop,Margaret Peacock,Speedy Express,Sir Rodney's Scones,60,10,0,600
+10659,9/5/2014,10/3/2014,9/10/2014,Queen Cozinha,Robert King,United Package,Gorgonzola Telino,20,12.5,0.05,237.5
+10660,9/8/2014,10/6/2014,10/15/2014,Hungry Coyote Import Store,Laura Callahan,Speedy Express,Sir Rodney's Marmalade,21,81,0,1701
+10661,9/9/2014,10/7/2014,9/15/2014,Hungry Owl All-Night Grocers,Robert King,Federal Shipping,Chartreuse verte,3,18,0.2,43.2
+10662,9/9/2014,10/7/2014,9/18/2014,Lonesome Pine Restaurant,Janet Leverling,United Package,Scottish Longbreads,10,12.5,0,125
+10663,9/10/2014,9/24/2014,10/3/2014,Bon app',Andrew Fuller,United Package,Boston Crab Meat,30,18.4,0.05,524.4
+10664,9/10/2014,10/8/2014,9/19/2014,Furia Bacalhau e Frutos do Mar,Nancy Davolio,Federal Shipping,Ikura,24,31,0.15,632.4
+10665,9/11/2014,10/9/2014,9/17/2014,Lonesome Pine Restaurant,Nancy Davolio,United Package,Manjimup Dried Apples,20,53,0,1060
+10666,9/12/2014,10/10/2014,9/22/2014,Richter Supermarkt,Robert King,United Package,ThÃ¼ringer Rostbratwurst,36,123.79,0,4456.44
+10667,9/12/2014,10/10/2014,9/19/2014,Ernst Handel,Robert King,Speedy Express,Gudbrandsdalsost,45,36,0.2,1296
+10668,9/15/2014,10/13/2014,9/23/2014,Die Wandernde Kuh,Nancy Davolio,United Package,Gorgonzola Telino,8,12.5,0.1,90
+10669,9/15/2014,10/13/2014,9/22/2014,Simons bistro,Andrew Fuller,Speedy Express,Inlagd Sill,30,19,0,570
+10670,9/16/2014,10/14/2014,9/18/2014,Frankenversand,Margaret Peacock,Speedy Express,TunnbrÃ¶d,32,9,0,288
+10671,9/17/2014,10/15/2014,9/24/2014,France restauration,Nancy Davolio,Speedy Express,Pavlova,10,17.45,0,174.5
+10672,9/17/2014,10/1/2014,9/26/2014,Berglunds snabbkÃ¶p,Anne Dodsworth,United Package,CÃ´te de Blaye,15,263.5,0.1,3557.25
+10673,9/18/2014,10/16/2014,9/19/2014,Wilman Kala,Andrew Fuller,Speedy Express,Pavlova,3,17.45,0,52.35
+10674,9/18/2014,10/16/2014,9/30/2014,Island Trading,Margaret Peacock,United Package,TunnbrÃ¶d,5,9,0,45
+10675,9/19/2014,10/17/2014,9/23/2014,Frankenversand,Steven Buchanan,United Package,Tofu,30,23.25,0,697.5
+10676,9/22/2014,10/20/2014,9/29/2014,Tortuga Restaurante,Andrew Fuller,United Package,Ikura,2,31,0,62
+10677,9/22/2014,10/20/2014,9/26/2014,Antonio Moreno TaquerÃ­a,Nancy Davolio,Federal Shipping,GumbÃ¤r GummibÃ¤rchen,30,31.23,0.15,796.36
+10678,9/23/2014,10/21/2014,10/16/2014,Save-a-lot Markets,Robert King,Federal Shipping,Queso Manchego La Pastora,100,38,0,3800
+10679,9/23/2014,10/21/2014,9/30/2014,Blondesddsl pÃ¨re et fils,Laura Callahan,Federal Shipping,Raclette Courdavault,12,55,0,660
+10680,9/24/2014,10/22/2014,9/26/2014,Old World Delicatessen,Nancy Davolio,Speedy Express,Pavlova,50,17.45,0.25,654.38
+10681,9/25/2014,10/23/2014,9/30/2014,Great Lakes Food Market,Janet Leverling,Federal Shipping,Teatime Chocolate Biscuits,30,9.2,0.1,248.4
+10682,9/25/2014,10/23/2014,10/1/2014,Antonio Moreno TaquerÃ­a,Janet Leverling,United Package,Geitost,30,2.5,0,75
+10683,9/26/2014,10/24/2014,10/1/2014,Du monde entier,Andrew Fuller,Speedy Express,Filo Mix,9,7,0,63
+10684,9/26/2014,10/24/2014,9/30/2014,Ottilies KÃ¤seladen,Janet Leverling,Speedy Express,Boston Crab Meat,20,18.4,0,368
+10685,9/29/2014,10/13/2014,10/3/2014,Gourmet Lanchonetes,Margaret Peacock,United Package,Ikura,20,31,0,620
+10686,9/30/2014,10/28/2014,10/8/2014,Piccolo und mehr,Andrew Fuller,Speedy Express,Alice Mutton,30,39,0.2,936
+10687,9/30/2014,10/28/2014,10/30/2014,Hungry Owl All-Night Grocers,Anne Dodsworth,United Package,Mishi Kobe Niku,50,97,0.25,3637.5
+10688,10/1/2014,10/15/2014,10/7/2014,Vaffeljernet,Margaret Peacock,United Package,Ikura,18,31,0.1,502.2
+10689,10/1/2014,10/29/2014,10/7/2014,Berglunds snabbkÃ¶p,Nancy Davolio,United Package,Chai,35,18,0.25,472.5
+10690,10/2/2014,10/30/2014,10/3/2014,Hanari Carnes,Nancy Davolio,Speedy Express,Gnocchi di nonna Alice,20,38,0.25,570
+10691,10/3/2014,11/14/2014,10/22/2014,QUICK-Stop,Andrew Fuller,United Package,Chai,30,18,0,540
+10692,10/3/2014,10/31/2014,10/13/2014,Alfreds Futterkiste,Margaret Peacock,United Package,Vegie-spread,20,43.9,0,878
+10693,10/6/2014,10/20/2014,10/10/2014,White Clover Markets,Janet Leverling,Federal Shipping,Mishi Kobe Niku,6,97,0,582
+10694,10/6/2014,11/3/2014,10/9/2014,QUICK-Stop,Laura Callahan,Federal Shipping,Uncle Bob's Organic Dried Pears,90,30,0,2700
+10695,10/7/2014,11/18/2014,10/14/2014,Wilman Kala,Robert King,Speedy Express,Northwoods Cranberry Sauce,10,40,0,400
+10696,10/8/2014,11/19/2014,10/14/2014,White Clover Markets,Laura Callahan,Federal Shipping,Alice Mutton,20,39,0,780
+10697,10/8/2014,11/5/2014,10/14/2014,LINO-Delicateses,Janet Leverling,Speedy Express,Teatime Chocolate Biscuits,7,9.2,0.25,48.3
+10698,10/9/2014,11/6/2014,10/17/2014,Ernst Handel,Margaret Peacock,Speedy Express,Queso Cabrales,15,21,0,315
+10699,10/9/2014,11/6/2014,10/13/2014,Morgenstern Gesundkost,Janet Leverling,Federal Shipping,Zaanse koeken,12,9.5,0,114
+10700,10/10/2014,11/7/2014,10/16/2014,Save-a-lot Markets,Janet Leverling,Speedy Express,Chai,5,18,0.2,72
+10701,10/13/2014,10/27/2014,10/15/2014,Hungry Owl All-Night Grocers,Michael Suyama,Federal Shipping,Raclette Courdavault,42,55,0.15,1963.5
+10702,10/13/2014,11/24/2014,10/21/2014,Alfreds Futterkiste,Margaret Peacock,Speedy Express,Aniseed Syrup,6,10,0,60
+10703,10/14/2014,11/11/2014,10/20/2014,Folk och fÃ¤ HB,Michael Suyama,United Package,Chang,5,19,0,95
+10704,10/14/2014,11/11/2014,11/7/2014,Queen Cozinha,Michael Suyama,Speedy Express,Chef Anton's Cajun Seasoning,6,22,0,132
+10705,10/15/2014,11/12/2014,11/18/2014,HILARION-Abastos,Anne Dodsworth,United Package,Gorgonzola Telino,20,12.5,0,250
+10706,10/16/2014,11/13/2014,10/21/2014,Old World Delicatessen,Laura Callahan,Federal Shipping,Pavlova,20,17.45,0,349
+10707,10/16/2014,10/30/2014,10/23/2014,Around the Horn,Margaret Peacock,Federal Shipping,PÃ¢tÃ© chinois,21,24,0,504
+10708,10/17/2014,11/28/2014,11/5/2014,The Big Cheese,Michael Suyama,United Package,Chef Anton's Gumbo Mix,4,21.35,0,85.4
+10709,10/17/2014,11/14/2014,11/20/2014,Gourmet Lanchonetes,Nancy Davolio,Federal Shipping,Northwoods Cranberry Sauce,40,40,0,1600
+10710,10/20/2014,11/17/2014,10/23/2014,Franchi S.p.A.,Nancy Davolio,Speedy Express,Teatime Chocolate Biscuits,5,9.2,0,46
+10711,10/21/2014,12/2/2014,10/29/2014,Save-a-lot Markets,Steven Buchanan,United Package,Teatime Chocolate Biscuits,12,9.2,0,110.4
+10712,10/21/2014,11/18/2014,10/31/2014,Hungry Owl All-Night Grocers,Janet Leverling,Speedy Express,Perth Pasties,3,32.8,0.05,93.48
+10713,10/22/2014,11/19/2014,10/24/2014,Save-a-lot Markets,Nancy Davolio,Speedy Express,Ikura,18,31,0,558
+10714,10/22/2014,11/19/2014,10/27/2014,Save-a-lot Markets,Steven Buchanan,Federal Shipping,Chang,30,19,0.25,427.5
+10715,10/23/2014,11/6/2014,10/29/2014,Bon app',Janet Leverling,Speedy Express,Ikura,21,31,0,651
+10716,10/24/2014,11/21/2014,10/27/2014,Rancho grande,Margaret Peacock,United Package,Sir Rodney's Scones,5,10,0,50
+10717,10/24/2014,11/21/2014,10/29/2014,Frankenversand,Nancy Davolio,United Package,Sir Rodney's Scones,32,10,0.05,304
+10718,10/27/2014,11/24/2014,10/29/2014,KÃ¶niglich Essen,Nancy Davolio,Federal Shipping,Queso Manchego La Pastora,36,38,0,1368
+10719,10/27/2014,11/24/2014,11/5/2014,Let's Stop N Shop,Laura Callahan,United Package,Carnarvon Tigers,12,62.5,0.25,562.5
+10720,10/28/2014,11/11/2014,11/5/2014,Que DelÃ­cia,Laura Callahan,United Package,Steeleye Stout,21,18,0,378
+10721,10/29/2014,11/26/2014,10/31/2014,QUICK-Stop,Steven Buchanan,Federal Shipping,Gula Malacca,50,19.45,0.05,923.88
+10722,10/29/2014,12/10/2014,11/4/2014,Save-a-lot Markets,Laura Callahan,Speedy Express,Chang,3,19,0,57
+10723,10/30/2014,11/27/2014,11/25/2014,White Clover Markets,Janet Leverling,Speedy Express,GumbÃ¤r GummibÃ¤rchen,15,31.23,0,468.45
+10724,10/30/2014,12/11/2014,11/5/2014,MÃ¨re Paillarde,Laura Callahan,United Package,Ikura,16,31,0,496
+10725,10/31/2014,11/28/2014,11/5/2014,Familia Arquibaldo,Margaret Peacock,Federal Shipping,Jack's New England Clam Chowder,12,9.65,0,115.8
+10726,11/3/2014,11/17/2014,12/5/2014,Eastern Connection,Margaret Peacock,Speedy Express,Chef Anton's Cajun Seasoning,25,22,0,550
+10727,11/3/2014,12/1/2014,12/5/2014,Reggiani Caseifici,Andrew Fuller,Speedy Express,Alice Mutton,20,39,0.05,741
+10728,11/4/2014,12/2/2014,11/11/2014,Queen Cozinha,Margaret Peacock,United Package,Nord-Ost Matjeshering,15,25.89,0,388.35
+10729,11/4/2014,12/16/2014,11/14/2014,LINO-Delicateses,Laura Callahan,Federal Shipping,Chai,50,18,0,900
+10730,11/5/2014,12/3/2014,11/14/2014,Bon app',Steven Buchanan,Speedy Express,Pavlova,15,17.45,0.05,248.66
+10731,11/6/2014,12/4/2014,11/14/2014,Chop-suey Chinese,Robert King,Speedy Express,Sir Rodney's Scones,40,10,0.05,380
+10732,11/6/2014,12/4/2014,11/7/2014,Bon app',Janet Leverling,Speedy Express,LakkalikÃ¶ri,20,18,0,360
+10733,11/7/2014,12/5/2014,11/10/2014,Berglunds snabbkÃ¶p,Nancy Davolio,Federal Shipping,Tofu,16,23.25,0,372
+10734,11/7/2014,12/5/2014,11/12/2014,Gourmet Lanchonetes,Andrew Fuller,Federal Shipping,Grandma's Boysenberry Spread,30,25,0,750
+10735,11/10/2014,12/8/2014,11/21/2014,Let's Stop N Shop,Michael Suyama,United Package,Sirop d'Ã©rable,20,28.5,0.1,513
+10736,11/11/2014,12/9/2014,11/21/2014,Hungry Owl All-Night Grocers,Anne Dodsworth,United Package,Louisiana Fiery Hot Pepper Sauce,40,21.05,0,842
+10737,11/11/2014,12/9/2014,11/18/2014,Vins et alcools Chevalier,Andrew Fuller,United Package,Konbu,4,6,0,24
+10738,11/12/2014,12/10/2014,11/18/2014,SpÃ©cialitÃ©s du monde,Andrew Fuller,Speedy Express,Pavlova,3,17.45,0,52.35
+10739,11/12/2014,12/10/2014,11/17/2014,Vins et alcools Chevalier,Janet Leverling,Federal Shipping,Inlagd Sill,6,19,0,114
+10740,11/13/2014,12/11/2014,11/25/2014,White Clover Markets,Margaret Peacock,United Package,RÃ¶ssle Sauerkraut,5,45.6,0.2,182.4
+10741,11/14/2014,11/28/2014,11/18/2014,Around the Horn,Margaret Peacock,Federal Shipping,Chang,15,19,0.2,228
+10742,11/14/2014,12/12/2014,11/18/2014,Bottom-Dollar Markets,Janet Leverling,Federal Shipping,Aniseed Syrup,20,10,0,200
+10743,11/17/2014,12/15/2014,11/21/2014,Around the Horn,Nancy Davolio,United Package,Spegesild,28,12,0.05,319.2
+10744,11/17/2014,12/15/2014,11/24/2014,Vaffeljernet,Michael Suyama,Speedy Express,Boston Crab Meat,50,18.4,0.2,736
+10745,11/18/2014,12/16/2014,11/27/2014,QUICK-Stop,Anne Dodsworth,Speedy Express,Carnarvon Tigers,24,62.5,0,1500
+10746,11/19/2014,12/17/2014,11/21/2014,Chop-suey Chinese,Nancy Davolio,Federal Shipping,Konbu,6,6,0,36
+10747,11/19/2014,12/17/2014,11/26/2014,Piccolo und mehr,Michael Suyama,Speedy Express,Gorgonzola Telino,8,12.5,0,100
+10748,11/20/2014,12/18/2014,11/28/2014,Save-a-lot Markets,Janet Leverling,Speedy Express,TunnbrÃ¶d,44,9,0,396
+10749,11/20/2014,12/18/2014,12/19/2014,Island Trading,Margaret Peacock,United Package,Gnocchi di nonna Alice,15,38,0,570
+10750,11/21/2014,12/19/2014,11/24/2014,Wartian Herkku,Anne Dodsworth,Speedy Express,Tofu,5,23.25,0.15,98.81
+10751,11/24/2014,12/22/2014,12/3/2014,Richter Supermarkt,Janet Leverling,Federal Shipping,GumbÃ¤r GummibÃ¤rchen,12,31.23,0.1,337.28
+10752,11/24/2014,12/22/2014,11/28/2014,North/South,Andrew Fuller,Federal Shipping,Chai,8,18,0,144
+10753,11/25/2014,12/23/2014,11/27/2014,Franchi S.p.A.,Janet Leverling,Speedy Express,Rogede sild,4,9.5,0,38
+10754,11/25/2014,12/23/2014,11/27/2014,Magazzini Alimentari Riuniti,Michael Suyama,Federal Shipping,Boston Crab Meat,3,18.4,0,55.2
+10755,11/26/2014,12/24/2014,11/28/2014,Bon app',Margaret Peacock,United Package,Zaanse koeken,30,9.5,0.25,213.75
+10756,11/27/2014,12/25/2014,12/2/2014,Split Rail Beer & Ale,Laura Callahan,United Package,Carnarvon Tigers,21,62.5,0.2,1050
+10757,11/27/2014,12/25/2014,12/15/2014,Save-a-lot Markets,Michael Suyama,Speedy Express,Sasquatch Ale,30,14,0,420
+10758,11/28/2014,12/26/2014,12/4/2014,Richter Supermarkt,Janet Leverling,Federal Shipping,GumbÃ¤r GummibÃ¤rchen,20,31.23,0,624.6
+10759,11/28/2014,12/26/2014,12/12/2014,Ana Trujillo Emparedados y helados,Janet Leverling,Federal Shipping,Mascarpone Fabioli,10,32,0,320
+10760,12/1/2014,12/29/2014,12/10/2014,Maison Dewey,Margaret Peacock,Speedy Express,NuNuCaÂ NuÃ-Nougat-Creme,12,14,0.25,126
+10761,12/2/2014,12/30/2014,12/8/2014,Rattlesnake Canyon Grocery,Steven Buchanan,United Package,NuNuCaÂ NuÃ-Nougat-Creme,35,14,0.25,367.5
+10762,12/2/2014,12/30/2014,12/9/2014,Folk och fÃ¤ HB,Janet Leverling,Speedy Express,Chartreuse verte,16,18,0,288
+10763,12/3/2014,12/31/2014,12/8/2014,Folies gourmandes,Janet Leverling,Federal Shipping,Sir Rodney's Scones,40,10,0,400
+10764,12/3/2014,12/31/2014,12/8/2014,Ernst Handel,Michael Suyama,Federal Shipping,Aniseed Syrup,20,10,0.1,180
+10765,12/4/2014,1/1/2015,12/9/2014,QUICK-Stop,Janet Leverling,Federal Shipping,Louisiana Fiery Hot Pepper Sauce,80,21.05,0.1,1515.6
+10766,12/5/2014,1/2/2015,12/9/2014,Ottilies KÃ¤seladen,Margaret Peacock,Speedy Express,Chang,40,19,0,760
+10767,12/5/2014,1/2/2015,12/15/2014,SuprÃªmes dÃ©lices,Margaret Peacock,Federal Shipping,Singaporean Hokkien Fried Mee,2,14,0,28
+10768,12/8/2014,1/5/2015,12/15/2014,Around the Horn,Janet Leverling,United Package,Gustaf's KnackebrÃ¶d,4,21,0,84
+10769,12/8/2014,1/5/2015,12/12/2014,Vaffeljernet,Janet Leverling,Speedy Express,Jack's New England Clam Chowder,30,9.65,0.05,275.02
+10770,12/9/2014,1/6/2015,12/17/2014,Hanari Carnes,Laura Callahan,Federal Shipping,Queso Cabrales,15,21,0.25,236.25
+10771,12/10/2014,1/7/2015,1/2/2015,Ernst Handel,Anne Dodsworth,United Package,Flotemysost,16,21.5,0,344
+10772,12/10/2014,1/7/2015,12/19/2014,Lehmanns Marktstand,Janet Leverling,United Package,ThÃ¼ringer Rostbratwurst,18,123.79,0,2228.22
+10773,12/11/2014,1/8/2015,12/16/2014,Ernst Handel,Nancy Davolio,Federal Shipping,Alice Mutton,33,39,0,1287
+10774,12/11/2014,12/25/2014,12/12/2014,Folk och fÃ¤ HB,Margaret Peacock,Speedy Express,Gorgonzola Telino,2,12.5,0.25,18.75
+10775,12/12/2014,1/9/2015,12/26/2014,The Cracker Box,Robert King,Speedy Express,Ikura,6,31,0,186
+10776,12/15/2014,1/12/2015,12/18/2014,Ernst Handel,Nancy Davolio,Federal Shipping,Gorgonzola Telino,16,12.5,0.05,190
+10777,12/15/2014,12/29/2014,1/21/2015,Gourmet Lanchonetes,Robert King,United Package,Singaporean Hokkien Fried Mee,20,14,0.2,224
+10778,12/16/2014,1/13/2015,12/24/2014,Berglunds snabbkÃ¶p,Janet Leverling,Speedy Express,Jack's New England Clam Chowder,10,9.65,0,96.5
+10779,12/16/2014,1/13/2015,1/14/2015,Morgenstern Gesundkost,Janet Leverling,United Package,Pavlova,20,17.45,0,349
+10780,12/16/2014,12/30/2014,12/25/2014,LILA-Supermercado,Andrew Fuller,Speedy Express,Outback Lager,35,15,0,525
+10781,12/17/2014,1/14/2015,12/19/2014,Wartian Herkku,Andrew Fuller,Federal Shipping,TourtiÃ¨re,3,7.45,0.2,17.88
+10782,12/17/2014,1/14/2015,12/22/2014,Cactus Comidas para llevar,Anne Dodsworth,Federal Shipping,Gorgonzola Telino,1,12.5,0,12.5
+10783,12/18/2014,1/15/2015,12/19/2014,Hanari Carnes,Margaret Peacock,United Package,Gorgonzola Telino,10,12.5,0,125
+10784,12/18/2014,1/15/2015,12/22/2014,Magazzini Alimentari Riuniti,Margaret Peacock,Federal Shipping,Inlagd Sill,30,19,0,570
+10785,12/18/2014,1/15/2015,12/24/2014,GROSELLA-Restaurante,Nancy Davolio,Federal Shipping,Ikura,10,31,0,310
+10786,12/19/2014,1/16/2015,12/23/2014,Queen Cozinha,Laura Callahan,Speedy Express,Northwoods Cranberry Sauce,30,40,0.2,960
+10787,12/19/2014,1/2/2015,12/26/2014,La maison d'Asie,Andrew Fuller,Speedy Express,Chang,15,19,0.05,270.75
+10788,12/22/2014,1/19/2015,1/19/2015,QUICK-Stop,Nancy Davolio,United Package,Teatime Chocolate Biscuits,50,9.2,0.05,437
+10789,12/22/2014,1/19/2015,12/31/2014,Folies gourmandes,Nancy Davolio,United Package,Carnarvon Tigers,30,62.5,0,1875
+10790,12/22/2014,1/19/2015,12/26/2014,Gourmet Lanchonetes,Michael Suyama,Speedy Express,Uncle Bob's Organic Dried Pears,3,30,0.15,76.5
+10791,12/23/2014,1/20/2015,1/1/2015,Frankenversand,Michael Suyama,United Package,ThÃ¼ringer Rostbratwurst,14,123.79,0.05,1646.41
+10792,12/23/2014,1/20/2015,12/31/2014,Wolski  Zajazd,Nancy Davolio,Federal Shipping,Chang,10,19,0,190
+10793,12/24/2014,1/21/2015,1/8/2015,Around the Horn,Janet Leverling,Federal Shipping,Jack's New England Clam Chowder,14,9.65,0,135.1
+10794,12/24/2014,1/21/2015,1/2/2015,Que DelÃ­cia,Michael Suyama,Speedy Express,Tofu,15,23.25,0.2,279
+10795,12/24/2014,1/21/2015,1/20/2015,Ernst Handel,Laura Callahan,United Package,Pavlova,65,17.45,0,1134.25
+10796,12/25/2014,1/22/2015,1/14/2015,HILARION-Abastos,Janet Leverling,Speedy Express,GumbÃ¤r GummibÃ¤rchen,21,31.23,0.2,524.66
+10797,12/25/2014,1/22/2015,1/5/2015,Drachenblut Delikatessen,Robert King,United Package,Queso Cabrales,20,21,0,420
+10798,12/26/2014,1/23/2015,1/5/2015,Island Trading,Andrew Fuller,Speedy Express,Tarte au sucre,2,49.3,0,98.6
+10799,12/26/2014,2/6/2015,1/5/2015,KÃ¶niglich Essen,Anne Dodsworth,Federal Shipping,Konbu,20,6,0.15,102
+10800,12/26/2014,1/23/2015,1/5/2015,Seven Seas Imports,Nancy Davolio,Federal Shipping,Queso Cabrales,50,21,0.1,945
+10801,12/29/2014,1/26/2015,12/31/2014,BÃ³lido Comidas preparadas,Margaret Peacock,United Package,Alice Mutton,40,39,0.25,1170
+10802,12/29/2014,1/26/2015,1/2/2015,Simons bistro,Margaret Peacock,United Package,Nord-Ost Matjeshering,25,25.89,0.25,485.44
+10803,12/30/2014,1/27/2015,1/6/2015,Wellington Importadora,Margaret Peacock,Speedy Express,Teatime Chocolate Biscuits,24,9.2,0.05,209.76
+10804,12/30/2014,1/27/2015,1/7/2015,Seven Seas Imports,Michael Suyama,United Package,Ikura,36,31,0,1116
+10805,12/30/2014,1/27/2015,1/9/2015,The Big Cheese,Andrew Fuller,Federal Shipping,Sasquatch Ale,10,14,0,140
+10806,12/31/2014,1/28/2015,1/5/2015,Victuailles en stock,Janet Leverling,United Package,Chang,20,19,0.25,285
+10807,12/31/2014,1/28/2015,1/30/2015,Franchi S.p.A.,Margaret Peacock,Speedy Express,Boston Crab Meat,1,18.4,0,18.4
+10808,1/1/2015,1/29/2015,1/9/2015,Old World Delicatessen,Andrew Fuller,Federal Shipping,Gnocchi di nonna Alice,20,38,0.15,646
+10809,1/1/2015,1/29/2015,1/7/2015,Wellington Importadora,Robert King,Speedy Express,Filo Mix,20,7,0,140
+10810,1/1/2015,1/29/2015,1/7/2015,Laughing Bacchus Wine Cellars,Andrew Fuller,Federal Shipping,Konbu,7,6,0,42
+10811,1/2/2015,1/30/2015,1/8/2015,LINO-Delicateses,Laura Callahan,Speedy Express,Teatime Chocolate Biscuits,15,9.2,0,138
+10812,1/2/2015,1/30/2015,1/12/2015,Reggiani Caseifici,Steven Buchanan,Speedy Express,Gorgonzola Telino,16,12.5,0.1,180
+10813,1/5/2015,2/2/2015,1/9/2015,Ricardo Adocicados,Nancy Davolio,Speedy Express,Chang,12,19,0.2,182.4
+10814,1/5/2015,2/2/2015,1/14/2015,Victuailles en stock,Janet Leverling,Federal Shipping,Jack's New England Clam Chowder,20,9.65,0,193
+10815,1/5/2015,2/2/2015,1/14/2015,Save-a-lot Markets,Andrew Fuller,Federal Shipping,Geitost,16,2.5,0,40
+10816,1/6/2015,2/3/2015,2/4/2015,Great Lakes Food Market,Margaret Peacock,United Package,CÃ´te de Blaye,30,263.5,0.05,7509.75
+10817,1/6/2015,1/20/2015,1/13/2015,KÃ¶niglich Essen,Janet Leverling,United Package,GumbÃ¤r GummibÃ¤rchen,40,31.23,0.15,1061.82
+10818,1/7/2015,2/4/2015,1/12/2015,Magazzini Alimentari Riuniti,Robert King,Federal Shipping,Mascarpone Fabioli,20,32,0,640
+10819,1/7/2015,2/4/2015,1/16/2015,Cactus Comidas para llevar,Andrew Fuller,Federal Shipping,Ipoh Coffee,7,46,0,322
+10820,1/7/2015,2/4/2015,1/13/2015,Rattlesnake Canyon Grocery,Janet Leverling,United Package,Gnocchi di nonna Alice,30,38,0,1140
+10821,1/8/2015,2/5/2015,1/15/2015,Split Rail Beer & Ale,Nancy Davolio,Speedy Express,Steeleye Stout,20,18,0,360
+10822,1/8/2015,2/5/2015,1/16/2015,Trail's Head Gourmet Provisioners,Michael Suyama,Federal Shipping,Tarte au sucre,3,49.3,0,147.9
+10823,1/9/2015,2/6/2015,1/13/2015,LILA-Supermercado,Steven Buchanan,United Package,Queso Cabrales,20,21,0.1,378
+10824,1/9/2015,2/6/2015,1/30/2015,Folk och fÃ¤ HB,Laura Callahan,Speedy Express,Jack's New England Clam Chowder,12,9.65,0,115.8
+10825,1/9/2015,2/6/2015,1/14/2015,Drachenblut Delikatessen,Nancy Davolio,Speedy Express,GumbÃ¤r GummibÃ¤rchen,12,31.23,0,374.76
+10826,1/12/2015,2/9/2015,2/6/2015,Blondesddsl pÃ¨re et fils,Michael Suyama,Speedy Express,Gorgonzola Telino,35,12.5,0,437.5
+10827,1/12/2015,1/26/2015,2/6/2015,Bon app',Nancy Davolio,United Package,Ikura,15,31,0,465
+10828,1/13/2015,1/27/2015,2/4/2015,Rancho grande,Anne Dodsworth,Speedy Express,Sir Rodney's Marmalade,5,81,0,405
+10829,1/13/2015,2/10/2015,1/23/2015,Island Trading,Anne Dodsworth,Speedy Express,Chang,10,19,0,190
+10830,1/13/2015,2/24/2015,1/21/2015,TradiÃ§Ã£o Hipermercados,Margaret Peacock,United Package,Grandma's Boysenberry Spread,6,25,0,150
+10831,1/14/2015,2/11/2015,1/23/2015,SantÃ© Gourmet,Janet Leverling,United Package,Teatime Chocolate Biscuits,2,9.2,0,18.4
+10832,1/14/2015,2/11/2015,1/19/2015,La maison d'Asie,Andrew Fuller,United Package,Konbu,3,6,0.2,14.4
+10833,1/15/2015,2/12/2015,1/23/2015,Ottilies KÃ¤seladen,Michael Suyama,United Package,Uncle Bob's Organic Dried Pears,20,30,0.1,540
+10834,1/15/2015,2/12/2015,1/19/2015,TradiÃ§Ã£o Hipermercados,Nancy Davolio,Federal Shipping,ThÃ¼ringer Rostbratwurst,8,123.79,0.05,940.8
+10835,1/15/2015,2/12/2015,1/21/2015,Alfreds Futterkiste,Nancy Davolio,Federal Shipping,Raclette Courdavault,15,55,0,825
+10836,1/16/2015,2/13/2015,1/21/2015,Ernst Handel,Robert King,Speedy Express,Gustaf's KnackebrÃ¶d,52,21,0,1092
+10837,1/16/2015,2/13/2015,1/23/2015,Berglunds snabbkÃ¶p,Anne Dodsworth,Federal Shipping,Konbu,6,6,0,36
+10838,1/19/2015,2/16/2015,1/23/2015,LINO-Delicateses,Janet Leverling,Federal Shipping,Chai,4,18,0.25,54
+10839,1/19/2015,2/16/2015,1/22/2015,TradiÃ§Ã£o Hipermercados,Janet Leverling,Federal Shipping,Escargots de Bourgogne,30,13.25,0.1,357.75
+10840,1/19/2015,3/2/2015,2/16/2015,LINO-Delicateses,Margaret Peacock,United Package,NuNuCaÂ NuÃ-Nougat-Creme,6,14,0.2,67.2
+10841,1/20/2015,2/17/2015,1/29/2015,SuprÃªmes dÃ©lices,Steven Buchanan,United Package,Ikura,16,31,0,496
+10842,1/20/2015,2/17/2015,1/29/2015,Tortuga Restaurante,Nancy Davolio,Federal Shipping,Queso Cabrales,15,21,0,315
+10843,1/21/2015,2/18/2015,1/26/2015,Victuailles en stock,Margaret Peacock,United Package,Manjimup Dried Apples,4,53,0.25,159
+10844,1/21/2015,2/18/2015,1/26/2015,Piccolo und mehr,Laura Callahan,United Package,Gustaf's KnackebrÃ¶d,35,21,0,735
+10845,1/21/2015,2/4/2015,1/30/2015,QUICK-Stop,Laura Callahan,Speedy Express,TunnbrÃ¶d,70,9,0.1,567
+10846,1/22/2015,3/5/2015,1/23/2015,SuprÃªmes dÃ©lices,Andrew Fuller,Federal Shipping,Chef Anton's Cajun Seasoning,21,22,0,462
+10847,1/22/2015,2/5/2015,2/10/2015,Save-a-lot Markets,Margaret Peacock,Federal Shipping,Chai,80,18,0.2,1152
+10848,1/23/2015,2/20/2015,1/29/2015,Consolidated Holdings,Robert King,United Package,Chef Anton's Gumbo Mix,30,21.35,0,640.5
+10849,1/23/2015,2/20/2015,1/30/2015,KÃ¶niglich Essen,Anne Dodsworth,United Package,Aniseed Syrup,49,10,0,490
+10850,1/23/2015,3/6/2015,1/30/2015,Victuailles en stock,Nancy Davolio,Speedy Express,NuNuCaÂ NuÃ-Nougat-Creme,20,14,0.15,238
+10851,1/26/2015,2/23/2015,2/2/2015,Ricardo Adocicados,Steven Buchanan,Speedy Express,Chang,5,19,0.05,90.25
+10852,1/26/2015,2/9/2015,1/30/2015,Rattlesnake Canyon Grocery,Laura Callahan,Speedy Express,Chang,15,19,0,285
+10853,1/27/2015,2/24/2015,2/3/2015,Blauer See Delikatessen,Anne Dodsworth,United Package,Carnarvon Tigers,10,62.5,0,625
+10854,1/27/2015,2/24/2015,2/5/2015,Ernst Handel,Janet Leverling,United Package,Ikura,100,31,0.15,2635
+10855,1/27/2015,2/24/2015,2/4/2015,Old World Delicatessen,Janet Leverling,Speedy Express,Pavlova,50,17.45,0,872.5
+10856,1/28/2015,2/25/2015,2/10/2015,Antonio Moreno TaquerÃ­a,Janet Leverling,United Package,Chang,20,19,0,380
+10857,1/28/2015,2/25/2015,2/6/2015,Berglunds snabbkÃ¶p,Laura Callahan,United Package,Aniseed Syrup,30,10,0,300
+10858,1/29/2015,2/26/2015,2/3/2015,La corne d'abondance,Andrew Fuller,Speedy Express,Uncle Bob's Organic Dried Pears,5,30,0,150
+10859,1/29/2015,2/26/2015,2/2/2015,Frankenversand,Nancy Davolio,United Package,Guarana Fantastica,40,4.5,0.25,135
+10860,1/29/2015,2/26/2015,2/4/2015,France restauration,Janet Leverling,Federal Shipping,Manjimup Dried Apples,3,53,0,159
+10861,1/30/2015,2/27/2015,2/17/2015,White Clover Markets,Margaret Peacock,United Package,Alice Mutton,42,39,0,1638
+10862,1/30/2015,3/13/2015,2/2/2015,Lehmanns Marktstand,Laura Callahan,United Package,Queso Cabrales,25,21,0,525
+10863,2/2/2015,3/2/2015,2/17/2015,HILARION-Abastos,Margaret Peacock,United Package,Chai,20,18,0.15,306
+10864,2/2/2015,3/2/2015,2/9/2015,Around the Horn,Margaret Peacock,United Package,Steeleye Stout,4,18,0,72
+10865,2/2/2015,2/16/2015,2/12/2015,QUICK-Stop,Andrew Fuller,Speedy Express,CÃ´te de Blaye,60,263.5,0.05,15019.5
+10866,2/3/2015,3/3/2015,2/12/2015,Berglunds snabbkÃ¶p,Steven Buchanan,Speedy Express,Chang,21,19,0.25,299.25
+10867,2/3/2015,3/17/2015,2/11/2015,Lonesome Pine Restaurant,Michael Suyama,Speedy Express,Perth Pasties,3,32.8,0,98.4
+10868,2/4/2015,3/4/2015,2/23/2015,Queen Cozinha,Robert King,United Package,GumbÃ¤r GummibÃ¤rchen,20,31.23,0,624.6
+10869,2/4/2015,3/4/2015,2/9/2015,Seven Seas Imports,Steven Buchanan,Speedy Express,Chai,40,18,0,720
+10870,2/4/2015,3/4/2015,2/13/2015,Wolski  Zajazd,Steven Buchanan,Federal Shipping,Steeleye Stout,3,18,0,54
+10871,2/5/2015,3/5/2015,2/10/2015,Bon app',Anne Dodsworth,United Package,Grandma's Boysenberry Spread,50,25,0.05,1187.5
+10872,2/5/2015,3/5/2015,2/9/2015,Godos Cocina TÃ­pica,Steven Buchanan,United Package,PÃ¢tÃ© chinois,10,24,0.05,228
+10873,2/6/2015,3/6/2015,2/9/2015,Wilman Kala,Margaret Peacock,Speedy Express,Sir Rodney's Scones,20,10,0,200
+10874,2/6/2015,3/6/2015,2/11/2015,Godos Cocina TÃ­pica,Steven Buchanan,United Package,Ikura,10,31,0,310
+10875,2/6/2015,3/6/2015,3/3/2015,Berglunds snabbkÃ¶p,Margaret Peacock,United Package,Teatime Chocolate Biscuits,25,9.2,0,230
+10876,2/9/2015,3/9/2015,2/12/2015,Bon app',Robert King,Federal Shipping,Spegesild,21,12,0,252
+10877,2/9/2015,3/9/2015,2/19/2015,Ricardo Adocicados,Nancy Davolio,Speedy Express,Pavlova,30,17.45,0.25,392.62
+10878,2/10/2015,3/10/2015,2/12/2015,QUICK-Stop,Margaret Peacock,Speedy Express,Sir Rodney's Marmalade,20,81,0.05,1539
+10879,2/10/2015,3/10/2015,2/12/2015,Wilman Kala,Janet Leverling,Federal Shipping,Boston Crab Meat,12,18.4,0,220.8
+10880,2/10/2015,3/24/2015,2/18/2015,Folk och fÃ¤ HB,Robert King,Speedy Express,TunnbrÃ¶d,30,9,0.2,216
+10881,2/11/2015,3/11/2015,2/18/2015,Cactus Comidas para llevar,Margaret Peacock,Speedy Express,RÃ¶d Kaviar,10,15,0,150
+10882,2/11/2015,3/11/2015,2/20/2015,Save-a-lot Markets,Margaret Peacock,Federal Shipping,Singaporean Hokkien Fried Mee,25,14,0,350
+10883,2/12/2015,3/12/2015,2/20/2015,Lonesome Pine Restaurant,Laura Callahan,Federal Shipping,Guarana Fantastica,8,4.5,0,36
+10884,2/12/2015,3/12/2015,2/13/2015,Let's Stop N Shop,Margaret Peacock,United Package,Sir Rodney's Scones,40,10,0.05,380
+10885,2/12/2015,3/12/2015,2/18/2015,SuprÃªmes dÃ©lices,Michael Suyama,Federal Shipping,Chang,20,19,0,380
+10886,2/13/2015,3/13/2015,3/2/2015,Hanari Carnes,Nancy Davolio,Speedy Express,Ikura,70,31,0,2170
+10887,2/13/2015,3/13/2015,2/16/2015,GalerÃ­a del gastrÃ³nomo,Laura Callahan,Federal Shipping,NuNuCaÂ NuÃ-Nougat-Creme,5,14,0,70
+10888,2/16/2015,3/16/2015,2/23/2015,Godos Cocina TÃ­pica,Nancy Davolio,United Package,Chang,20,19,0,380
+10889,2/16/2015,3/16/2015,2/23/2015,Rattlesnake Canyon Grocery,Anne Dodsworth,Federal Shipping,Queso Cabrales,40,21,0,840
+10890,2/16/2015,3/16/2015,2/18/2015,Du monde entier,Robert King,Speedy Express,Alice Mutton,15,39,0,585
+10891,2/17/2015,3/17/2015,2/19/2015,Lehmanns Marktstand,Robert King,United Package,Nord-Ost Matjeshering,15,25.89,0.05,368.93
+10892,2/17/2015,3/17/2015,2/19/2015,Maison Dewey,Margaret Peacock,United Package,Raclette Courdavault,40,55,0.05,2090
+10893,2/18/2015,3/18/2015,2/20/2015,KÃ¶niglich Essen,Anne Dodsworth,United Package,Northwoods Cranberry Sauce,30,40,0,1200
+10894,2/18/2015,3/18/2015,2/20/2015,Save-a-lot Markets,Nancy Davolio,Speedy Express,Konbu,28,6,0.05,159.6
+10895,2/18/2015,3/18/2015,2/23/2015,Ernst Handel,Janet Leverling,Speedy Express,Guarana Fantastica,110,4.5,0,495
+10896,2/19/2015,3/19/2015,2/27/2015,Maison Dewey,Robert King,Federal Shipping,Rogede sild,15,9.5,0,142.5
+10897,2/19/2015,3/19/2015,2/25/2015,Hungry Owl All-Night Grocers,Janet Leverling,United Package,ThÃ¼ringer Rostbratwurst,80,123.79,0,9903.2
+10898,2/20/2015,3/20/2015,3/6/2015,OcÃ©ano AtlÃ¡ntico Ltda.,Margaret Peacock,United Package,Konbu,5,6,0,30
+10899,2/20/2015,3/20/2015,2/26/2015,LILA-Supermercado,Steven Buchanan,Federal Shipping,Chartreuse verte,8,18,0.15,122.4
+10900,2/20/2015,3/20/2015,3/4/2015,Wellington Importadora,Nancy Davolio,United Package,Outback Lager,3,15,0.25,33.75
+10901,2/23/2015,3/23/2015,2/26/2015,HILARION-Abastos,Margaret Peacock,Speedy Express,Jack's New England Clam Chowder,30,9.65,0,289.5
+10902,2/23/2015,3/23/2015,3/3/2015,Folk och fÃ¤ HB,Nancy Davolio,Speedy Express,PÃ¢tÃ© chinois,30,24,0.15,612
+10903,2/24/2015,3/24/2015,3/4/2015,Hanari Carnes,Janet Leverling,Federal Shipping,Konbu,40,6,0,240
+10904,2/24/2015,3/24/2015,2/27/2015,White Clover Markets,Janet Leverling,Federal Shipping,Escargots de Bourgogne,15,13.25,0,198.75
+10905,2/24/2015,3/24/2015,3/6/2015,Wellington Importadora,Anne Dodsworth,United Package,Chai,20,18,0.05,342
+10906,2/25/2015,3/11/2015,3/3/2015,Wolski  Zajazd,Margaret Peacock,Federal Shipping,Sirop d'Ã©rable,15,28.5,0,427.5
+10907,2/25/2015,3/25/2015,2/27/2015,SpÃ©cialitÃ©s du monde,Michael Suyama,Federal Shipping,RhÃ¶nbrÃ¤u Klosterbier,14,7.75,0,108.5
+10908,2/26/2015,3/26/2015,3/6/2015,Reggiani Caseifici,Margaret Peacock,United Package,Uncle Bob's Organic Dried Pears,20,30,0.05,570
+10909,2/26/2015,3/26/2015,3/10/2015,SantÃ© Gourmet,Nancy Davolio,United Package,Uncle Bob's Organic Dried Pears,12,30,0,360
+10910,2/26/2015,3/26/2015,3/4/2015,Wilman Kala,Nancy Davolio,Federal Shipping,Teatime Chocolate Biscuits,12,9.2,0,110.4
+10911,2/26/2015,3/26/2015,3/5/2015,Godos Cocina TÃ­pica,Janet Leverling,Speedy Express,Chai,10,18,0,180
+10912,2/26/2015,3/26/2015,3/18/2015,Hungry Owl All-Night Grocers,Andrew Fuller,United Package,Queso Cabrales,40,21,0.25,630
+10913,2/26/2015,3/26/2015,3/4/2015,Queen Cozinha,Margaret Peacock,Speedy Express,Chef Anton's Cajun Seasoning,30,22,0.25,495
+10914,2/27/2015,3/27/2015,3/2/2015,Queen Cozinha,Michael Suyama,Speedy Express,Flotemysost,25,21.5,0,537.5
+10915,2/27/2015,3/27/2015,3/2/2015,Tortuga Restaurante,Andrew Fuller,United Package,Alice Mutton,10,39,0,390
+10916,2/27/2015,3/27/2015,3/9/2015,Rancho grande,Nancy Davolio,United Package,Pavlova,6,17.45,0,104.7
+10917,3/2/2015,3/30/2015,3/11/2015,Romero y tomillo,Margaret Peacock,United Package,Nord-Ost Matjeshering,1,25.89,0,25.89
+10918,3/2/2015,3/30/2015,3/11/2015,Bottom-Dollar Markets,Janet Leverling,Federal Shipping,Chai,60,18,0.25,810
+10919,3/2/2015,3/30/2015,3/4/2015,LINO-Delicateses,Andrew Fuller,United Package,Pavlova,24,17.45,0,418.8
+10920,3/3/2015,3/31/2015,3/9/2015,Around the Horn,Margaret Peacock,United Package,Valkoinen suklaa,24,16.25,0,390
+10921,3/3/2015,4/14/2015,3/9/2015,Vaffeljernet,Nancy Davolio,Speedy Express,Steeleye Stout,10,18,0,180
+10922,3/3/2015,3/31/2015,3/5/2015,Hanari Carnes,Steven Buchanan,Federal Shipping,Alice Mutton,15,39,0,585
+10923,3/3/2015,4/14/2015,3/13/2015,La maison d'Asie,Robert King,Federal Shipping,Singaporean Hokkien Fried Mee,10,14,0.2,112
+10924,3/4/2015,4/1/2015,4/8/2015,Berglunds snabbkÃ¶p,Janet Leverling,United Package,Ikura,20,31,0.1,558
+10925,3/4/2015,4/1/2015,3/13/2015,Hanari Carnes,Janet Leverling,Speedy Express,Inlagd Sill,25,19,0.15,403.75
+10926,3/4/2015,4/1/2015,3/11/2015,Ana Trujillo Emparedados y helados,Margaret Peacock,Federal Shipping,Queso Cabrales,2,21,0,42
+10927,3/5/2015,4/2/2015,4/8/2015,La corne d'abondance,Margaret Peacock,Speedy Express,Sir Rodney's Marmalade,5,81,0,405
+10928,3/5/2015,4/2/2015,3/18/2015,GalerÃ­a del gastrÃ³nomo,Nancy Davolio,Speedy Express,Zaanse koeken,5,9.5,0,47.5
+10929,3/5/2015,4/2/2015,3/12/2015,Frankenversand,Michael Suyama,Speedy Express,Sir Rodney's Scones,60,10,0,600
+10930,3/6/2015,4/17/2015,3/18/2015,SuprÃªmes dÃ©lices,Margaret Peacock,Federal Shipping,Sir Rodney's Scones,36,10,0,360
+10931,3/6/2015,3/20/2015,3/19/2015,Richter Supermarkt,Margaret Peacock,United Package,Konbu,42,6,0.15,214.2
+10932,3/6/2015,4/3/2015,3/24/2015,Bon app',Laura Callahan,Speedy Express,Pavlova,30,17.45,0.1,471.15
+10933,3/6/2015,4/3/2015,3/16/2015,Island Trading,Michael Suyama,Federal Shipping,Perth Pasties,2,32.8,0,65.6
+10934,3/9/2015,4/6/2015,3/12/2015,Lehmanns Marktstand,Janet Leverling,Federal Shipping,Grandma's Boysenberry Spread,20,25,0,500
+10935,3/9/2015,4/6/2015,3/18/2015,Wellington Importadora,Margaret Peacock,Federal Shipping,Chai,21,18,0,378
+10936,3/9/2015,4/6/2015,3/18/2015,Great Lakes Food Market,Janet Leverling,United Package,Inlagd Sill,30,19,0.2,456
+10937,3/10/2015,3/24/2015,3/13/2015,Cactus Comidas para llevar,Robert King,Federal Shipping,RÃ¶ssle Sauerkraut,8,45.6,0,364.8
+10938,3/10/2015,4/7/2015,3/16/2015,QUICK-Stop,Janet Leverling,United Package,Konbu,20,6,0.25,90
+10939,3/10/2015,4/7/2015,3/13/2015,Magazzini Alimentari Riuniti,Andrew Fuller,United Package,Chang,10,19,0.15,161.5
+10940,3/11/2015,4/8/2015,3/23/2015,Bon app',Laura Callahan,Federal Shipping,Uncle Bob's Organic Dried Pears,8,30,0,240
+10941,3/11/2015,4/8/2015,3/20/2015,Save-a-lot Markets,Robert King,United Package,Gorgonzola Telino,44,12.5,0.25,412.5
+10942,3/11/2015,4/8/2015,3/18/2015,Reggiani Caseifici,Anne Dodsworth,Federal Shipping,Maxilaku,28,20,0,560
+10943,3/11/2015,4/8/2015,3/19/2015,B's Beverages,Margaret Peacock,United Package,Konbu,15,6,0,90
+10944,3/12/2015,3/26/2015,3/13/2015,Bottom-Dollar Markets,Michael Suyama,Federal Shipping,Queso Cabrales,5,21,0.25,78.75
+10945,3/12/2015,4/9/2015,3/18/2015,Morgenstern Gesundkost,Margaret Peacock,Speedy Express,Konbu,20,6,0,120
+10946,3/12/2015,4/9/2015,3/19/2015,Vaffeljernet,Nancy Davolio,United Package,Ikura,25,31,0,775
+10947,3/13/2015,4/10/2015,3/16/2015,B's Beverages,Janet Leverling,United Package,Raclette Courdavault,4,55,0,220
+10948,3/13/2015,4/10/2015,3/19/2015,Godos Cocina TÃ­pica,Janet Leverling,Federal Shipping,Valkoinen suklaa,9,16.25,0,146.25
+10949,3/13/2015,4/10/2015,3/17/2015,Bottom-Dollar Markets,Andrew Fuller,Federal Shipping,Grandma's Boysenberry Spread,12,25,0,300
+10950,3/16/2015,4/13/2015,3/23/2015,Magazzini Alimentari Riuniti,Nancy Davolio,United Package,Chef Anton's Cajun Seasoning,5,22,0,110
+10951,3/16/2015,4/27/2015,4/7/2015,Richter Supermarkt,Anne Dodsworth,United Package,Geitost,15,2.5,0.05,35.62
+10952,3/16/2015,4/27/2015,3/24/2015,Alfreds Futterkiste,Nancy Davolio,Speedy Express,Grandma's Boysenberry Spread,16,25,0.05,380
+10953,3/16/2015,3/30/2015,3/25/2015,Around the Horn,Anne Dodsworth,United Package,Sir Rodney's Marmalade,50,81,0.05,3847.5
+10954,3/17/2015,4/28/2015,3/20/2015,LINO-Delicateses,Steven Buchanan,Speedy Express,Pavlova,28,17.45,0.15,415.31
+10955,3/17/2015,4/14/2015,3/20/2015,Folk och fÃ¤ HB,Laura Callahan,United Package,RhÃ¶nbrÃ¤u Klosterbier,12,7.75,0.2,74.4
+10956,3/17/2015,4/28/2015,3/20/2015,Blauer See Delikatessen,Michael Suyama,United Package,Sir Rodney's Scones,12,10,0,120
+10957,3/18/2015,4/15/2015,3/27/2015,HILARION-Abastos,Laura Callahan,Federal Shipping,Nord-Ost Matjeshering,30,25.89,0,776.7
+10958,3/18/2015,4/15/2015,3/27/2015,OcÃ©ano AtlÃ¡ntico Ltda.,Robert King,United Package,Chef Anton's Gumbo Mix,20,21.35,0,427
+10959,3/18/2015,4/29/2015,3/23/2015,Gourmet Lanchonetes,Michael Suyama,United Package,RhÃ¶nbrÃ¤u Klosterbier,20,7.75,0.15,131.75
+10960,3/19/2015,4/2/2015,4/8/2015,HILARION-Abastos,Janet Leverling,Speedy Express,Guarana Fantastica,10,4.5,0.25,33.75
+10961,3/19/2015,4/16/2015,3/30/2015,Queen Cozinha,Laura Callahan,Speedy Express,Filo Mix,6,7,0.05,39.9
+10962,3/19/2015,4/16/2015,3/23/2015,QUICK-Stop,Laura Callahan,United Package,Uncle Bob's Organic Dried Pears,45,30,0,1350
+10963,3/19/2015,4/16/2015,3/26/2015,Furia Bacalhau e Frutos do Mar,Anne Dodsworth,Federal Shipping,Camembert Pierrot,2,34,0.15,57.8
+10964,3/20/2015,4/17/2015,3/24/2015,SpÃ©cialitÃ©s du monde,Janet Leverling,United Package,Carnarvon Tigers,6,62.5,0,375
+10965,3/20/2015,4/17/2015,3/30/2015,Old World Delicatessen,Michael Suyama,Federal Shipping,Manjimup Dried Apples,16,53,0,848
+10966,3/20/2015,4/17/2015,4/8/2015,Chop-suey Chinese,Margaret Peacock,Speedy Express,Gravad lax,8,26,0,208
+10967,3/23/2015,4/20/2015,4/2/2015,Toms SpezialitÃ¤ten,Andrew Fuller,United Package,Teatime Chocolate Biscuits,12,9.2,0,110.4
+10968,3/23/2015,4/20/2015,4/1/2015,Ernst Handel,Nancy Davolio,Federal Shipping,Queso Manchego La Pastora,30,38,0,1140
+10969,3/23/2015,4/20/2015,3/30/2015,ComÃ©rcio Mineiro,Nancy Davolio,United Package,Spegesild,9,12,0,108
+10970,3/24/2015,4/7/2015,4/24/2015,BÃ³lido Comidas preparadas,Anne Dodsworth,Speedy Express,Filo Mix,40,7,0.2,224
+10971,3/24/2015,4/21/2015,4/2/2015,France restauration,Andrew Fuller,United Package,ThÃ¼ringer Rostbratwurst,14,123.79,0,1733.06
+10972,3/24/2015,4/21/2015,3/26/2015,La corne d'abondance,Margaret Peacock,United Package,Alice Mutton,6,39,0,234
+10973,3/24/2015,4/21/2015,3/27/2015,La corne d'abondance,Michael Suyama,United Package,GumbÃ¤r GummibÃ¤rchen,5,31.23,0,156.15
+10974,3/25/2015,4/8/2015,4/3/2015,Split Rail Beer & Ale,Janet Leverling,Federal Shipping,Vegie-spread,10,43.9,0,439
+10975,3/25/2015,4/22/2015,3/27/2015,Bottom-Dollar Markets,Nancy Davolio,Federal Shipping,Northwoods Cranberry Sauce,16,40,0,640
+10976,3/25/2015,5/6/2015,4/3/2015,HILARION-Abastos,Nancy Davolio,Speedy Express,RÃ¶ssle Sauerkraut,20,45.6,0,912
+10977,3/26/2015,4/23/2015,4/10/2015,Folk och fÃ¤ HB,Laura Callahan,Federal Shipping,Chartreuse verte,30,18,0,540
+10978,3/26/2015,4/23/2015,4/23/2015,Maison Dewey,Anne Dodsworth,United Package,Northwoods Cranberry Sauce,20,40,0.15,680
+10979,3/26/2015,4/23/2015,3/31/2015,Ernst Handel,Laura Callahan,United Package,Uncle Bob's Organic Dried Pears,18,30,0,540
+10980,3/27/2015,5/8/2015,4/17/2015,Folk och fÃ¤ HB,Margaret Peacock,Speedy Express,RhÃ¶nbrÃ¤u Klosterbier,40,7.75,0.2,248
+10981,3/27/2015,4/24/2015,4/2/2015,Hanari Carnes,Nancy Davolio,United Package,CÃ´te de Blaye,60,263.5,0,15810
+10982,3/27/2015,4/24/2015,4/8/2015,Bottom-Dollar Markets,Andrew Fuller,Speedy Express,Uncle Bob's Organic Dried Pears,20,30,0,600
+10983,3/27/2015,4/24/2015,4/6/2015,Save-a-lot Markets,Andrew Fuller,United Package,Konbu,84,6,0.15,428.4
+10984,3/30/2015,4/27/2015,4/3/2015,Save-a-lot Markets,Nancy Davolio,Federal Shipping,Pavlova,55,17.45,0,959.75
+10985,3/30/2015,4/27/2015,4/2/2015,Hungry Owl All-Night Grocers,Andrew Fuller,Speedy Express,Pavlova,36,17.45,0.1,565.38
+10986,3/30/2015,4/27/2015,4/21/2015,OcÃ©ano AtlÃ¡ntico Ltda.,Laura Callahan,United Package,Queso Cabrales,30,21,0,630
+10987,3/31/2015,4/28/2015,4/6/2015,Eastern Connection,Laura Callahan,Speedy Express,Uncle Bob's Organic Dried Pears,60,30,0,1800
+10988,3/31/2015,4/28/2015,4/10/2015,Rattlesnake Canyon Grocery,Janet Leverling,United Package,Uncle Bob's Organic Dried Pears,60,30,0,1800
+10989,3/31/2015,4/28/2015,4/2/2015,Que DelÃ­cia,Andrew Fuller,Speedy Express,Grandma's Boysenberry Spread,40,25,0,1000
+10990,4/1/2015,5/13/2015,4/7/2015,Ernst Handel,Andrew Fuller,Federal Shipping,Sir Rodney's Scones,65,10,0,650
+10991,4/1/2015,4/29/2015,4/7/2015,QUICK-Stop,Nancy Davolio,Speedy Express,Chang,50,19,0.2,760
+10992,4/1/2015,4/29/2015,4/3/2015,The Big Cheese,Nancy Davolio,Federal Shipping,Mozzarella di Giovanni,2,34.8,0,69.6
+10993,4/1/2015,4/29/2015,4/10/2015,Folk och fÃ¤ HB,Robert King,Federal Shipping,ThÃ¼ringer Rostbratwurst,50,123.79,0.25,4642.12
+10994,4/2/2015,4/16/2015,4/9/2015,Vaffeljernet,Andrew Fuller,Federal Shipping,Raclette Courdavault,18,55,0.05,940.5
+10995,4/2/2015,4/30/2015,4/6/2015,Pericles Comidas clÃ¡sicas,Nancy Davolio,Federal Shipping,Manjimup Dried Apples,20,53,0,1060
+10996,4/2/2015,4/30/2015,4/10/2015,QUICK-Stop,Margaret Peacock,United Package,Singaporean Hokkien Fried Mee,40,14,0,560
+10997,4/3/2015,5/15/2015,4/13/2015,LILA-Supermercado,Laura Callahan,United Package,Mascarpone Fabioli,50,32,0,1600
+10998,4/3/2015,4/17/2015,4/17/2015,Wolski  Zajazd,Laura Callahan,United Package,Guarana Fantastica,12,4.5,0,54
+10999,4/3/2015,5/1/2015,4/10/2015,Ottilies KÃ¤seladen,Michael Suyama,United Package,Jack's New England Clam Chowder,20,9.65,0.05,183.35
+11000,4/6/2015,5/4/2015,4/14/2015,Rattlesnake Canyon Grocery,Andrew Fuller,Federal Shipping,Chef Anton's Cajun Seasoning,25,22,0.25,412.5
+11001,4/6/2015,5/4/2015,4/14/2015,Folk och fÃ¤ HB,Andrew Fuller,United Package,Uncle Bob's Organic Dried Pears,60,30,0,1800
+11002,4/6/2015,5/4/2015,4/16/2015,Save-a-lot Markets,Margaret Peacock,Speedy Express,Konbu,56,6,0,336
+11003,4/6/2015,5/4/2015,4/8/2015,The Cracker Box,Janet Leverling,Federal Shipping,Chai,4,18,0,72
+11004,4/7/2015,5/5/2015,4/20/2015,Maison Dewey,Janet Leverling,Speedy Express,GumbÃ¤r GummibÃ¤rchen,6,31.23,0,187.38
+11005,4/7/2015,5/5/2015,4/10/2015,Wilman Kala,Andrew Fuller,Speedy Express,Chai,2,18,0,36
+11006,4/7/2015,5/5/2015,4/15/2015,Great Lakes Food Market,Janet Leverling,United Package,Chai,8,18,0,144
+11007,4/8/2015,5/6/2015,4/13/2015,Princesa Isabel Vinhos,Laura Callahan,United Package,Northwoods Cranberry Sauce,30,40,0,1200
+11008,4/8/2015,5/6/2015,,Ernst Handel,Robert King,Federal Shipping,RÃ¶ssle Sauerkraut,70,45.6,0.05,3032.4
+11009,4/8/2015,5/6/2015,4/10/2015,Godos Cocina TÃ­pica,Andrew Fuller,Speedy Express,Guarana Fantastica,12,4.5,0,54
+11010,4/9/2015,5/7/2015,4/21/2015,Reggiani Caseifici,Andrew Fuller,United Package,Uncle Bob's Organic Dried Pears,20,30,0,600
+11011,4/9/2015,5/7/2015,4/13/2015,Alfreds Futterkiste,Janet Leverling,Speedy Express,Escargots de Bourgogne,40,13.25,0.05,503.5
+11012,4/9/2015,4/23/2015,4/17/2015,Frankenversand,Nancy Davolio,Federal Shipping,Teatime Chocolate Biscuits,50,9.2,0.05,437
+11013,4/9/2015,5/7/2015,4/10/2015,Romero y tomillo,Andrew Fuller,Speedy Express,TunnbrÃ¶d,10,9,0,90
+11014,4/10/2015,5/8/2015,4/15/2015,LINO-Delicateses,Andrew Fuller,Federal Shipping,Jack's New England Clam Chowder,28,9.65,0.1,243.18
+11015,4/10/2015,4/24/2015,4/20/2015,SantÃ© Gourmet,Andrew Fuller,United Package,Nord-Ost Matjeshering,15,25.89,0,388.35
+11016,4/10/2015,5/8/2015,4/13/2015,Around the Horn,Anne Dodsworth,United Package,Gorgonzola Telino,15,12.5,0,187.5
+11017,4/13/2015,5/11/2015,4/20/2015,Ernst Handel,Anne Dodsworth,United Package,Aniseed Syrup,25,10,0,250
+11018,4/13/2015,5/11/2015,4/16/2015,Lonesome Pine Restaurant,Margaret Peacock,United Package,Queso Manchego La Pastora,20,38,0,760
+11019,4/13/2015,5/11/2015,,Rancho grande,Michael Suyama,Federal Shipping,Spegesild,3,12,0,36
+11020,4/14/2015,5/12/2015,4/16/2015,Ottilies KÃ¤seladen,Andrew Fuller,United Package,Ikura,24,31,0.15,632.4
+11021,4/14/2015,5/12/2015,4/21/2015,QUICK-Stop,Janet Leverling,Speedy Express,Chang,11,19,0.25,156.75
+11022,4/14/2015,5/12/2015,5/4/2015,Hanari Carnes,Anne Dodsworth,United Package,Teatime Chocolate Biscuits,35,9.2,0,322
+11023,4/14/2015,4/28/2015,4/24/2015,B's Beverages,Nancy Davolio,United Package,Uncle Bob's Organic Dried Pears,4,30,0,120
+11024,4/15/2015,5/13/2015,4/20/2015,Eastern Connection,Margaret Peacock,Speedy Express,GumbÃ¤r GummibÃ¤rchen,12,31.23,0,374.76
+11025,4/15/2015,5/13/2015,4/24/2015,Wartian Herkku,Michael Suyama,Federal Shipping,Chai,10,18,0.1,162
+11026,4/15/2015,5/13/2015,4/28/2015,Franchi S.p.A.,Margaret Peacock,Speedy Express,Carnarvon Tigers,8,62.5,0,500
+11027,4/16/2015,5/14/2015,4/20/2015,Bottom-Dollar Markets,Nancy Davolio,Speedy Express,Guarana Fantastica,30,4.5,0.25,101.25
+11028,4/16/2015,5/14/2015,4/22/2015,KÃ¶niglich Essen,Andrew Fuller,Speedy Express,PÃ¢tÃ© chinois,35,24,0,840
+11029,4/16/2015,5/14/2015,4/27/2015,Chop-suey Chinese,Margaret Peacock,Speedy Express,Gnocchi di nonna Alice,20,38,0,760
+11030,4/17/2015,5/15/2015,4/27/2015,Save-a-lot Markets,Robert King,United Package,Chang,100,19,0.25,1425
+11031,4/17/2015,5/15/2015,4/24/2015,Save-a-lot Markets,Michael Suyama,United Package,Chai,45,18,0,810
+11032,4/17/2015,5/15/2015,4/23/2015,White Clover Markets,Andrew Fuller,Federal Shipping,Inlagd Sill,35,19,0,665
+11033,4/17/2015,5/15/2015,4/23/2015,Richter Supermarkt,Robert King,Federal Shipping,Perth Pasties,70,32.8,0.1,2066.4
+11034,4/20/2015,6/1/2015,4/27/2015,Old World Delicatessen,Laura Callahan,Speedy Express,Sir Rodney's Scones,15,10,0.1,135
+11035,4/20/2015,5/18/2015,4/24/2015,SuprÃªmes dÃ©lices,Andrew Fuller,United Package,Chai,10,18,0,180
+11036,4/20/2015,5/18/2015,4/22/2015,Drachenblut Delikatessen,Laura Callahan,Federal Shipping,Konbu,7,6,0,42
+11037,4/21/2015,5/19/2015,4/27/2015,Godos Cocina TÃ­pica,Robert King,Speedy Express,Outback Lager,4,15,0,60
+11038,4/21/2015,5/19/2015,4/30/2015,SuprÃªmes dÃ©lices,Nancy Davolio,United Package,Boston Crab Meat,5,18.4,0.2,73.6
+11039,4/21/2015,5/19/2015,,LINO-Delicateses,Nancy Davolio,United Package,RÃ¶ssle Sauerkraut,20,45.6,0,912
+11040,4/22/2015,5/20/2015,,Great Lakes Food Market,Margaret Peacock,Federal Shipping,Sir Rodney's Scones,20,10,0,200
+11041,4/22/2015,5/20/2015,4/28/2015,Chop-suey Chinese,Janet Leverling,United Package,Chang,30,19,0.2,456
+11042,4/22/2015,5/6/2015,5/1/2015,ComÃ©rcio Mineiro,Andrew Fuller,Speedy Express,Gula Malacca,15,19.45,0,291.75
+11043,4/22/2015,5/20/2015,4/29/2015,SpÃ©cialitÃ©s du monde,Steven Buchanan,United Package,Queso Cabrales,10,21,0,210
+11044,4/23/2015,5/21/2015,5/1/2015,Wolski  Zajazd,Margaret Peacock,Speedy Express,Tarte au sucre,12,49.3,0,591.6
+11045,4/23/2015,5/21/2015,,Bottom-Dollar Markets,Michael Suyama,United Package,Geitost,15,2.5,0,37.5
+11046,4/23/2015,5/21/2015,4/24/2015,Die Wandernde Kuh,Laura Callahan,United Package,Queso Manchego La Pastora,20,38,0.05,722
+11047,4/24/2015,5/22/2015,5/1/2015,Eastern Connection,Robert King,Federal Shipping,Chai,25,18,0.25,337.5
+11048,4/24/2015,5/22/2015,4/30/2015,Bottom-Dollar Markets,Robert King,Federal Shipping,Scottish Longbreads,42,12.5,0,525
+11049,4/24/2015,5/22/2015,5/4/2015,Gourmet Lanchonetes,Janet Leverling,Speedy Express,Chang,10,19,0.2,152
+11050,4/27/2015,5/25/2015,5/5/2015,Folk och fÃ¤ HB,Laura Callahan,United Package,LakkalikÃ¶ri,50,18,0.1,810
+11051,4/27/2015,5/25/2015,,La maison d'Asie,Robert King,Federal Shipping,Guarana Fantastica,10,4.5,0.2,36
+11052,4/27/2015,5/25/2015,5/1/2015,Hanari Carnes,Janet Leverling,Speedy Express,Ipoh Coffee,30,46,0.2,1104
+11053,4/27/2015,5/25/2015,4/29/2015,Piccolo und mehr,Andrew Fuller,United Package,Carnarvon Tigers,35,62.5,0.2,1750
+11054,4/28/2015,5/26/2015,,Cactus Comidas para llevar,Laura Callahan,Speedy Express,Geitost,10,2.5,0,25
+11055,4/28/2015,5/26/2015,5/5/2015,HILARION-Abastos,Robert King,United Package,Guarana Fantastica,15,4.5,0,67.5
+11056,4/28/2015,5/12/2015,5/1/2015,Eastern Connection,Laura Callahan,United Package,Uncle Bob's Organic Dried Pears,40,30,0,1200
+11057,4/29/2015,5/27/2015,5/1/2015,North/South,Janet Leverling,Federal Shipping,Outback Lager,3,15,0,45
+11058,4/29/2015,5/27/2015,,Blauer See Delikatessen,Anne Dodsworth,Federal Shipping,Sir Rodney's Scones,3,10,0,30
+11059,4/29/2015,6/10/2015,,Ricardo Adocicados,Andrew Fuller,United Package,Konbu,30,6,0,180
+11060,4/30/2015,5/28/2015,5/4/2015,Franchi S.p.A.,Andrew Fuller,United Package,Camembert Pierrot,4,34,0,136
+11061,4/30/2015,6/11/2015,,Great Lakes Food Market,Margaret Peacock,Federal Shipping,Camembert Pierrot,15,34,0,510
+11062,4/30/2015,5/28/2015,,Reggiani Caseifici,Margaret Peacock,United Package,Perth Pasties,10,32.8,0.2,262.4
+11063,4/30/2015,5/28/2015,5/6/2015,Hungry Owl All-Night Grocers,Janet Leverling,United Package,Sasquatch Ale,30,14,0,420
+11064,5/1/2015,5/29/2015,5/4/2015,Save-a-lot Markets,Nancy Davolio,Speedy Express,Alice Mutton,77,39,0.1,2702.7
+11065,5/1/2015,5/29/2015,,LILA-Supermercado,Laura Callahan,Speedy Express,Nord-Ost Matjeshering,4,25.89,0.25,77.67
+11066,5/1/2015,5/29/2015,5/4/2015,White Clover Markets,Robert King,United Package,Pavlova,3,17.45,0,52.35
+11067,5/4/2015,5/18/2015,5/6/2015,Drachenblut Delikatessen,Nancy Davolio,United Package,Jack's New England Clam Chowder,9,9.65,0,86.85
+11068,5/4/2015,6/1/2015,,Queen Cozinha,Laura Callahan,United Package,RÃ¶ssle Sauerkraut,8,45.6,0.15,310.08
+11069,5/4/2015,6/1/2015,5/6/2015,Tortuga Restaurante,Nancy Davolio,United Package,Chartreuse verte,20,18,0,360
+11070,5/5/2015,6/2/2015,,Lehmanns Marktstand,Andrew Fuller,Speedy Express,Chai,40,18,0.15,612
+11071,5/5/2015,6/2/2015,,LILA-Supermercado,Nancy Davolio,Speedy Express,Uncle Bob's Organic Dried Pears,15,30,0.05,427.5
+11072,5/5/2015,6/2/2015,,Ernst Handel,Margaret Peacock,United Package,Chang,8,19,0,152
+11073,5/5/2015,6/2/2015,,Pericles Comidas clÃ¡sicas,Andrew Fuller,United Package,Queso Cabrales,10,21,0,210
+11074,5/6/2015,6/3/2015,,Simons bistro,Robert King,United Package,Pavlova,14,17.45,0.05,232.08
+11075,5/6/2015,6/3/2015,,Richter Supermarkt,Laura Callahan,United Package,Chang,10,19,0.15,161.5
+11076,5/6/2015,6/3/2015,,Bon app',Margaret Peacock,United Package,Grandma's Boysenberry Spread,20,25,0.25,375
+11077,5/6/2015,6/3/2015,,Rattlesnake Canyon Grocery,Nancy Davolio,United Package,Chang,24,19,0.2,364.8
