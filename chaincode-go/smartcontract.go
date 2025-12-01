@@ -7,7 +7,7 @@ import (
 	"fmt"
     "strconv"
 
-	"github.com/hyperledger/fabric-chaincode-go/shim"
+    "github.com/hyperledger/fabric-chaincode-go/shim"
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
@@ -42,24 +42,7 @@ type CustomerPrivate struct {
 }
 
 
-type Order struct {
-    OrderID      string `json:"orderID"`
-    CustomerID   string `json:"customerID"`
-    Employee     string `json:"employee"`
-    OrderDate    string `json:"orderDate"`
-    RequiredDate string `json:"requiredDate"`
-    ShippedDate  string `json:"shippedDate"`
-    ShipperID    string `json:"shipperID"`
-    Freight      float64 `json:"freight"`
-}
 
-type OrderDetail struct {
-    OrderID   string  `json:"orderID"`
-    ProductID string  `json:"productID"`
-    UnitPrice float64 `json:"unitPrice"`
-    Quantity  int     `json:"quantity"`
-    Discount  float64 `json:"discount"`
-}
 
 type EmployeePrivate struct {
     EmployeeID   string `json:"employeeID"`
@@ -175,62 +158,7 @@ func (s *SmartContract) CreateCustomer(ctx contractapi.TransactionContextInterfa
 
 // Org2: Create Order
 
-func (s *SmartContract) CreateOrder(ctx contractapi.TransactionContextInterface) error {
-    transientMap, err := ctx.GetStub().GetTransient()
-    if err != nil {
-        return err
-    }
 
-    orderJSON, ok := transientMap["order"]
-    if !ok {
-        return fmt.Errorf("order key not found in transient map")
-    }
-
-    var order Order
-    err = json.Unmarshal(orderJSON, &order)
-    if err != nil {
-        return err
-    }
-
-    collection, err := getCollectionName(ctx, "Orders")
-    if err != nil {
-        return err
-    }
-
-    return ctx.GetStub().PutPrivateData(collection, order.OrderID, orderJSON)
-}
-
-func (s *SmartContract) CreateOrderDetail(ctx contractapi.TransactionContextInterface) error {
-    transientMap, err := ctx.GetStub().GetTransient()
-    if err != nil {
-        return fmt.Errorf("failed to get transient: %v", err)
-    }
-
-    detailJSON, ok := transientMap["detail"]
-    if !ok {
-        return fmt.Errorf("detail key not found in transient map")
-    }
-
-    var detail OrderDetail
-    if err := json.Unmarshal(detailJSON, &detail); err != nil {
-        return fmt.Errorf("failed to unmarshal order detail: %v", err)
-    }
-    if detail.OrderID == "" || detail.ProductID == "" {
-        return fmt.Errorf("orderID or productID is empty")
-    }
-
-    collection, err := getCollectionName(ctx, "OrderDetails")
-    if err != nil {
-        return err
-    }
-
-    compositeKey, err := ctx.GetStub().CreateCompositeKey("orderDetail", []string{detail.OrderID, detail.ProductID})
-    if err != nil {
-        return fmt.Errorf("failed to create composite key: %v", err)
-    }
-
-    return ctx.GetStub().PutPrivateData(collection, compositeKey, detailJSON)
-}
 
 
 // Public Product (shared)
@@ -342,94 +270,7 @@ func (s *SmartContract) ReadCustomer(ctx contractapi.TransactionContextInterface
 	return &cust, nil
 }
 
-// Read private order
-func (s *SmartContract) ReadOrder(ctx contractapi.TransactionContextInterface, orderID string) (*Order, error) {
-    collection, err := getCollectionName(ctx, "Orders")
-    if err != nil {
-        return nil, err
-    }
 
-    data, err := ctx.GetStub().GetPrivateData(collection, orderID)
-    if err != nil {
-        return nil, err
-    }
-    if data == nil {
-        return nil, fmt.Errorf("order %s not found", orderID)
-    }
-
-    var order Order
-    err = json.Unmarshal(data, &order)
-    if err != nil {
-        return nil, err
-    }
-    return &order, nil
-}
-// Read private order detail
-func (s *SmartContract) ReadOrderDetail(ctx contractapi.TransactionContextInterface, orderID string, productID string) (*OrderDetail, error) {
-    collection, err := getCollectionName(ctx, "OrderDetails")
-    if err != nil {
-        return nil, err
-    }
-
-    compositeKey, err := ctx.GetStub().CreateCompositeKey("orderDetail", []string{orderID, productID})
-    if err != nil {
-        return nil, fmt.Errorf("failed to create composite key: %v", err)
-    }
-
-    data, err := ctx.GetStub().GetPrivateData(collection, compositeKey)
-    if err != nil {
-        return nil, err
-    }
-    if data == nil {
-        return nil, fmt.Errorf("order detail %s not found", compositeKey)
-    }
-
-    var detail OrderDetail
-    if err := json.Unmarshal(data, &detail); err != nil {
-        return nil, err
-    }
-    return &detail, nil
-}
-
-// Read all order details by OrderID
-func (s *SmartContract) ReadOrderDetailsByOrderID(ctx contractapi.TransactionContextInterface, orderID string) ([]*OrderDetail, error) {
-    collection, err := getCollectionName(ctx, "OrderDetails")
-    if err != nil {
-        return nil, err
-    }
-
-    resultsIterator, err := ctx.GetStub().GetPrivateDataByPartialCompositeKey(collection, "orderDetail", []string{orderID})
-    if err != nil {
-        return nil, err
-    }
-    defer resultsIterator.Close()
-
-    var details []*OrderDetail
-    for resultsIterator.HasNext() {
-        queryResponse, err := resultsIterator.Next()
-        if err != nil {
-            return nil, err
-        }
-
-        _, compositeKeyParts, err := ctx.GetStub().SplitCompositeKey(queryResponse.Key)
-        if err != nil {
-            return nil, err
-        }
-
-        var detail OrderDetail
-        if err := json.Unmarshal(queryResponse.Value, &detail); err != nil {
-            return nil, err
-        }
-
-        // Gán lại OrderID và ProductID từ composite key để chắc chắn
-        detail.OrderID = compositeKeyParts[0]
-        detail.ProductID = compositeKeyParts[1]
-
-        details = append(details, &detail)
-    }
-
-    return details, nil
-}
 
 
 
