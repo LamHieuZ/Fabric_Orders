@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fabric Web Demo</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🌐 Hyperledger Fabric Web Interface</h1>
+
+    <!-- Org2 - Create Order -->
+    <div class="form-box">
+        <h2>Org2 - Tạo đơn hàng</h2>
+        <form action="/create_order" method="post">
+            <label>Order ID:</label>
+            <input type="text" name="orderId" required>
+
+            <label>Customer ID:</label>
+            <input type="text" name="customerId" required>
+
+            <label>Employee ID:</label>
+            <input type="number" name="employee" required>
+
+            <label>Order Date:</label>
+            <input type="date" name="orderDate" required>
+
+            <label>Required Date:</label>
+            <input type="date" name="requiredDate" required>
+
+            <label>Shipper ID:</label>
+            <input type="number" name="shipperID" required>
+
+            <label>Freight:</label>
+            <input type="number" step="0.01" name="freight" required>
+
+            <h3>Chi tiết đơn hàng</h3>
+            <div id="items">
+                <div class="item">
+                    <label>Product ID:</label>
+                    <input type="text" name="productId" required>
+
+                    <label>Quantity:</label>
+                    <input type="number" name="quantity" required>
+
+                    <label>Unit Price:</label>
+                    <input type="number" step="1" name="unitPrice" required>
+
+                    <label>Discount:</label>
+                    <input type="number" step="0.01" name="discount" value="0">
+                    <hr>
+                </div>
+            </div>
+
+            <button type="button" onclick="addItem()">+ Thêm sản phẩm</button>
+            <button type="submit">Create Order</button>
+        </form>
+    </div>
+
+        <!-- Query Order -->
+    <div class="form-box">
+        <h2>🔍 Tra cứu đơn hàng</h2>
+        <form action="/read_order" method="post">
+            <label>Order ID:</label>
+            <input type="text" name="orderId" required>
+            <button type="submit">Query</button>
+        </form>
+    </div>
+    
+    <!-- Org1 - Verify Customer -->
+    <div class="form-box">
+        <h2>Org1 - Xác minh khách hàng</h2>
+        <form action="/verify_customer" method="post">
+            <label>Customer ID:</label>
+            <input type="text" name="customerId" required>
+            <label>Order ID:</label>
+            <input type="text" name="orderId" required>
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+
+    <!-- Query Order -->
+    <div class="form-box">
+        <h2>🔍 Tra cứu đơn hàng</h2>
+        <form action="/read_order" method="post">
+            <label>Order ID:</label>
+            <input type="text" name="orderId" required>
+            <button type="submit">Query</button>
+        </form>
+    </div>
+
+    <!-- Org2 - Share Details -->
+    <div class="form-box">
+        <h2>Org2 – Chia sẻ chi tiết đơn hàng</h2>
+        <form action="/share_details" method="post">
+            <input name="orderId" placeholder="Order ID" required>
+            <button type="submit">Share Details</button>
+        </form>
+    </div>
+
+    <!-- Org2 - Promote Order -->
+    <div class="form-box">
+        <h2>Org2 – Đưa đơn hàng lên Ledger</h2>
+        <form action="/promote_details" method="post">
+            <input name="orderId" placeholder="Order ID" required>
+            <button type="submit">Promote to World State</button>
+        </form>
+    </div>
+
+    <!-- Order Details -->
+    <div class="form-box">
+        <h2>📦 Xem chi tiết đơn hàng</h2>
+        <form action="/readorderdetails" method="post">
+            <label>Order ID:</label>
+            <input type="text" name="orderId" required>
+            <button type="submit">Xem chi tiết</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <h2>📊 Truy vấn & Thống kê</h2>
+
+    <div class="form-box">
+        <h3>Xem toàn bộ đơn hàng</h3>
+        <form action="/read_all_orders" method="post">
+            <button type="submit">Read All Orders</button>
+        </form>
+    </div>
+
+    <div class="form-box">
+        <h3>Xem đơn theo khách hàng </h3>
+        <form action="/read_orders_by_customer" method="post">
+            <label>Customer ID:</label>
+            <input type="text" name="customerId" placeholder="Nhập mã khách hàng" required>
+            <button type="submit">Xem đơn hàng</button>
+        </form>
+    </div>
+
+    <div class="form-box">
+    <h3>⛓ Xem toàn bộ Block</h3>
+    <form action="/show_blocks" method="get">
+        <button type="submit">Xem Blockchain</button>
+    </form>
+    </div>
+
+
+    <script>
+        function addItem() {
+            const container = document.getElementById("items");
+            const item = document.querySelector(".item").cloneNode(true);
+            item.querySelectorAll("input").forEach(input => input.value = "");
+            container.appendChild(item);
+        }
+    </script>
+</body>
+</html>

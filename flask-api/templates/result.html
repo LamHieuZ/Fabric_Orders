@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fabric Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>🧾 {{ action }}</h2>
+
+<!-- Trạng thái -->
+{% if success is defined %}
+    {% if success %}
+        <div style="padding:10px; background:#e6fffa; border:1px solid #13c2c2;">
+             <b>Giao dịch thành công</b>
+        </div>
+    {% else %}
+        <div style="padding:10px; background:#fff1f0; border:1px solid #ff4d4f;">
+             <b>Giao dịch thất bại</b>
+        </div>
+    {% endif %}
+{% endif %}
+
+<br>
+
+
+
+<a href="/" style="text-decoration:none;">← Quay lại trang chính</a>
+
+</body>
+</html>

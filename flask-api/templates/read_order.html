@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ action }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+<h2>{{ action }}</h2>
+
+{% if data %}
+    <!-- ================= ORDER INFO ================= -->
+    <div class="box">
+        <h3>📄 Order Info</h3>
+        <p><b>Order ID:</b> {{ data.orderId }}</p>
+        <p><b>Status:</b> {{ data.status }}</p>
+        <p><b>Customer Hash:</b> {{ data.customerIdHash }}</p>
+
+        <p><b>Employee:</b> {{ data.employee }}</p>
+        <p><b>Order Date:</b> {{ data.orderDate }}</p>
+        <p><b>Required Date:</b> {{ data.requiredDate }}</p>
+        <p><b>Shipper ID:</b> {{ data.shipperID }}</p>
+        <p><b>Freight:</b> {{ data.freight }}</p>
+    </div>
+
+    <!-- ================= ORDER DETAILS ================= -->
+    <div class="box">
+        <h3>📦 Order Details</h3>
+
+        {% if data.OrderDetail and data.OrderDetail.items %}
+        <table>
+            <tr>
+                <th>Product ID</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Discount</th>
+                <th>Item Total</th>
+            </tr>
+            {% for item in data.OrderDetail.items %}
+            <tr>
+                <td>{{ item.productId }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.unitPrice }}</td>
+                <td>{{ item.discount }}</td>
+                <td>{{ item.price }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <p><b>Total Order Value:</b> {{ data.OrderDetail.total }}</p>
+        {% else %}
+        <p style="color: orange;">⚠️ Order details chưa được publish hoặc không có quyền xem.</p>
+        {% endif %}
+    </div>
+{% else %}
+    <p class="error">❌ Không tìm thấy dữ liệu hoặc lỗi khi query.</p>
+    <pre>{{ stderr }}</pre>
+{% endif %}
+
+</body>
+</html>

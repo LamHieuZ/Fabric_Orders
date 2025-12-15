@@ -290,35 +290,34 @@ infoln "Installing chaincode on peer0.org1..."
 installChaincode 1
 infoln "Install chaincode on peer0.org2..."
 installChaincode 2
-infoln "Installing chaincode on peer0.org3..."
-installChaincode 3
+
 
 ## query whether the chaincode is installed
 queryInstalled 1
 
-# Approve cho Org1, Org2, Org3
+# Approve cho Org1, Org2
 approveForMyOrg 1
 approveForMyOrg 2
-approveForMyOrg 3
 
-# Check commit readiness trên cả 3 Org
-checkCommitReadiness 1 "\"Org1MSP\": true" "\"Org2MSP\": true" "\"Org3MSP\": true"
-checkCommitReadiness 2 "\"Org1MSP\": true" "\"Org2MSP\": true" "\"Org3MSP\": true"
-checkCommitReadiness 3 "\"Org1MSP\": true" "\"Org2MSP\": true" "\"Org3MSP\": true"
 
-# Commit chaincode definition với cả 3 Org
-commitChaincodeDefinition 1 2 3
+# Check commit readiness trên cả 2 Org
+checkCommitReadiness 1 "\"Org1MSP\": true" "\"Org2MSP\": true" 
+checkCommitReadiness 2 "\"Org1MSP\": true" "\"Org2MSP\": true" 
+
+
+# Commit chaincode definition với cả 2 Org
+commitChaincodeDefinition 1 2 
 
 # Query committed trên cả 3 Org
 queryCommitted 1
 queryCommitted 2
-queryCommitted 3
+
 
 # Invoke init nếu có
 if [ "$CC_INIT_FCN" = "NA" ]; then
   infoln "Chaincode initialization is not required"
 else
-  chaincodeInvokeInit 1 2 3
+  chaincodeInvokeInit 1 2
 fi
 
 exit 0
