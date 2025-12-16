@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>📦 Blockchain Blocks</title>
+  <title> Blockchain Blocks</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
     h2 { color: #333; }
@@ -16,10 +16,10 @@
   </style>
 </head>
 <body>
-  <h2>📦 Blockchain Blocks</h2>
+  <h2> Blockchain Blocks</h2>
 
   {% for b in blocks %}
-    <h3>🧱 Block #{{ b.block_number }}</h3>
+    <h3> Block #{{ b.block_number }}</h3>
     <p>Channel: {{ b.channel_id }}</p>
     <p>Transactions: {{ b.tx_count }}</p>
     <p><b>Data Hash:</b> <span class="hash">{{ b.data_hash }}</span></p>
@@ -49,7 +49,7 @@
 
     {% for tx in b.transactions %}
       {% if tx.rwset %}
-        <h4>🔑 Read/Write Set (Tx {{ tx.tx_id }})</h4>
+        <h4> Read/Write Set (Tx {{ tx.tx_id }})</h4>
         <table>
           <tr><th>Namespace</th><th>Key</th><th>Value</th></tr>
           {% for rw in tx.rwset %}
