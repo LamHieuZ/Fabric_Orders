@@ -1,123 +1,162 @@
-import subprocess, json, base64, os, time
 import pandas as pd
+import json, base64, subprocess, time, os
 
+BASE = "/home/hieulam/go/src/github.com/hieulamZ/fabric-samples/test-network"
+PEER_BIN = f"{BASE}/../bin/peer"
 
-# ==== THÔNG TIN CHUỖI VÀ PEER ====
-CHANNEL = "mychannel"
-CHAINCODE = "mycc"
 ORDERER = "localhost:7050"
 ORDERER_TLS = "--ordererTLSHostnameOverride=orderer.example.com"
-
-ORDERER_CA = os.environ["ORDERER_CA"]
+CHANNEL = "mychannel"
+CHAINCODE = "mycc"
 
 PEER1 = "localhost:7051"
-ORG1_CA = os.environ["PEER0_ORG1_CA"]
-
 PEER2 = "localhost:9051"
-ORG2_CA = os.environ["PEER0_ORG2_CA"]
 
-# ==== HÀM GỌI CHAINCODE ====
-def invoke_chaincode(args, peer, ca, transient=None):
+ORG1_CA = f"{BASE}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+ORG2_CA = f"{BASE}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt"
+ORDERER_CA = f"{BASE}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+
+WAIT_SECONDS = 1
+
+def org1_env():
+    env = os.environ.copy()
+    env.update({
+        "CORE_PEER_TLS_ENABLED": "true",
+        "CORE_PEER_LOCALMSPID": "Org1MSP",
+        "CORE_PEER_TLS_ROOTCERT_FILE": ORG1_CA,
+        "CORE_PEER_MSPCONFIGPATH": f"{BASE}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp",
+        "CORE_PEER_ADDRESS": PEER1,
+        "ORDERER_CA": ORDERER_CA,
+        "FABRIC_CFG_PATH": f"{BASE}/../config",
+        "PATH": f"{BASE}/../bin:" + env["PATH"],
+    })
+    return env
+
+def org2_env():
+    env = os.environ.copy()
+    env.update({
+        "CORE_PEER_TLS_ENABLED": "true",
+        "CORE_PEER_LOCALMSPID": "Org2MSP",
+        "CORE_PEER_TLS_ROOTCERT_FILE": ORG2_CA,
+        "CORE_PEER_MSPCONFIGPATH": f"{BASE}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp",
+        "CORE_PEER_ADDRESS": PEER2,
+        "ORDERER_CA": ORDERER_CA,
+        "FABRIC_CFG_PATH": f"{BASE}/../config",
+        "PATH": f"{BASE}/../bin:" + env["PATH"],
+    })
+    return env
+
+def run(cmd, env):
+    return subprocess.run(cmd, env=env, capture_output=True, text=True)
+
+def publish_with_retry(order_id, max_retries=5, delay=1):
     cmd = [
-        "peer", "chaincode", "invoke",
+        PEER_BIN, "chaincode", "invoke",
         "-o", ORDERER, ORDERER_TLS,
         "--tls", "--cafile", ORDERER_CA,
         "-C", CHANNEL, "-n", CHAINCODE,
-        "--peerAddresses", peer,
-        "--tlsRootCertFiles", ca,
-        "-c", json.dumps({"Args": args})
+        "--peerAddresses", PEER1, "--tlsRootCertFiles", ORG1_CA,
+        "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
+        "-c", json.dumps({"function": "PublishOrderDetails", "Args": [order_id]})
     ]
-    if transient:
-        cmd += ["--transient", json.dumps(transient)]
-    return subprocess.run(cmd, capture_output=True, text=True)
 
-# ==== TỪNG BƯỚC XỬ LÝ ====
-def create_order(order_id, customer_id, meta, details):
+    for _ in range(max_retries):
+        res = run(cmd, org1_env())
+        out = res.stdout + res.stderr
+        if "status:200" in out:
+            print(f"✅ Publish {order_id} thành công")
+            return True
+        time.sleep(delay)
+
+    print(f"❌ Publish {order_id} thất bại")
+    return False
+
+orders_df = pd.read_csv("orders.csv")
+details_df = pd.read_csv("order_details.csv")
+
+orders_df["orderID"] = orders_df["orderID"].astype(str)
+details_df["orderID"] = details_df["orderID"].astype(str)
+
+grouped_details = details_df.groupby("orderID")
+
+for _, row in orders_df.iterrows():
+    order_id = row["orderID"].strip()
+    customer_id = str(row["customerID"]).strip()
+
+    items = []
+    if order_id in grouped_details.groups:
+        for _, d in grouped_details.get_group(order_id).iterrows():
+            items.append({
+                "productId": str(d["productID"]),
+                "quantity": int(d["quantity"]),
+                "unitPrice": float(d["unitPrice"]),
+                "discount": float(d["discount"]),
+                "price": float(d["unitPrice"]) * int(d["quantity"]) - float(d["discount"])
+            })
+
+    order_meta = {
+        "orderId": order_id,
+        "employee": int(row["employeeID"]),
+        "orderDate": str(row["orderDate"]),
+        "requiredDate": str(row["requiredDate"]),
+        "shippedDate": str(row["shippedDate"]),
+        "shipperID": int(row["shipperID"]),
+        "freight": float(row["freight"]),
+        "status": "CREATED",
+        "approvedByOrg1": False
+    }
+
+    order_details = {
+        "orderId": order_id,
+        "items": items,
+        "total": sum(i["price"] for i in items)
+    }
+
     transient = {
         "customerId": base64.b64encode(customer_id.encode()).decode(),
-        "order": base64.b64encode(json.dumps(meta).encode()).decode(),
-        "orderDetails": base64.b64encode(json.dumps(details).encode()).decode()
+        "order": base64.b64encode(json.dumps(order_meta).encode()).decode(),
+        "orderDetails": base64.b64encode(json.dumps(order_details).encode()).decode()
     }
-    return invoke_chaincode(["CreateOrder", order_id], PEER2, ORG2_CA, transient)
 
-def verify_customer(order_id, customer_id):
-    transient = {
-        "customerId": base64.b64encode(customer_id.encode()).decode()
-    }
-    return invoke_chaincode(["VerifyCustomer", order_id], PEER1, ORG1_CA, transient)
+    run([
+        PEER_BIN, "chaincode", "invoke",
+        "-o", ORDERER, ORDERER_TLS,
+        "--tls", "--cafile", ORDERER_CA,
+        "-C", CHANNEL, "-n", CHAINCODE,
+        "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
+        "--peerAddresses", PEER1, "--tlsRootCertFiles", ORG1_CA,
+        "-c", json.dumps({"function": "CreateOrder", "Args": [order_id]}),
+        "--transient", json.dumps(transient)
+    ], org2_env())
 
-def share_order_details(order_id):
-    return invoke_chaincode(["ShareOrderDetailsToOrg1", order_id], PEER2, ORG2_CA)
+    time.sleep(WAIT_SECONDS)
 
-def publish_order(order_id):
-    return invoke_chaincode(["PublishOrderDetails", order_id], PEER1, ORG1_CA)
+    run([
+        PEER_BIN, "chaincode", "invoke",
+        "-o", ORDERER, ORDERER_TLS,
+        "--tls", "--cafile", ORDERER_CA,
+        "-C", CHANNEL, "-n", CHAINCODE,
+        "--peerAddresses", PEER1, "--tlsRootCertFiles", ORG1_CA,
+        "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
+        "-c", json.dumps({"function": "VerifyCustomer", "Args": [order_id]}),
+        "--transient", json.dumps({
+            "customerId": base64.b64encode(customer_id.encode()).decode()
+        })
+    ], org1_env())
 
-# ==== XỬ LÝ TOÀN BỘ ĐƠN HÀNG ====
-def process_order(order_id, customer_id, meta, details):
-    print(f"\n🛒 Đơn hàng {order_id} — Khách {customer_id}")
-    print("→ Tạo đơn hàng...")
-    print(create_order(order_id, customer_id, meta, details).stderr)
+    time.sleep(WAIT_SECONDS)
 
-    time.sleep(1)
-    print("→ Xác thực khách hàng...")
-    print(verify_customer(order_id, customer_id).stderr)
+    run([
+        PEER_BIN, "chaincode", "invoke",
+        "-o", ORDERER, ORDERER_TLS,
+        "--tls", "--cafile", ORDERER_CA,
+        "-C", CHANNEL, "-n", CHAINCODE,
+        "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
+        "-c", json.dumps({"function": "ShareOrderDetailsToOrg1", "Args": [order_id]})
+    ], org2_env())
 
-    time.sleep(1)
-    print("→ Chia sẻ chi tiết đơn hàng...")
-    print(share_order_details(order_id).stderr)
+    time.sleep(WAIT_SECONDS)
 
-    time.sleep(1)
-    print("→ Công bố đơn hàng...")
-    print(publish_order(order_id).stderr)
+    publish_with_retry(order_id, delay=WAIT_SECONDS)
 
-# ==== ĐỌC FILE CSV VÀ CHẠY ====
-def run_batch_from_csv():
-    orders = pd.read_csv("orders.csv")
-    details = pd.read_csv("order_details.csv")
-
-    orders.columns = orders.columns.str.strip()
-    details.columns = details.columns.str.strip()
-    orders["orderID"] = orders["orderID"].astype(str)
-    details["orderID"] = details["orderID"].astype(str)
-
-    grouped = details.groupby("orderID")
-
-    for _, row in orders.iterrows():
-        order_id = row["orderID"]
-        customer_id = row["customerID"]
-
-        meta = {
-            "orderId": order_id,
-            "employee": int(row["employeeID"]),
-            "orderDate": str(row["orderDate"]),
-            "requiredDate": str(row["requiredDate"]),
-            "shippedDate": str(row["shippedDate"]),
-            "shipperID": int(row["shipperID"]),
-            "freight": float(row["freight"]),
-            "status": "CREATED",
-            "approvedByOrg1": False
-        }
-
-        items = []
-        if order_id in grouped.groups:
-            for _, d in grouped.get_group(order_id).iterrows():
-                items.append({
-                    "productId": str(d["productID"]),
-                    "quantity": int(d["quantity"]),
-                    "unitPrice": float(d["unitPrice"]),
-                    "discount": float(d["discount"]),
-                    "price": float(d["unitPrice"]) * (1 - float(d["discount"]))
-                })
-
-        details_obj = {
-            "orderId": order_id,
-            "items": items,
-            "total": sum(i["quantity"] * i["price"] for i in items)
-        }
-
-        process_order(order_id, customer_id, meta, details_obj)
-        time.sleep(2)
-
-# ==== CHẠY ====
-if __name__ == "__main__":
-    run_batch_from_csv()
+    print(f"🎉 Order {order_id} hoàn tất\n")
