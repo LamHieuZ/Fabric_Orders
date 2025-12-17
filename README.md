@@ -1,6 +1,6 @@
 # Blockchain Data Pipeline with Hyperledger Fabric, Trino, and Spark
 
-## 📌 Giới thiệu
+##  Giới thiệu
 Dự án này triển khai một mạng Hyperledger Fabric để ghi nhận dữ liệu đơn hàng, sau đó sử dụng Trino để truy vấn dữ liệu và Spark để xử lý các pipeline (bronze → silver → gold). Hệ thống được container hóa bằng Docker Compose.
 
 ---
@@ -12,7 +12,7 @@ docker-compose.yml     # Docker Compose config
 README.md              # Tài liệu hướng dẫn
 
 
-## 🚀 Khởi chạy mạng Fabric
+##  Khởi chạy mạng Fabric
 
 ```bash
 cd test-network
@@ -26,7 +26,7 @@ cd test-network
 # Đưa dữ liệu đơn hàng mẫu lên blockchain
 python3 up_orders.py
 
-Quản lý Docker Compose
+## Quản lý Docker Compose
 
 # Dừng toàn bộ container và xóa volumes
 docker compose down -v
