@@ -4,8 +4,8 @@
 Dự án này triển khai một mạng Hyperledger Fabric để ghi nhận dữ liệu đơn hàng, sau đó sử dụng Trino để truy vấn dữ liệu và Spark để xử lý các pipeline (bronze → silver → gold). Hệ thống được container hóa bằng Docker Compose.
 
 ---
-Cấu trúc dự án
-
+## Cấu trúc dự án
+```bash
 test-network/          # Hyperledger Fabric network scripts
 pipelines/             # Spark ETL & ML pipelines
 docker-compose.yml     # Docker Compose config
