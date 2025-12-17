@@ -24,6 +24,7 @@ type Order struct {
     Freight        float64 `json:"freight"`
     Status         string  `json:"status"`
     ApprovedByOrg1 bool    `json:"approvedByOrg1"`
+
 }
 type OrderDetail struct {
     OrderID string  `json:"orderId"`
@@ -37,7 +38,10 @@ type Item struct {
     Discount  float64 `json:"discount"`
     Price     float64 `json:"price"`
 }
-
+type PublicOrder struct {
+    Order
+    OrderDetail *OrderDetail 
+}
 
 // =======================
 // SmartContract
@@ -59,13 +63,14 @@ func sha256Hex(b []byte) string {
 // transient: customerId, order, orderDetails
 // "order" là JSON metadata (employee, dates, shipperID, freight)
 func (s *SmartContract) CreateOrder(ctx contractapi.TransactionContextInterface, orderID string) error {
+    // Chỉ Org2 mới được tạo đơn hàng
     msp, _ := ctx.GetClientIdentity().GetMSPID()
     if msp != "Org2MSP" {
         return fmt.Errorf("only Org2 can create order")
     }
 
-    // Kiểm tra orderID đã tồn tại chưa trong collection chung
-    existing, err := ctx.GetStub().GetPrivateData("Org1Org2OrdersCollection", orderID)
+    // Kiểm tra orderID đã tồn tại chưa trong world state
+    existing, err := ctx.GetStub().GetState(orderID)
     if err != nil {
         return fmt.Errorf("failed to check existing order: %v", err)
     }
@@ -96,17 +101,17 @@ func (s *SmartContract) CreateOrder(ctx contractapi.TransactionContextInterface,
     ord.Status = "CREATED"
     ord.ApprovedByOrg1 = false
 
+
+    // Ghi Order vào world state
     ordJSON, err := json.Marshal(ord)
     if err != nil {
         return err
     }
-
-    // Write shared Orders
-    if err := ctx.GetStub().PutPrivateData("Org1Org2OrdersCollection", orderID, ordJSON); err != nil {
+    if err := ctx.GetStub().PutState(orderID, ordJSON); err != nil {
         return err
     }
 
-    // Write private OrderDetails
+    // Ghi OrderDetail vào private data Org2
     var det OrderDetail
     if err := json.Unmarshal(ordDet, &det); err != nil {
         return err
@@ -123,21 +128,25 @@ func (s *SmartContract) CreateOrder(ctx contractapi.TransactionContextInterface,
 
     return nil
 }
+
+
+
 // VerifyCustomer(orderId) — Org1
 func (s *SmartContract) VerifyCustomer(ctx contractapi.TransactionContextInterface, orderID string) error {
+    // Chỉ Org1 mới được verify
     msp, _ := ctx.GetClientIdentity().GetMSPID()
     if msp != "Org1MSP" {
         return fmt.Errorf("only Org1 can verify customer")
     }
 
-    // Lấy order từ collection chung
-    sharedJSON, err := ctx.GetStub().GetPrivateData("Org1Org2OrdersCollection", orderID)
-    if err != nil || sharedJSON == nil {
-        return fmt.Errorf("order not found")
+    // Lấy order từ world state
+    orderJSON, err := ctx.GetStub().GetState(orderID)
+    if err != nil || orderJSON == nil {
+        return fmt.Errorf("order not found in world state")
     }
 
     var ord Order
-    if err := json.Unmarshal(sharedJSON, &ord); err != nil {
+    if err := json.Unmarshal(orderJSON, &ord); err != nil {
         return err
     }
 
@@ -159,112 +168,149 @@ func (s *SmartContract) VerifyCustomer(ctx contractapi.TransactionContextInterfa
         return fmt.Errorf("customer mismatch between Org1 and Org2")
     }
 
-    // Nếu khớp thì Org1 approve
+    // Nếu khớp thì Org1 approve và cập nhật trạng thái
     ord.ApprovedByOrg1 = true
     ord.Status = "APPROVED"
 
-    updated, _ := json.Marshal(ord)
-    return ctx.GetStub().PutPrivateData("Org1Org2OrdersCollection", orderID, updated)
+    updated, err := json.Marshal(ord)
+    if err != nil {
+        return err
+    }
+
+    // Ghi lại vào world state
+    return ctx.GetStub().PutState(orderID, updated)
 }
 
+
 // transient: customerId
-func (s *SmartContract) PromoteDetails(ctx contractapi.TransactionContextInterface, orderID string) error {
-    // Chỉ cho phép Org2 gọi hàm này
-    msp, _ := ctx.GetClientIdentity().GetMSPID()
-    if msp != "Org2MSP" {
-        return fmt.Errorf("only Org2 can promote details")
+func (s *SmartContract) ShareOrderDetailsToOrg1(
+    ctx contractapi.TransactionContextInterface,
+    orderID string,
+) error {
+
+    if msp, _ := ctx.GetClientIdentity().GetMSPID(); msp != "Org2MSP" {
+        return fmt.Errorf("only Org2 can share order details")
     }
 
-    // Lấy metadata Order từ collection chung Org1-Org2
-    sharedJSON, err := ctx.GetStub().GetPrivateData("Org1Org2OrdersCollection", orderID)
-    if err != nil || sharedJSON == nil {
-        return fmt.Errorf("order not found")
-    }
-
-    var ord Order
-    if err := json.Unmarshal(sharedJSON, &ord); err != nil {
-        return err
-    }
-
-    // Kiểm tra Org1 đã approve chưa
-    if !ord.ApprovedByOrg1 {
-        return fmt.Errorf("order not approved by Org1")
-    }
-
-    // Lấy OrderDetail từ collection riêng của Org2
-    detJSON, err := ctx.GetStub().GetPrivateData("Org2MSPOrderDetailsCollection", orderID)
+    // Lấy private details của Org2
+    detJSON, err := ctx.GetStub().
+        GetPrivateData("Org2MSPOrderDetailsCollection", orderID)
     if err != nil || detJSON == nil {
-        return fmt.Errorf("order details not found in Org2 collection")
+        return fmt.Errorf("order details not found in Org2 private collection")
     }
 
-    // Ghi sang collection chung Org1-Org2
-    if err := ctx.GetStub().PutPrivateData("Org1Org2OrderDetailsShared", orderID, detJSON); err != nil {
-        return err
+    // Ghi sang collection chung Org1–Org2
+    err = ctx.GetStub().PutPrivateData(
+        "Org1Org2OrderDetailsShared",
+        orderID,
+        detJSON,
+    )
+    if err != nil {
+        return fmt.Errorf("failed to share order details: %v", err)
     }
 
     return nil
 }
 
+func (s *SmartContract) PublishOrderDetails(
+    ctx contractapi.TransactionContextInterface,
+    orderID string,
+) error {
+
+    // Cho phép Org1 hoặc Org2
+    msp, _ := ctx.GetClientIdentity().GetMSPID()
+    if msp != "Org1MSP" && msp != "Org2MSP" {
+        return fmt.Errorf("only Org1 or Org2 can publish order")
+    }
+
+    // 1. Read public order
+    orderJSON, err := ctx.GetStub().GetState(orderID)
+    if err != nil || orderJSON == nil {
+        return fmt.Errorf("order not found")
+    }
+
+    var ord Order
+    json.Unmarshal(orderJSON, &ord)
+
+
+
+    if !ord.ApprovedByOrg1 {
+        return fmt.Errorf("order not approved by Org1")
+    }
+
+    // 2. Read shared details
+    detJSON, err := ctx.GetStub().
+        GetPrivateData("Org1Org2OrderDetailsShared", orderID)
+    if err != nil || detJSON == nil {
+        return fmt.Errorf("shared order details not found")
+    }
+
+    var det OrderDetail
+    json.Unmarshal(detJSON, &det)
+
+    // 3. Merge & publish
+    result := PublicOrder{
+        Order:       ord,
+        OrderDetail: &det,
+    }
+
+    finalJSON, _ := json.Marshal(result)
+    return ctx.GetStub().PutState(orderID, finalJSON)
+}
+
+
+
 // ReadOrder(orderId) — Org1/Org2
 func (s *SmartContract) ReadOrder(ctx contractapi.TransactionContextInterface, orderID string) (*Order, error) {
-    b, err := ctx.GetStub().GetPrivateData("Org1Org2OrdersCollection", orderID)
-    if err != nil || b == nil { return nil, fmt.Errorf("order not found") }
-    var ord Order; json.Unmarshal(b, &ord)
+    // Lấy dữ liệu order từ world state
+    b, err := ctx.GetStub().GetState(orderID)
+    if err != nil {
+        return nil, fmt.Errorf("failed to read order: %v", err)
+    }
+    if b == nil {
+        return nil, fmt.Errorf("order %s not found", orderID)
+    }
+
+    var ord Order
+    if err := json.Unmarshal(b, &ord); err != nil {
+        return nil, fmt.Errorf("failed to unmarshal order: %v", err)
+    }
+
     return &ord, nil
 }
 
 // ReadOrderDetailsShared(orderId) — Org1/Org2
 func (s *SmartContract) ReadOrderDetailsShared(ctx contractapi.TransactionContextInterface, orderID string) (*OrderDetail, error) {
-    // Đọc metadata để kiểm tra đã approve chưa
-    ordJSON, err := ctx.GetStub().GetPrivateData("Org1Org2OrdersCollection", orderID)
+    // Đọc order từ world state
+    ordJSON, err := ctx.GetStub().GetState(orderID)
     if err != nil || ordJSON == nil {
         return nil, fmt.Errorf("order not found")
     }
+
     var ord Order
     if err := json.Unmarshal(ordJSON, &ord); err != nil {
         return nil, fmt.Errorf("failed to unmarshal order: %v", err)
     }
+
+    // Kiểm tra Org1 đã approve chưa
     if !ord.ApprovedByOrg1 {
         return nil, fmt.Errorf("customer not approved yet")
     }
 
-    // Trả chi tiết nếu đã approve
-    b, err := ctx.GetStub().GetPrivateData("Org1Org2OrderDetailsShared", orderID)
-    if err != nil || b == nil {
-        return nil, fmt.Errorf("shared details not found")
+    // Sau khi Org2 promote, OrderDetails đã được ghi vào world state
+    // Ta đọc lại toàn bộ struct fullOrder (Order + OrderDetail)
+    var pub PublicOrder
+    if err := json.Unmarshal(ordJSON, &pub); err != nil {
+        return nil, fmt.Errorf("failed to unmarshal public order: %v", err)
     }
-    var d OrderDetail
-    if err := json.Unmarshal(b, &d); err != nil {
-        return nil, err
-    }
-    return &d, nil
+    return pub.OrderDetail, nil
+
 }
 
-// ReadOrderDetailsPrivate(orderId) — chỉ Org2
-func (s *SmartContract) ReadOrderDetailsPrivate(ctx contractapi.TransactionContextInterface, orderID string) (*OrderDetail, error) {
-    msp, _ := ctx.GetClientIdentity().GetMSPID()
-    if msp != "Org2MSP" {
-        return nil, fmt.Errorf("only Org2 can read its private order details")
-    }
-
-    b, err := ctx.GetStub().GetPrivateData("Org2MSPOrderDetailsCollection", orderID)
-    if err != nil {
-        return nil, fmt.Errorf("failed to read private order details: %v", err)
-    }
-    if b == nil {
-        return nil, fmt.Errorf("order details %s not found", orderID)
-    }
-
-    var d OrderDetail
-    if err := json.Unmarshal(b, &d); err != nil {
-        return nil, err
-    }
-    return &d, nil
-}
 // Đọc tất cả Orders trong collection chung
 func (s *SmartContract) ReadAllOrders(ctx contractapi.TransactionContextInterface) ([]*Order, error) {
-    // Lấy iterator cho tất cả key trong collection
-    resultsIterator, err := ctx.GetStub().GetPrivateDataByRange("Org1Org2OrdersCollection", "", "")
+    // Lấy iterator cho tất cả key trong world state
+    resultsIterator, err := ctx.GetStub().GetStateByRange("", "")
     if err != nil {
         return nil, fmt.Errorf("failed to get orders: %v", err)
     }
@@ -285,51 +331,34 @@ func (s *SmartContract) ReadAllOrders(ctx contractapi.TransactionContextInterfac
     return orders, nil
 }
 
-// Đọc chi tiết Order từ collection riêng của Org2
-func (s *SmartContract) ReadOrderDetails(ctx contractapi.TransactionContextInterface, orderID string) (*OrderDetail, error) {
-    detJSON, err := ctx.GetStub().GetPrivateData("Org2MSPOrderDetailsCollection", orderID)
-    if err != nil {
-        return nil, fmt.Errorf("failed to read order details: %v", err)
-    }
-    if detJSON == nil {
-        return nil, fmt.Errorf("order details not found")
-    }
 
-    var det OrderDetail
-    if err := json.Unmarshal(detJSON, &det); err != nil {
-        return nil, fmt.Errorf("failed to unmarshal order details: %v", err)
-    }
-    return &det, nil
-}
-func (s *SmartContract) ReadOrdersByCustomerID(ctx contractapi.TransactionContextInterface) ([]*Order, error) {
-    // Lấy customerId từ transient
-    t, err := ctx.GetStub().GetTransient()
-    if err != nil {
-        return nil, err
-    }
-    cust := t["customerId"]
-    if cust == nil {
-        return nil, fmt.Errorf("missing customerId in transient")
-    }
-    custHash := sha256Hex(cust)
+func (s *SmartContract) ReadOrdersByCustomerID(
+    ctx contractapi.TransactionContextInterface,
+    customerId string,
+) ([]*Order, error) {
 
-    // Duyệt tất cả orders trong collection chung
-    resultsIterator, err := ctx.GetStub().GetPrivateDataByRange("Org1Org2OrdersCollection", "", "")
+    // Băm customerId bằng SHA256
+    custHash := sha256Hex([]byte(customerId))
+
+    // Duyệt toàn bộ world state
+    iterator, err := ctx.GetStub().GetStateByRange("", "")
     if err != nil {
-        return nil, fmt.Errorf("failed to get orders: %v", err)
+        return nil, fmt.Errorf("failed to get state by range: %v", err)
     }
-    defer resultsIterator.Close()
+    defer iterator.Close()
 
     var matched []*Order
-    for resultsIterator.HasNext() {
-        kv, err := resultsIterator.Next()
+    for iterator.HasNext() {
+        kv, err := iterator.Next()
         if err != nil {
-            return nil, err
+            return nil, fmt.Errorf("iterator error: %v", err)
         }
+
         var ord Order
         if err := json.Unmarshal(kv.Value, &ord); err != nil {
-            return nil, err
+            continue
         }
+
         // So sánh hash
         if ord.CustomerIDHash == custHash {
             matched = append(matched, &ord)
@@ -338,4 +367,95 @@ func (s *SmartContract) ReadOrdersByCustomerID(ctx contractapi.TransactionContex
 
     return matched, nil
 }
+
+
+func (s *SmartContract) ReadPublicOrder(
+    ctx contractapi.TransactionContextInterface,
+    orderID string,
+) (*PublicOrder, error) {
+
+    // Đọc dữ liệu từ world state (thống nhất key)
+    b, err := ctx.GetStub().GetState(orderID)
+    if err != nil {
+        return nil, fmt.Errorf("failed to read order: %v", err)
+    }
+    if b == nil {
+        return nil, fmt.Errorf("order %s not found", orderID)
+    }
+
+    var pub PublicOrder
+    if err := json.Unmarshal(b, &pub); err != nil {
+        return nil, fmt.Errorf("failed to unmarshal public order: %v", err)
+    }
+
+    if pub.OrderDetail == nil {
+        return nil, fmt.Errorf("order %s has no details (not promoted yet)", orderID)
+    }
+
+    return &pub, nil
+}
+
+func (s *SmartContract) CreateOrderAndApprove(
+    ctx contractapi.TransactionContextInterface,
+    orderID string,
+) error {
+    msp, _ := ctx.GetClientIdentity().GetMSPID()
+    if msp != "Org2MSP" {
+        return fmt.Errorf("only Org2 can create and approve order")
+    }
+
+    // Lấy transient fields
+    t, err := ctx.GetStub().GetTransient()
+    if err != nil {
+        return err
+    }
+    cust := t["customerId"]
+    ordMeta := t["order"]
+    ordDet := t["orderDetails"]
+    if cust == nil || ordMeta == nil || ordDet == nil {
+        return fmt.Errorf("missing transient fields")
+    }
+
+    // Parse Order
+    var ord Order
+    if err := json.Unmarshal(ordMeta, &ord); err != nil {
+        return err
+    }
+    ord.OrderID = orderID
+    ord.CustomerIDHash = sha256Hex(cust)
+    ord.Status = "APPROVED"
+    ord.ApprovedByOrg1 = true
+
+    // Parse OrderDetail
+    var det OrderDetail
+    if err := json.Unmarshal(ordDet, &det); err != nil {
+        return err
+    }
+    det.OrderID = orderID
+
+    // Ghi OrderDetail vào private collections
+    detJSON, _ := json.Marshal(det)
+    if err := ctx.GetStub().PutPrivateData("Org2MSPOrderDetailsCollection", orderID, detJSON); err != nil {
+        return err
+    }
+    if err := ctx.GetStub().PutPrivateData("Org1Org2OrderDetailsShared", orderID, detJSON); err != nil {
+        return err
+    }
+
+    // Ghi đè trực tiếp PublicOrder lên key orderID
+    pub := PublicOrder{
+        Order:       ord,
+        OrderDetail: &det,
+    }
+    pubJSON, _ := json.Marshal(pub)
+    if err := ctx.GetStub().PutState(orderID, pubJSON); err != nil {
+        return err
+    }
+
+    return nil
+}
+
+
+
+
 

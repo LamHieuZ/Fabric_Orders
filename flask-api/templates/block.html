@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Blockchain Blocks</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    h2 { color: #333; }
+    h3 { margin-top: 30px; color: #4CAF50; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+    th { background-color: #4CAF50; color: white; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    tr:hover { background-color: #ddd; }
+    .hash { font-family: monospace; font-size: 0.9em; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h2> Blockchain Blocks</h2>
+
+  {% for b in blocks %}
+    <h3> Block #{{ b.block_number }}</h3>
+    <p>Channel: {{ b.channel_id }}</p>
+    <p>Transactions: {{ b.tx_count }}</p>
+    <p><b>Data Hash:</b> <span class="hash">{{ b.data_hash }}</span></p>
+    <p><b>Previous Hash:</b> <span class="hash">{{ b.previous_hash }}</span></p>
+
+    {% if b.tx_count > 0 %}
+    <table>
+      <tr>
+        <th>Tx ID</th>
+        <th>Timestamp</th>
+        <th>Chaincode</th>
+        <th>Function</th>
+        <th>Args</th>
+        <th>Creator</th>
+      </tr>
+      {% for tx in b.transactions %}
+      <tr>
+        <td class="hash">{{ tx.tx_id }}</td>
+        <td>{{ tx.timestamp }}</td>
+        <td>{{ tx.chaincode }}</td>
+        <td>{{ tx.function }}</td>
+        <td>{{ tx.args }}</td>
+        <td>{{ tx.creator }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% for tx in b.transactions %}
+      {% if tx.rwset %}
+        <h4> Read/Write Set (Tx {{ tx.tx_id }})</h4>
+        <table>
+          <tr><th>Namespace</th><th>Key</th><th>Value</th></tr>
+          {% for rw in tx.rwset %}
+          <tr>
+            <td>{{ rw.namespace }}</td>
+            <td>{{ rw.key }}</td>
+            <td>{{ rw.value }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      {% endif %}
+    {% endfor %}
+    {% else %}
+      <p><i>Không có transaction trong block này.</i></p>
+    {% endif %}
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ action }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { margin-bottom: 15px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .error { color: red; }
+    pre { background: #fafafa; border: 1px solid #eee; padding: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>{{ action }}</h2>
+
+{% if stdout %}
+  <table>
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Status</th>
+        <th>Employee</th>
+        <th>Order Date</th>
+        <th>Required Date</th>
+        <th>Shipped Date</th>
+        <th>Shipper ID</th>
+        <th>Freight</th>
+        <th>CustomerIDHash</th>
+      </tr>
+    </thead>
+    <tbody id="orders-body"></tbody>
+  </table>
+{% else %}
+  <p class="error"> Không có dữ liệu trả về.</p>
+{% endif %}
+
+{% if stderr %}
+  <h3 class="error"> Lỗi</h3>
+  <pre>{{ stderr }}</pre>
+{% endif %}
+
+<a href="/">← Quay lại trang chính</a>
+
+<script>
+  const raw = `{{ stdout|safe }}`.trim();
+  let data;
+  try {
+    data = JSON.parse(raw);
+  } catch (e) {
+    data = null;
+  }
+
+  const tbody = document.getElementById("orders-body");
+  if (Array.isArray(data)) {
+    data.forEach(ord => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${ord.orderId || ""}</td>
+        <td>${ord.status || ""}</td>
+        <td>${ord.employee || ""}</td>
+        <td>${ord.orderDate || ""}</td>
+        <td>${ord.requiredDate || ""}</td>
+        <td>${ord.shippedDate || ""}</td>
+        <td>${ord.shipperID || ""}</td>
+        <td>${ord.freight || ""}</td>
+        <td>${ord.customerIdHash || ord.CustomerIDHash || ""}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+</script>
+
+</body>
+</html>
