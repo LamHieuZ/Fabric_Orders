@@ -10,6 +10,9 @@ test-network/          # Hyperledger Fabric network scripts
 pipelines/             # Spark ETL & ML pipelines
 docker-compose.yml     # Docker Compose config
 README.md              # Tài liệu hướng dẫn
+```
+
+![Kiến trúc hệ thống](Kien-truc.png)
 
 
 ##  Khởi chạy mạng Fabric
