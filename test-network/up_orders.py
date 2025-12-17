@@ -16,21 +16,7 @@ ORG1_CA = f"{BASE}/organizations/peerOrganizations/org1.example.com/peers/peer0.
 ORG2_CA = f"{BASE}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt"
 ORDERER_CA = f"{BASE}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
 
-WAIT_SECONDS = 2
-
-def org1_env():
-    env = os.environ.copy()
-    env.update({
-        "CORE_PEER_TLS_ENABLED": "true",
-        "CORE_PEER_LOCALMSPID": "Org1MSP",
-        "CORE_PEER_TLS_ROOTCERT_FILE": ORG1_CA,
-        "CORE_PEER_MSPCONFIGPATH": f"{BASE}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp",
-        "CORE_PEER_ADDRESS": PEER1,
-        "ORDERER_CA": ORDERER_CA,
-        "FABRIC_CFG_PATH": f"{BASE}/../config",
-        "PATH": f"{BASE}/../bin:" + env["PATH"],
-    })
-    return env
+WAIT_SECONDS = 1
 
 def org2_env():
     env = os.environ.copy()
@@ -49,28 +35,32 @@ def org2_env():
 def run(cmd, env):
     return subprocess.run(cmd, env=env, capture_output=True, text=True)
 
-def publish_with_retry(order_id, max_retries=5, delay=1):
+def create_and_publish(order_id, customer_id, order_meta, order_details):
+    transient = {
+        "customerId": base64.b64encode(customer_id.encode()).decode(),
+        "order": base64.b64encode(json.dumps(order_meta).encode()).decode(),
+        "orderDetails": base64.b64encode(json.dumps(order_details).encode()).decode()
+    }
+
     cmd = [
         PEER_BIN, "chaincode", "invoke",
         "-o", ORDERER, ORDERER_TLS,
         "--tls", "--cafile", ORDERER_CA,
         "-C", CHANNEL, "-n", CHAINCODE,
-        "--peerAddresses", PEER1, "--tlsRootCertFiles", ORG1_CA,
         "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
-        "-c", json.dumps({"function": "PublishOrderDetails", "Args": [order_id]})
+        "--peerAddresses", PEER1, "--tlsRootCertFiles", ORG1_CA,
+        "-c", json.dumps({"function": "CreateOrderAndApprove", "Args": [order_id]}),
+        "--transient", json.dumps(transient)
     ]
 
-    for _ in range(max_retries):
-        res = run(cmd, org1_env())
-        out = res.stdout + res.stderr
-        if "status:200" in out:
-            print(f" Publish {order_id} thành công")
-            return True
-        time.sleep(delay)
+    res = run(cmd, org2_env())
+    out = res.stdout + res.stderr
+    if "status:200" in out:
+        print(f" Order {order_id} đã tạo và công bố thành công")
+    else:
+        print(f" Order {order_id} thất bại\n{out}")
 
-    print(f"❌ Publish {order_id} thất bại")
-    return False
-
+# ================== MAIN ==================
 orders_df = pd.read_csv("orders.csv")
 details_df = pd.read_csv("order_details.csv")
 
@@ -92,7 +82,6 @@ for _, row in orders_df.iterrows():
                 "unitPrice": float(d["unitPrice"]),
                 "discount": float(d["discount"]),
                 "price": float(d["unitPrice"]) * int(d["quantity"]) * (1 - float(d["discount"]))
-
             })
 
     order_meta = {
@@ -103,8 +92,8 @@ for _, row in orders_df.iterrows():
         "shippedDate": str(row["shippedDate"]),
         "shipperID": int(row["shipperID"]),
         "freight": float(row["freight"]),
-        "status": "CREATED",
-        "approvedByOrg1": False
+        "status": "APPROVED",        # mặc định đã duyệt
+        "approvedByOrg1": True       # mặc định Org1 đã approve
     }
 
     order_details = {
@@ -113,51 +102,5 @@ for _, row in orders_df.iterrows():
         "total": sum(i["price"] for i in items)
     }
 
-    transient = {
-        "customerId": base64.b64encode(customer_id.encode()).decode(),
-        "order": base64.b64encode(json.dumps(order_meta).encode()).decode(),
-        "orderDetails": base64.b64encode(json.dumps(order_details).encode()).decode()
-    }
-
-    run([
-        PEER_BIN, "chaincode", "invoke",
-        "-o", ORDERER, ORDERER_TLS,
-        "--tls", "--cafile", ORDERER_CA,
-        "-C", CHANNEL, "-n", CHAINCODE,
-        "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
-        "--peerAddresses", PEER1, "--tlsRootCertFiles", ORG1_CA,
-        "-c", json.dumps({"function": "CreateOrder", "Args": [order_id]}),
-        "--transient", json.dumps(transient)
-    ], org2_env())
-
+    create_and_publish(order_id, customer_id, order_meta, order_details)
     time.sleep(WAIT_SECONDS)
-
-    run([
-        PEER_BIN, "chaincode", "invoke",
-        "-o", ORDERER, ORDERER_TLS,
-        "--tls", "--cafile", ORDERER_CA,
-        "-C", CHANNEL, "-n", CHAINCODE,
-        "--peerAddresses", PEER1, "--tlsRootCertFiles", ORG1_CA,
-        "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
-        "-c", json.dumps({"function": "VerifyCustomer", "Args": [order_id]}),
-        "--transient", json.dumps({
-            "customerId": base64.b64encode(customer_id.encode()).decode()
-        })
-    ], org1_env())
-
-    time.sleep(WAIT_SECONDS)
-
-    run([
-        PEER_BIN, "chaincode", "invoke",
-        "-o", ORDERER, ORDERER_TLS,
-        "--tls", "--cafile", ORDERER_CA,
-        "-C", CHANNEL, "-n", CHAINCODE,
-        "--peerAddresses", PEER2, "--tlsRootCertFiles", ORG2_CA,
-        "-c", json.dumps({"function": "ShareOrderDetailsToOrg1", "Args": [order_id]})
-    ], org2_env())
-
-    time.sleep(WAIT_SECONDS)
-
-    publish_with_retry(order_id, delay=WAIT_SECONDS)
-
-    print(f" Order {order_id} hoàn tất\n")

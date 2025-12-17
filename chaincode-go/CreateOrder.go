@@ -395,6 +395,67 @@ func (s *SmartContract) ReadPublicOrder(
     return &pub, nil
 }
 
+func (s *SmartContract) CreateOrderAndApprove(
+    ctx contractapi.TransactionContextInterface,
+    orderID string,
+) error {
+    msp, _ := ctx.GetClientIdentity().GetMSPID()
+    if msp != "Org2MSP" {
+        return fmt.Errorf("only Org2 can create and approve order")
+    }
+
+    // Lấy transient fields
+    t, err := ctx.GetStub().GetTransient()
+    if err != nil {
+        return err
+    }
+    cust := t["customerId"]
+    ordMeta := t["order"]
+    ordDet := t["orderDetails"]
+    if cust == nil || ordMeta == nil || ordDet == nil {
+        return fmt.Errorf("missing transient fields")
+    }
+
+    // Parse Order
+    var ord Order
+    if err := json.Unmarshal(ordMeta, &ord); err != nil {
+        return err
+    }
+    ord.OrderID = orderID
+    ord.CustomerIDHash = sha256Hex(cust)
+    ord.Status = "APPROVED"
+    ord.ApprovedByOrg1 = true
+
+    // Parse OrderDetail
+    var det OrderDetail
+    if err := json.Unmarshal(ordDet, &det); err != nil {
+        return err
+    }
+    det.OrderID = orderID
+
+    // Ghi OrderDetail vào private collections
+    detJSON, _ := json.Marshal(det)
+    if err := ctx.GetStub().PutPrivateData("Org2MSPOrderDetailsCollection", orderID, detJSON); err != nil {
+        return err
+    }
+    if err := ctx.GetStub().PutPrivateData("Org1Org2OrderDetailsShared", orderID, detJSON); err != nil {
+        return err
+    }
+
+    // Ghi đè trực tiếp PublicOrder lên key orderID
+    pub := PublicOrder{
+        Order:       ord,
+        OrderDetail: &det,
+    }
+    pubJSON, _ := json.Marshal(pub)
+    if err := ctx.GetStub().PutState(orderID, pubJSON); err != nil {
+        return err
+    }
+
+    return nil
+}
+
+
 
 
 

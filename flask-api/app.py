@@ -126,7 +126,7 @@ def create_order():
         qty = int(quantities[i])
         price = float(unit_prices[i])
         disc = float(discounts[i]) if discounts[i] else 0.0
-        item_total = price * qty - disc
+        item_total = price * qty * (1 - disc)
         total += item_total
 
         items.append({
