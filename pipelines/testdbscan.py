@@ -49,7 +49,7 @@ output_prefix = "gold/analytics/dbscan_pca"
 # ======================================================
 def main():
 
-    print("📥 Loading iceberg.gold.orders ...")
+    print("Loading iceberg.gold.orders ...")
     gold = spark.table("iceberg.gold.orders").toPandas()
 
     # --------------------------------------------------
@@ -103,16 +103,16 @@ def main():
     pca = PCA(n_components=3, random_state=42)
     X_pca = pca.fit_transform(X_scaled)
 
-    print("📉 PCA explained variance ratio:")
+    print("PCA explained variance ratio:")
     print(pca.explained_variance_ratio_)
-    print("📉 Total explained variance:", pca.explained_variance_ratio_.sum())
+    print("Total explained variance:", pca.explained_variance_ratio_.sum())
 
     gold["pca1"] = X_pca[:, 0]
     gold["pca2"] = X_pca[:, 1]
     gold["pca3"] = X_pca[:, 2]
 
     # --------------------------------------------------
-    # 3️⃣ DBSCAN on PCA space
+    # DBSCAN on PCA space
     # --------------------------------------------------
     dbscan = DBSCAN(
         eps=0.9,        # PCA space → eps ổn định hơn
@@ -121,7 +121,7 @@ def main():
 
     gold["cluster"] = dbscan.fit_predict(X_pca)
 
-    print("\n📊 Cluster distribution:")
+    print("\n Cluster distribution:")
     print(gold["cluster"].value_counts())
 
     # --------------------------------------------------
@@ -230,9 +230,9 @@ def main():
         "iceberg.gold.clustering_results"
     ).createOrReplace()
 
-    print("\n✅ DBSCAN + PCA clustering completed")
-    print("✓ MinIO  → fabric/gold/analytics/dbscan_pca/")
-    print("✓ Iceberg → iceberg.gold.clustering_results")
+    print("\n DBSCAN + PCA clustering completed")
+    print("MinIO  → fabric/gold/analytics/dbscan_pca/")
+    print("Iceberg → iceberg.gold.clustering_results")
 
 
 # ======================================================

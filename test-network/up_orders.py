@@ -1,7 +1,7 @@
 import pandas as pd
 import json, base64, subprocess, time, os
 
-BASE = "/home/hieulam/go/src/github.com/hieulamZ/fabric-samples/test-network"
+BASE = os.getcwd() 
 PEER_BIN = f"{BASE}/../bin/peer"
 
 ORDERER = "localhost:7050"

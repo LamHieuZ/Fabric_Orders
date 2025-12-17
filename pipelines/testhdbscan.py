@@ -75,7 +75,7 @@ def main():
     spark = build_spark()
     spark.sql("CREATE NAMESPACE IF NOT EXISTS iceberg.gold")
 
-    print("📥 Loading iceberg.gold.orders ...")
+    print("Loading iceberg.gold.orders ...")
     gold = spark.table("iceberg.gold.orders").toPandas()
     gold.columns = gold.columns.str.lower()
 
@@ -108,10 +108,10 @@ def main():
     X_pca = pca.fit_transform(X_scaled)
 
     gold["pca1"], gold["pca2"], gold["pca3"] = X_pca[:, 0], X_pca[:, 1], X_pca[:, 2]
-    print(f"📉 PCA explained variance (sum): {pca.explained_variance_ratio_.sum():.4f}")
+    print(f"PCA explained variance (sum): {pca.explained_variance_ratio_.sum():.4f}")
 
     # ---- HDBSCAN ----
-    print("🚀 Running HDBSCAN ...")
+    print("Running HDBSCAN ...")
     clusterer = hdbscan.HDBSCAN(
         min_cluster_size=15,
         min_samples=8,
@@ -122,7 +122,7 @@ def main():
     gold["cluster_probability"] = clusterer.probabilities_
     gold["outlier_score"] = clusterer.outlier_scores_
 
-    print("\n📊 Cluster distribution:")
+    print("\n Cluster distribution:")
     print(gold["cluster"].value_counts())
 
     # ---- Save CSV ----
@@ -151,9 +151,9 @@ def main():
     plt.title("HDBSCAN Cluster Confidence")
     save_plot_to_minio("hdbscan_pca_probability.png")
 
-    print("\n✅ HDBSCAN Advanced v3 completed")
-    print(f"✓ MinIO   → {bucket}/{output_prefix}/")
-    print("✓ Iceberg → iceberg.gold.hdbscan_results")
+    print("\n HDBSCAN Advanced v3 completed")
+    print(f" MinIO   → {bucket}/{output_prefix}/")
+    print(" Iceberg → iceberg.gold.hdbscan_results")
 
 if __name__ == "__main__":
     main()
