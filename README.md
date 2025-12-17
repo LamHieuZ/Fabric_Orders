@@ -26,8 +26,9 @@ cd test-network
 # Đưa dữ liệu đơn hàng mẫu lên blockchain
 python3 up_orders.py
 ```
-## Quản lý Docker Compose
+## Pipeline with Minio, Trino, and Spark
 ```bash
+## Quản lý Docker Compose
 # Dừng toàn bộ container và xóa volumes
 docker compose down -v
 
