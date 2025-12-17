@@ -25,9 +25,9 @@ cd test-network
 
 # Đưa dữ liệu đơn hàng mẫu lên blockchain
 python3 up_orders.py
-
+```
 ## Quản lý Docker Compose
-
+```bash
 # Dừng toàn bộ container và xóa volumes
 docker compose down -v
 
@@ -67,3 +67,4 @@ docker compose exec spark-master /opt/spark/bin/spark-submit /app/pipelines/test
 
 # Test HDBSCAN clustering
 docker compose exec spark-master /opt/spark/bin/spark-submit /app/pipelines/testhdbscan.py
+```
